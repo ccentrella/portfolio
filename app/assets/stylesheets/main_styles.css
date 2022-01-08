@@ -1,0 +1,16 @@
+/* CSS Document */
+
+@import url("https://use.typekit.net/dby5tzk.css");
+
+.logo {
+	font-family: jaf-domus-titling-web, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 2.5em;
+	color: white;
+}
+
+.navbar {
+	background-color: #9A0002;
+	height: 400px
+}
