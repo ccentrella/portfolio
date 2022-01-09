@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Chris Centrella</title>
     <meta charset="utf-8">
@@ -8,14 +9,24 @@
     <meta name="keywords" content="Chris Centrella, christian, web, designer, developer, software, engineer, website">
     <meta name="width" content="width=device-width, content=1.0">
 </head>
+
 </html>
 <header>
-    <div id = "banner-image">
-        <img alt="Banner Image" src="" />
+    <div class="banner-image">
+        <div class="banner-overlay">
+            <h1 class="logo">Chris Centrella</h1>
+            <div class="flex">
+                <h2 class="logo-tagline">Web Designer</h2>
+                <%= image_tag "icons/menu.png" , class: 'menu-toggle' %>
+            </div>
+        </div>
     </div>
-</header>
-<div id="navbar">
 
-</div>
+    <!--<div class="navbar">
+        <ul>
+            <li></li>
+        </ul>
+    </div>-->
+</header>
 <h1>Welcome!</h1>
 <p>Find me in app/views/static_pages/home.html.erb</p>
