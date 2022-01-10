@@ -3,16 +3,28 @@
 @import url("https://use.typekit.net/dby5tzk.css");
 
 /*Fonts*/
-body {
-	font-size: 2em;
+body, p {
+	font-size: 1.25em;
 	font-family: 'Quasimoda', sans-serif;
 	font-weight: 300;
 }
+
+p.large {
+	font-size: 1.5em;
+	}
+p.small {
+		font-size: 0.8em;
+		}
 
 h1, h2, h3, h4 {
 	font-family: rooney-sans, sans-serif;
 	font-style: normal;
 	font-weight: 700;
+	color: #9A0002;
+}
+
+h1 {
+	font-size: 3em;
 }
 
 /*Flex*/
@@ -30,7 +42,7 @@ h1, h2, h3, h4 {
 /*Navbar*/
 
 header {
-	margin: -27px -8px 0 -8px;
+	margin: -27px -8px 0109px -8px;
 }
 
 .banner-image{
@@ -48,6 +60,24 @@ header {
 	padding-bottom:25px;
 }
 
+.home-image{
+	height: 100vw;
+	border-bottom: 3px solid #3c4006c7;
+	background-color: #3D5D212e;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(<%= asset_path 'background-home.png' %>);
+	display: flex;
+	align-items: center
+}
+
+.home-overlay
+{
+	background-color: #3D5D2123;
+	padding-bottom:25px;
+	width: 100%;
+}
+
 .logo {
 	margin: 0;
 	padding: 60px 15px 0 15px;
@@ -56,6 +86,17 @@ header {
 	font-style: normal;
 	line-height: 1.15;
 	font-size: 16vw;
+	color: white;
+}
+
+.logo-small {
+	margin: 0;
+	padding: 30px 25px 0 25px;
+	font-family: jaf-domus-titling-web, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 1.15;
+	font-size: 11.5vw;
 	color: white;
 }
 
@@ -73,7 +114,63 @@ header {
 	margin-top: -32px;
 	background-color: #657C3B;
 	height: 50px;
+
+	ul { float: none;
+		list-style-type: none;}
+	}
+
+/*Buttons*/
+div.button-div {
+	padding: 30px 0 15px 0;
+	text-align: center;
+}
+a.button {
+	padding: 15px 22px 14px 21px;
+	border: 2px solid #4C8E13;
+	border-radius: 30px;
+	background-color: transparent;
+	font-family: 'rooney-sans', sans-serif;
+	font-weight: 500;
+	font-size: 0.9em;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	text-align: center;
 }
 
-.navbar ul { float: none;
-			 list-style-type: none;}
+
+a.button:hover {
+	color: #fcfcfc;
+	background-color: #3B4D0A;
+}
+
+/*Footer*/
+footer {
+	padding-top:110px;
+	margin: -8px;
+}
+.footer-top{
+	height: 180px;
+	background-color: #2E4000;
+	border-top: 3px solid #6A80007f;
+}
+
+.footer-bottom
+{
+	padding: 50px 0 20px 0;
+	height: 250px;
+	background-color: #3F0708;
+	align-items: center;
+}
+.copyright {
+	font-family: 'Quasimoda', sans-serif;
+	color: whitesmoke;
+	font-weight: 300;
+	font-size: 0.8em;
+	padding: 25px;
+}
+hr
+{
+	margin: 50px 0;
+	border: 2px dashed whitesmoke;
+}
