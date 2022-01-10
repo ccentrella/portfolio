@@ -8,6 +8,20 @@
     <meta name="description" content="Christian web designer, software engineer">
     <meta name="keywords" content="Chris Centrella, christian, web, designer, developer, software, engineer, website">
     <meta name="width" content="width=device-width, content=1.0">
+    <script type="text/javascript">
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+    </script>
 </head>
 
 <body>
@@ -57,12 +71,12 @@
             <h2 class="logo-small">Chris<br/>Centrella</h2>
         </div>
         <div class="footer-bottom">
-            <div class="flex">
-            <a class="button" href="#">Vision</a>
-            <a class="button" href="#">Work</a>
-            <a class="button" href="#">Photos</a>
-            <a class="button" href="#">Blog</a>
-        </div>
+            <div class="flex-wrap">
+                <a class="footer-button" href="#">Vision</a>
+                <a class="footer-button" href="#">Work</a>
+                <a class="footer-button" href="#">Photos</a>
+                <a class="footer-button" href="#">Blog</a>
+            </div>
             <hr/>
             <p class="copyright">© 2021 Chris Centrella.
                 All rights reserved.</p>

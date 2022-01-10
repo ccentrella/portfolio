@@ -34,6 +34,13 @@ h1 {
 	justify-content: space-between;
 }
 
+.flex-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap:wrap;
+}
+
 .menu-toggle {
 	height: 28px;
 	padding: 25px;
@@ -62,7 +69,9 @@ header {
 
 .home-image{
 	height: 100vw;
+	height: calc(var(--vh, 1vh) * 100);
 	border-bottom: 3px solid #3c4006c7;
+	padding-bottom: 15px;
 	background-color: #3D5D212e;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -124,7 +133,7 @@ div.button-div {
 	padding: 30px 0 15px 0;
 	text-align: center;
 }
-a.button {
+a.button, a.footer-button {
 	padding: 15px 22px 14px 21px;
 	border: 2px solid #4C8E13;
 	border-radius: 30px;
@@ -138,10 +147,23 @@ a.button {
 	text-align: center;
 }
 
-
 a.button:hover {
-	color: #fcfcfc;
+	color: whitesmoke;
 	background-color: #3B4D0A;
+}
+
+a.footer-button
+{
+	padding: 15px 25px 15px 25px;
+	margin: 10px;
+	color: whitesmoke;
+	border-color: whitesmoke;
+}
+
+a.footer-button:hover
+{
+	background-color: whitesmoke;
+	color: #3F0708;
 }
 
 /*Footer*/
@@ -157,20 +179,20 @@ footer {
 
 .footer-bottom
 {
-	padding: 50px 0 20px 0;
+	padding: 30px 0 20px 0;
 	height: 250px;
 	background-color: #3F0708;
 	align-items: center;
 }
 .copyright {
+	padding: 0 20px 20px 20px;
 	font-family: 'Quasimoda', sans-serif;
 	color: whitesmoke;
 	font-weight: 300;
-	font-size: 0.8em;
-	padding: 25px;
+	font-size: 12pt;
 }
 hr
 {
-	margin: 50px 0;
-	border: 2px dashed whitesmoke;
+	margin: 30px 0;
+	border: 1px dashed whitesmoke;
 }
