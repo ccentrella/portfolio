@@ -9,18 +9,18 @@
     <meta name="keywords" content="Chris Centrella, christian, web, designer, developer, software, engineer, website">
     <meta name="width" content="width=device-width, content=1.0">
     <script type="text/javascript">
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
 
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    // We listen to the resize event
-    window.addEventListener('resize', () => {
-    // We execute the same script as before
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+        // We listen to the resize event
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
     </script>
 </head>
 
@@ -28,7 +28,7 @@
     <header>
         <div class="home-image">
             <div class="home-overlay">
-                <h1 class="logo">Chris<br/>Centrella</h1>
+                <h1 class="logo">Chris<br />Centrella</h1>
                 <div class="flex">
                     <h2 class="logo-tagline">Web Designer</h2>
                 </div>
@@ -41,34 +41,39 @@
         </ul>
     </div>-->
     </header>
-    <h1>About Me</h1>
-    <p class="large">
-        I’m an aspiring software engineer. I especially love creating user interfaces, because it allows me to uniquely
-        express what matters most—to myself, my clients, or my company.
-    </p>
-    <div class="button-div"><a class="button" href="#">Work Experience</a></div>
-    <h1>Vision</h1>
-    <p class="large">
-        To bring the love and healing of Jesus to His children, through technology.
-    </p>
-    <div class="button-div"><a class="button" href="#">Mission Statement</a></div>
+    <main>
+        <h1>About Me</h1>
+        <p class="large">
+            I’m an aspiring software engineer. I especially love creating user interfaces, because it allows me to
+            uniquely
+            express what matters most—to myself, my clients, or my company.
+        </p>
+        <div class="button-div"><a class="button" href="#">Work Experience</a></div>
+        <h1>Vision</h1>
+        <p class="large">
+            To bring the love and healing of Jesus to His children, through technology.
+        </p>
+        <div class="button-div"><a class="button" href="#">Mission Statement</a></div>
 
-    <h1>Captivate</h1>
-    <p class="large">
-        It’s my passion to capture the moment through the gift of photography. Beautiful things bring hope and light to
-        those who are depressed. Photography allows me to capture and preserve what’s beautiful. </p>
-    <div class="button-div"><a class="button" href="#">Photo Gallery</a></div>
+        <h1>Captivate</h1>
+        <p class="large">
+            It’s my passion to capture the moment through the gift of photography. Beautiful things bring hope and light
+            to
+            those who are depressed. Photography allows me to capture and preserve what’s beautiful. </p>
+        <div class="button-div"><a class="button" href="#">Photo Gallery</a></div>
         <h1>Love</h1>
-    <p class="large">
-        Naked on the cross, Jesus cried out to His Father to have mercy on those who killed Him: “Father, forgive them,
-        for they know not what they do.” Likewise, Jesus calls me to love each of His children, no matter what they have
-        done or where they have been.</p>
-    <div class="button-div"><a class="button" href="#">Personal Blog</a></div>
-    
+        <p class="large">
+            Naked on the cross, Jesus cried out to His Father to have mercy on those who killed Him: “Father, forgive
+            them,
+            for they know not what they do.” Likewise, Jesus calls me to love each of His children, no matter what they
+            have
+            done or where they have been.</p>
+        <div class="button-div"><a class="button" href="#">Personal Blog</a></div>
+    </main>
     <!--Footer-->
     <footer>
         <div class="footer-top">
-            <h2 class="logo-small">Chris<br/>Centrella</h2>
+            <h2 class="logo-small">Chris<br />Centrella</h2>
         </div>
         <div class="footer-bottom">
             <div class="flex-wrap">
@@ -77,7 +82,7 @@
                 <a class="footer-button" href="#">Photos</a>
                 <a class="footer-button" href="#">Blog</a>
             </div>
-            <hr/>
+            <hr />
             <p class="copyright">© 2021 Chris Centrella.
                 All rights reserved.</p>
         </div>
