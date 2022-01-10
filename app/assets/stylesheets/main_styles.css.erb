@@ -41,9 +41,9 @@ h1 {
 
 .flex-wrap {
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	flex-wrap:wrap;
+	gap: 15px;
 }
 
 .menu-toggle {
@@ -111,7 +111,7 @@ header {
 
 .logo-small {
 	padding: 30px 25px 0 25px;
-	font-size: 14vw;
+	font-size: 12vw;
 }
 
 .logo-tagline {
@@ -159,11 +159,10 @@ a.button:hover {
 
 a.footer-button
 {
-	padding: 15px 25px 15px 25px;
-	margin: 10px;
 	color: whitesmoke;
 	border-color: whitesmoke;
 	flex-basis: 30%;
+	max-width: 120px;
 }
 
 a.footer-button:hover
@@ -178,20 +177,20 @@ footer {
 	margin: -8px;
 }
 .footer-top{
-	height: 180px;
+	height: auto;
+	padding-bottom: 10%;
 	background-color: #2E4000;
 	border-top: 3px solid #6A80007f;
 }
 
 .footer-bottom
 {
-	padding: 30px 0 20px 0;
-	height: 250px;
+	padding: 30px 0 0 0;
 	background-color: #3F0708;
-	align-items: center;
 }
 .copyright {
 	padding: 0 20px 20px 20px;
+	margin: 0;
 	font-family: 'Quasimoda', sans-serif;
 	color: whitesmoke;
 	font-weight: 300;
