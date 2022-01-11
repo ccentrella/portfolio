@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+    <title><%= full_title(yield (:title)) %></title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Chris Centrella">
+    <meta name="description" content="Christian web designer, software engineer">
+    <meta name="keywords" content="Chris Centrella, christian, web, designer, developer, software, engineer, website">
+    <meta name="width" content="width=device-width, content=1.0">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +17,8 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
