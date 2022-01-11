@@ -8,6 +8,8 @@ $light-text: #fcfcfc;
 $primary: #9A0002;
 $secondary: #3D5D21;
 $navbar: #657C3B;
+$timeline: #496600;
+$timeline-text: #627E2D;
 $background-footer-top: #2E4000;
 $background-footer-border: #6A80007f;
 $background-footer-bottom: #3F0708;
@@ -35,7 +37,9 @@ p {
     }
 }
 
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+}
 
 h1,
 h2,
@@ -65,6 +69,91 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.dot,
+.dot-small,
+.dot-beginning,
+.dot-end {
+    margin-right: -0.2em;
+    margin-block: -0.35em;
+    display: inline-block;
+    height: 1.15em;
+    width: 1.15em;
+    background-color: $timeline-text;
+    border-radius: 50%;
+}
+
+.dot-beginning {
+    margin-left: -0.85em;
+    margin-bottom: 2em;
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.dot-end {
+    margin-left: -0.85em;
+    margin-top: 1em;
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.dot-small {
+    margin-left: 0.2em;
+    margin-right: 0;
+    margin-block: -0.2em;
+    height: 15px;
+    width: 15px;
+}
+
+.timeline {
+    margin-top: 3em;
+    margin-left: 3em;
+    border-left: 4px solid $timeline;
+}
+
+.timeline-item {
+    >h2 {
+        margin-left: 2em;
+        text-indent: -5.5em;
+        padding-right: 0.5em;
+        color: $timeline-text;
+        font-family: 'Quasimoda', sans-serif;
+        font-size: 2.75vh;
+        font-weight: 300;
+
+        .timeline-year {
+            padding-right: 0.4em;
+            font-family: droid-sans-mono, monospace;
+            font-weight: 400;
+        }
+
+        .timeline-heading {
+
+            &:before {
+                content: '⸻';
+                font-size: 2vh;
+            }
+        }
+
+    }
+
+    >p {
+        margin: 0.5em 0 0.5em 4em;
+        text-indent: -1.4em;
+        color: $timeline-text;
+        font-family: 'Quasimoda', sans-serif;
+        font-size: 2.25vh;
+        font-weight: 300;
+
+        &:before {
+            content: '⸺';
+            text-indent: 15px;
+            font-size: 1.75vh;
+        }
+    }
 }
 
 /** Header **/
@@ -150,8 +239,8 @@ footer {
     a {
         color: $logo-text
     }
-    a:hover
-    {
+
+    a:hover {
         color: $logo-text-hover
     }
 }
@@ -164,8 +253,7 @@ footer {
     padding: 30px 25px 0 25px;
     font-size: 12vw;
 
-    a:hover
-    {
+    a:hover {
         color: f0f0f0;
     }
 }
@@ -216,4 +304,3 @@ a.footer-button {
         color: $background-footer-bottom;
     }
 }
-
