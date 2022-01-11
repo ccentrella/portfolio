@@ -13,6 +13,8 @@ $background-footer-border: #6A80007f;
 $background-footer-bottom: #3F0708;
 $overlay: #3D5D2123;
 $banner-border: #3c4006c7;
+$logo-text: $light-text;
+$logo-text-hover: #ecf7ed;
 $button-border: #4C8E13;
 $button-hover: #3B4D0A;
 
@@ -32,6 +34,8 @@ p {
         font-size: 0.8em;
     }
 }
+
+a {text-decoration: none;}
 
 h1,
 h2,
@@ -141,7 +145,15 @@ footer {
     font-weight: 600;
     line-height: 1.15;
     font-size: 17vw;
-    color: $light-text;
+    color: $logo-text;
+
+    a {
+        color: $logo-text
+    }
+    a:hover
+    {
+        color: $logo-text-hover
+    }
 }
 
 .logo-large {
@@ -151,6 +163,11 @@ footer {
 .logo-small {
     padding: 30px 25px 0 25px;
     font-size: 12vw;
+
+    a:hover
+    {
+        color: f0f0f0;
+    }
 }
 
 .logo-tagline {
