@@ -7,15 +7,11 @@
     <meta name="author" content="Chris Centrella">
     <meta name="description" content="Christian web designer, software engineer">
     <meta name="keywords" content="Chris Centrella, christian, web, designer, developer, software, engineer, website">
-    <meta name="width" content="width=device-width, content=1.0">
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
     <%= render 'layouts/header' %>
     <%= yield %>
