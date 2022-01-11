@@ -11,17 +11,21 @@ $navbar: #657C3B;
 $background-footer-top: #2E4000;
 $background-footer-border: #6A80007f;
 $background-footer-bottom: #3F0708;
+$overlay: #3D5D2123;
+$banner-border: #3c4006c7;
+$button-border: #4C8E13;
+$button-hover: #3B4D0A;
 
 /** Text **/
 
 body,
 p {
     font-family: 'Quasimoda', sans-serif;
-    font-size: 2.5vh;
+    font-size: 3vh;
     font-weight: 300;
 
     &.large {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     &.small {
@@ -82,8 +86,7 @@ header {
 
 .banner-image {
     min-height: 250px;
-    border-bottom: 3px solid #3c4006c7;
-    background-color: #3D5D212e;
+    border-bottom: 3px solid $banner-border;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(<%= asset_path 'banner.png' %>);
@@ -91,8 +94,7 @@ header {
 
 .banner-overlay {
     padding-bottom: 25px;
-    background-color: #3D5D2123;
-
+    background-color: $overlay;
 }
 
 /** Footer **/
@@ -139,7 +141,7 @@ footer {
     font-weight: 600;
     line-height: 1.15;
     font-size: 17vw;
-    color: whitesmoke;
+    color: $light-text;
 }
 
 .logo-large {
@@ -169,32 +171,32 @@ div.button-div {
 a.button,
 a.footer-button {
     padding: 15px 22px 14px 21px;
-    border: 2px solid #4C8E13;
+    border: 2px solid $button-border;
     border-radius: 30px;
     background-color: transparent;
     font-family: 'rooney-sans', sans-serif;
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
     text-align: center;
 
     &:hover {
-        color: whitesmoke;
-        background-color: #3B4D0A;
+        color: $light-text;
+        background-color: $button-hover;
     }
 }
 
 a.footer-button {
-    color: whitesmoke;
-    border-color: whitesmoke;
+    color: $light-text;
+    border-color: $light-text;
     flex-basis: 30%;
     max-width: 120px;
 
     &:hover {
-        background-color: whitesmoke;
-        color: #3F0708;
+        background-color: $light-text;
+        color: $background-footer-bottom;
     }
 }
 
