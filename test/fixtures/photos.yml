@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyText
+  tag: MyString
+  alt: 1
+  likes: 1
+  allow_download: false
+  user_id: 1
+
+two:
+  path: MyText
+  tag: MyString
+  alt: 1
+  likes: 1
+  allow_download: false
+  user_id: 1

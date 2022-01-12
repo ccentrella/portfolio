@@ -7,6 +7,8 @@ one:
   category: MyString
   description: MyString
   tags: MyString
+  created_at: <%= 1.years.ago %>
+  user_id: 0
 
 two:
   content: MyText
@@ -15,3 +17,5 @@ two:
   category: MyString
   description: MyString
   tags: MyString
+  created_at: <%= 1.day.ago %>
+  user_id: 0

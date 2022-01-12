@@ -14,4 +14,13 @@ class PostTest < ActiveSupport::TestCase
     @post.title = nil
     assert_not @post.valid?
   end
+
+  test "user id should be present" do
+    @post.user_id = nil
+    assert_not @post.valid?
+  end
+
+  test "most recent posts should come first" do
+    assert_equal posts(:two), Post.first
+  end
 end
