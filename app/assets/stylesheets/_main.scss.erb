@@ -5,7 +5,11 @@
 $light-text: #fcfcfc;
 $primary: #9A0002;
 $secondary: #3D5D21;
-$navbar: #657C3B;
+$navbar: #425218;
+$navbar-item: #4E5D27;
+$navbar-hover: #35430F;
+$navbar-active: #2A3808;
+$navbar-border: #66693B;
 $timeline: #496600;
 $timeline-text: #627E2D;
 $background-footer-top: #2E4000;
@@ -37,6 +41,7 @@ p {
 
 a {
     text-decoration: none;
+    color: $light-text;
 }
 
 h1,
@@ -160,32 +165,76 @@ header {
     margin: -27px -8px 0109px -8px;
 }
 
+.navbar-outer {
+    flex-wrap: wrap;
+}
+
+@keyframes menu_toggle {
+    from {opacity: 1}
+    to {opacity: 0.7;}
+}
 .menu-toggle {
-    height: 28px;
-    padding: 25px;
+    height: 1.5em;
+    padding: 1.5em;
+    cursor:pointer;
+
+    &:hover {
+        opacity: 0.7;
+        animation-name: menu_toggle;
+        animation-duration: 1s;
+    }
 }
 
 .navbar {
-    margin-top: -32px;
-    height: 50px;
     background-color: $navbar;
+    border: 1px solid $navbar-border;
+    text-align: center;
+    display: none;
+    flex-basis: 100%;
 
     ul {
+        margin: 0;
+        padding: 0;
         float: none;
         list-style-type: none;
+    }
+
+    .nav-item {
+        &:nth-child(odd) {
+            background-color: $navbar-item;
+        }
+
+        a {
+            padding: 0.6em;
+            font-size: 1.1em;
+            display: block;
+        }
+
+        &:hover {
+            background-color: $navbar-hover;
+        }
+
+        &.active {
+            background-color: $navbar-active;
+        }
+    }
+}
+
+#toggle {
+    display: none;
+
+    &:checked ~ .navbar {
+        display: block;
     }
 }
 
 .banner-image {
-    min-height: 250px;
     border-bottom: 3px solid $banner-border;
     background-repeat: no-repeat;
-    background-size: cover;
     background-image: url(<%= asset_path 'banner.png' %>);
 }
 
 .banner-overlay {
-    padding-bottom: 25px;
     background-color: $overlay;
 }
 
@@ -257,8 +306,9 @@ footer {
     }
 }
 
-.logo-tagline {
-    margin: 12px 0 0 0;
+.logo-tagline,
+.logo-tagline-header {
+    margin: 0.5em 0 0 0;
     padding: 0 15px 0 15px;
     font-family: jaf-domus-titling-web, sans-serif;
     font-weight: 500;
@@ -266,14 +316,31 @@ footer {
     color: white;
 }
 
-/** Buttons **/
-@keyframes button_hover{
-    from {background-color: transparent; color: black;}
-    to {background-color: $button-hover; color: $light-text;}
+.logo-tagline-header {
+    margin: -0.6em 0 0 0;
 }
+
+/** Buttons **/
+@keyframes button_hover {
+    from {
+        background-color: transparent;
+        color: black;
+    }
+
+    to {
+        background-color: $button-hover;
+        color: $light-text;
+    }
+}
+
 @keyframes button_hover_width {
-    from {padding-left: 0.5em;}
-    to {padding-left: 1em;}
+    from {
+        padding-left: 0.5em;
+    }
+
+    to {
+        padding-left: 1em;
+    }
 }
 
 div.button-div {

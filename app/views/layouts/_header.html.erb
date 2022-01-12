@@ -1,17 +1,24 @@
 <header>
-        <div class="banner-image">
-            <div class="banner-overlay">
-            <h1 class='logo'><%= link_to 'Chris Centrella', root_path %></h1>
-                <div class="flex">
-                    <h2 class="logo-tagline">Web Designer</h2>
-                    <%= image_tag "icons/menu.png" , class: 'menu-toggle' %>
-                </div>
-            </div>
+  <div class="banner-image">
+    <div class="banner-overlay">
+      <h1 class='logo'><%= link_to 'Chris Centrella', root_path %></h1>
+      <div class="flex navbar-outer">
+        <h2 class="logo-tagline-header">Web Designer</h2>
+        <input type="checkbox" id="toggle">
+        <label for="toggle">
+          <%= image_tag "icons/menu.png", class: 'menu-toggle' %>
+        </label>
+        <div class="navbar">
+          <ul>
+            <li class="nav-item"><%= link_to 'Home', root_path %></li>
+            <li class="nav-item"><%= link_to 'Work', about_path %></li>
+            <li class="nav-item"><%= link_to 'Vision', mission_path %></li>
+            <li class="nav-item"><%= link_to 'Photos', '#' %></li>
+            <li class="nav-item"><%= link_to 'Blog', '#' %></li>
+            <li class="nav-item"><%= link_to 'Contact Me', contact_path %></li>
+          </ul>
         </div>
-
-        <!--<div class="navbar">
-        <ul>
-            <li></li>
-        </ul>
-    </div>-->
+      </div>
+    </div>
+  </div>
 </header>
