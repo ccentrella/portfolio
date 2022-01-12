@@ -3,6 +3,7 @@
 /** Variables and mixins **/
 
 $light-text: #fcfcfc;
+$dark-text: #353535;
 $primary: #9A0002;
 $secondary: #3D5D21;
 $navbar: #425218;
@@ -29,6 +30,7 @@ p {
     font-family: 'Quasimoda', sans-serif;
     font-size: 2.75vh;
     font-weight: 300;
+    color: $dark-text;
 
     &.large {
         font-size: 1.1em;
@@ -41,7 +43,11 @@ p {
 
 a {
     text-decoration: none;
-    color: $light-text;
+    color: dodgerblue;
+
+    &:hover {
+        color: deepskyblue;
+    }
 }
 
 h1,
@@ -208,6 +214,7 @@ header {
             padding: 0.6em;
             font-size: 1.1em;
             display: block;
+            color: $light-text;
         }
 
         &:hover {

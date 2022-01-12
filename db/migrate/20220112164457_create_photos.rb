@@ -7,7 +7,6 @@ class CreatePhotos < ActiveRecord::Migration[7.0]
       t.integer :likes
       t.boolean :allow_download
       t.integer :user_id
-
       t.timestamps
     end
   end
