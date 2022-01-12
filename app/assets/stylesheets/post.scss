@@ -1,0 +1,15 @@
+$background: #4A0809;
+
+.post {
+    border: 1px solid $background;
+    border-radius: 1em;
+}
+
+.post-image
+{
+    height: 1.5em
+}
+
+.post-details {
+    background-color: $background;
+}
