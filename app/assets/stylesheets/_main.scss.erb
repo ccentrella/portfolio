@@ -22,6 +22,9 @@ $logo-text: $light-text;
 $logo-text-hover: #ecf7ed;
 $button-border: #4C8E13;
 $button-hover: #3B4D0A;
+$flash-success: #657C3B;
+$flash-warning: #D97109;
+$flash-error: #D92E2E;
 
 /** Text **/
 
@@ -166,9 +169,34 @@ hr {
     }
 }
 
+.flash-container {
+    margin: -3em 0 0 0;
+}
+
+.flash, .flash-success {
+    margin: 0 0.5em;
+    padding: 0.5em 1em;
+    text-align: center;
+    background-color: $flash-success;
+    border-radius: 4em;
+
+    p {
+        color: $light-text;
+    }
+
+}
+
+.flash-warning {
+    background-color: $flash-warning;
+}
+
+.flash-error {
+    background-color: $flash-error;
+}
+
 /** Header **/
 header {
-    margin: -27px -8px 0109px -8px;
+    margin: -8px -8px 6em -8px;
 }
 
 .navbar-outer {
