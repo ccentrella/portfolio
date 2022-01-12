@@ -31,18 +31,24 @@
         uniquely
         express what matters most—to myself, my clients, or my company.
       </p>
-      <div class="button-div"><a class="button" href="/about">Work Experience<i class="icon fa fa-chevron-right"></i></a></div>
+      <div class="button-div">
+        <%= link_to "Work Experience<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button' %>
+      </div>
       <h1>Vision</h1>
       <p class="large">
         To bring the love and healing of Jesus to His children, through technology.
       </p>
-      <div class="button-div"><a class="button" href="/mission">Mission Statement<i class="icon fa fa-chevron-right"></i></a></div>
+      <div class="button-div">
+        <%= link_to "Mission Statement<i class='icon fa fa-chevron-right'></i>".html_safe, mission_path, class: 'button' %>
+      </div>
       <h1>Captivate</h1>
       <p class="large">
         It’s my passion to capture the moment through the gift of photography. Beautiful things bring hope and light
         to
         those who are depressed. Photography allows me to capture and preserve what’s beautiful. </p>
-      <div class="button-div"><a class="button" href="#">Photo Gallery<i class="icon fa fa-chevron-right"></i></a></div>
+      <div class="button-div">
+        <%= link_to "Photo Gallery<i class='icon fa fa-chevron-right'></i>".html_safe, '#', class: 'button' %>
+      </div>
       <h1>Love</h1>
       <p class="large">
         Naked on the cross, Jesus cried out to His Father to have mercy on those who killed Him: “Father, forgive
@@ -50,8 +56,10 @@
         for they know not what they do.” Likewise, Jesus calls me to love each of His children, no matter what they
         have
         done or where they have been.</p>
-      <div class="button-div"><a class="button" href="#">Personal Blog<i class="icon fa fa-chevron-right"></i></a></div>
-    </main>
+      <div class="button-div">
+        <%= link_to "Personal Blog<i class='icon fa fa-chevron-right'></i>".html_safe, '#', class: 'button' %>
+      </div>
+      </main>
     <%= render 'layouts/footer' %>
   </body>
 </html>
