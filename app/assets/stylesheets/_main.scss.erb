@@ -1,7 +1,5 @@
 /* CSS Document */
 
-@import url("https://use.typekit.net/dby5tzk.css");
-
 /** Variables and mixins **/
 
 $light-text: #fcfcfc;
@@ -269,6 +267,15 @@ footer {
 }
 
 /** Buttons **/
+@keyframes button_hover{
+    from {background-color: transparent; color: black;}
+    to {background-color: $button-hover; color: $light-text;}
+}
+@keyframes button_hover_width {
+    from {padding-left: 0.5em;}
+    to {padding-left: 1em;}
+}
+
 div.button-div {
     padding: 30px 0 15px 0;
     text-align: center;
@@ -288,9 +295,21 @@ a.footer-button {
     text-transform: uppercase;
     text-align: center;
 
+    .icon {
+        padding-left: 0.5em;
+    }
+
     &:hover {
         color: $light-text;
         background-color: $button-hover;
+        animation-name: button_hover;
+        animation-duration: 1s;
+
+        .icon {
+            padding-left: 1em;
+            animation-name: button_hover_width;
+            animation-duration: 1s;
+        }
     }
 }
 
@@ -303,5 +322,6 @@ a.footer-button {
     &:hover {
         background-color: $light-text;
         color: $background-footer-bottom;
+        animation-name: none;
     }
 }
