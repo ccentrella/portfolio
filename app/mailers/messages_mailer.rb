@@ -7,6 +7,6 @@ class MessagesMailer < ApplicationMailer
   #
   def send_message(message)
     @message = message
-    mail to: message.email, subject: "New Form Submission"
+    mail to: "ccentrella.j@gmail.com", subject: "New Form Submission"
    end
 end
