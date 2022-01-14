@@ -1,12 +1,12 @@
 class MessagesController < ApplicationController
 
     def create
-        @message = Message.new(user_params)
-        if @user.delivery
+        @message = Message.new(message_params)
+        if @message.send_message_email
             flash.now[:success] = 'Message sent!'
         else
-            flash.now[:error]= 'Could not send message'
-            render 'new'
+            flash.now[:error] = 'Could not send message'
+            render :new
         end
     end
 
@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
 
     private
 
-    def user_params
-        params.require(:user).permit(:name, :email, :message)
+    def message_params
+        params.require(:message).permit(:name, :email, :details, :nickname)
     end
 end
