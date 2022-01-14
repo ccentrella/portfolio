@@ -2,18 +2,10 @@
 <main>
   <h1>Get in Touch</h1>
   <p class="large">Thank you so much for reaching out to me! Because I’m still attending college I can’t make any promises, but I will do my best to respond as soon as possible. I look forward to getting back to you!</p>
-  <p class="large">“The Lord, He is my strength and my song, and He has become my salvation. He is <em>my God</em>.”<br/>
+  <p class="large">“The Lord, He is my strength and my song, and He has become my salvation. He is <em>my God</em>.”
     (Exodus 15:2)</p>
-  <br/>
-  <h1>Website Under Construction!!!</h1>
-  <h2>In the meantime, please contact me through LinkedIn or Facebook.</h2>
-  <div class="button-div">
-    <a href="https://www.facebook.com/ccentrella.j" class="button">Facebook</a>
-  </div>
-  <div class="button-div" style="padding-bottom:65px">
-    <a href="https://www.linkedin.com/in/ccentrella/" class="button">LinkedIn</a>
-  </div>
-  <%= form_with(model: @message, class: 'contact-form') do |f| %>
+</main>
+<%= form_with(model: @message, class: 'contact-form') do |f| %>
     <%= render 'shared/error_messages' %>
 
     <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
@@ -25,5 +17,4 @@
 
     <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>
     <%= f.submit 'Send Message', class: 'button field submit-button' %>
-  <% end %>
-</main>
+<% end %>

@@ -13,27 +13,29 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <header>
-      <div class="hero-image">
-        <div class="hero-overlay">
-          <h1 class="logo-large">Chris<br />
-            Centrella</h1>
-          <div class="flex">
-            <h2 class="logo-tagline">Web Designer</h2>
+      <div class="hero">
+        <div class="hero-image">
+          <div class="hero-overlay">
+            <h1 class="logo-large">Chris<br />
+              Centrella</h1>
+            <div class="flex">
+              <h2 class="logo-tagline">Web Designer</h2>
+            </div>
+          </div>
+        </div>
+        <div class="hero-about">
+          <h1>About Me</h1>
+          <p class="large">
+            I’m an aspiring software engineer. I especially love creating user interfaces, because it allows me to
+            uniquely
+            express what matters most—to myself, my clients, or my company.
+          </p>
+          <div class="button-div">
+            <%= link_to "Work Experience<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button' %>
           </div>
         </div>
       </div>
-    </header>
-    <main>
-      <h1>About Me</h1>
-      <p class="large">
-        I’m an aspiring software engineer. I especially love creating user interfaces, because it allows me to
-        uniquely
-        express what matters most—to myself, my clients, or my company.
-      </p>
-      <div class="button-div">
-        <%= link_to "Work Experience<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button' %>
-      </div>
+      <main>
       <h1>Vision</h1>
       <p class="large">
         To bring the love and healing of Jesus to His children, through technology.
@@ -61,12 +63,12 @@
       </div>
       <h1>Get in Touch</h1>
       <p class="large">
-      Do you need assistance from a web designer or software engineer? Please don't hesitate to reach out to me and I will do my best to get back to you!
+        Do you need assistance from a web designer or software engineer? Please don't hesitate to reach out to me and I will do my best to get back to you!
       </p>
       <div class="button-div">
-      <%= link_to "Contact Me<i class='icon fa fa-chevron-right'></i>".html_safe, contact_path, class: 'button' %>
+        <%= link_to "Contact Me<i class='icon fa fa-chevron-right'></i>".html_safe, contact_path, class: 'button' %>
       </div>
-      </main>
+    </main>
     <%= render 'layouts/footer' %>
   </body>
 </html>

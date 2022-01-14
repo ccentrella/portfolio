@@ -1,8 +1,15 @@
+.hero {
+    display: block;
+    align-items: center;
+}
+
 .hero-image {
     display: flex;
+    order: 2;
+    flex: 1 0 0;
     align-items: center;
-    height: calc(var(--vh, 1vh) * 100);
-    border-bottom: 3px solid #3c4006c7;
+    height: calc(var(--vh, 1vh) * 100 - 30px);
+    border-bottom: 30px solid #3c4006c7;
     padding-bottom: 20px;
     background-color: #3D5D212e;
     background-repeat: no-repeat;
@@ -15,4 +22,35 @@
     padding-bottom: 50px;
     width: 100%;
     background-color: #3D5D2123;
+}
+
+.hero-about {
+    padding: 30px 30px 0 20px;
+    order: 1;
+    flex: 1 0 0;
+}
+
+@media screen and (min-width:750px) {
+    .hero {
+        display: flex;
+        border-bottom: 5px dashed #3c4006c7;
+    }
+
+    main {
+        margin-top:100px;
+    }
+
+    .hero-image {
+         padding: 0 2em;
+    }
+
+    .hero-overlay {
+        margin-top: 50px;
+        background: transparent;
+    }
+
+    .hero-about {
+        padding: 0 2em;
+    }
+   
 }
