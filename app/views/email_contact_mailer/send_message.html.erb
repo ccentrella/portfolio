@@ -1,0 +1,14 @@
+<h1>Submission</h1>
+
+<p>
+  Hello Chris, you have recently received a form submission! See below for more details.
+</p>
+
+<h2>Submission Details</h2>
+<p>Name: <%= @email_contact.name %></p>
+<p>Email: <%= @email_contact.email %></p>
+<p>Message Contents: <%= @email_contact.message %></p>
+<p>Time: <%= Time.current %>
+<br/>
+<p>To respond, send to this email: <%= @email_contact.email %></p>
+<a class="button" href="mailto:<%= @email_contact.email %>">Respond</a>

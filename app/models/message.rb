@@ -1,11 +1,13 @@
 class Message < MailForm::Base
-    attribute :name, validate: true
-    attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-    attribute :details, validate: true
-    attribute :nickname, captcha: true
+    attr_accessor :name, :email, :details, :nickname
+    validates(:name, presence: true, length: { maximum: 50 })
+    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    validates(:email, presence: true, length: { maximum: 255 },
+              format: { with: VALID_EMAIL_REGEX })
 
     # Send email
     def send_message_email
-        MessagesMailer.send_message(self).deliver_now
+        EmailContactMailer.send_message(self).deliver
     end
+
 end
