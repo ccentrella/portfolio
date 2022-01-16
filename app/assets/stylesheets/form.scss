@@ -44,3 +44,12 @@ $light-text: #fcfcfc;
         animation-duration: 1s;
     }
 }
+
+@media (pointer: fine) {
+    .submit-button:hover {
+        background-color: $light-text;
+        color: #700C0E;
+        animation-name: button_hover;
+        animation-duration: 1s;
+    }
+}
