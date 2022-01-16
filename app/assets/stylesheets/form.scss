@@ -37,12 +37,6 @@ $light-text: #fcfcfc;
     border: 2px solid $light-text;
     color: $light-text;
 
-    &:hover {
-        background-color: $light-text;
-        color: #700C0E;
-        animation-name: button_hover;
-        animation-duration: 1s;
-    }
 }
 
 @media (pointer: fine) {
