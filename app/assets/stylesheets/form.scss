@@ -8,7 +8,7 @@ $light-text: #fcfcfc;
     text-align: center;
 }
 
-.field {
+.field, .field:hover {
     margin: 0.5em 0;
     padding: 1em;
     width: 90%;
@@ -26,7 +26,7 @@ $light-text: #fcfcfc;
     border-radius: 40px;
 }
 
-@keyframes button_hover{
+@keyframes submit_button_hover{
     from {background-color: transparent;}
     to {background-color: $light-text;}
 }
@@ -37,13 +37,11 @@ $light-text: #fcfcfc;
     border: 2px solid $light-text;
     color: $light-text;
 
-}
-
-@media (pointer: fine) {
-    .submit-button:hover {
+    &:hover {
+        border: 2px solid $light-text;
         background-color: $light-text;
         color: #700C0E;
-        animation-name: button_hover;
+        animation-name: submit_button_hover;
         animation-duration: 1s;
     }
 }
