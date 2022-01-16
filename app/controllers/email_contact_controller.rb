@@ -5,7 +5,8 @@ class EmailContactController < ApplicationController
     
     def create
         @email_contact = EmailContact.new(email_contact_params)
-        if @email_contact.deliver
+        if @email_contact.valid?
+            @email_contact.deliver
             flash[:success] = 'Message sent!'
             redirect_to contact_path
         else

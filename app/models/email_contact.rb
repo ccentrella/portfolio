@@ -1,5 +1,6 @@
 class EmailContact
     include ActiveModel::API
+    include ActiveModel::Validations
 
     attr_accessor :name, :email, :message, :nickname
     validates :name, presence: true, length: { maximum: 50 }
@@ -10,8 +11,6 @@ class EmailContact
     validates :nickname, presence: false
 
     def deliver
-        if valid?
             EmailContactMailer.send_message(self).deliver
-        end
     end
 end
