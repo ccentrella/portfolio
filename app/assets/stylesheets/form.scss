@@ -26,15 +26,25 @@ $light-text: #fcfcfc;
     border-radius: 40px;
 }
 
+@keyframes submit_button_hover{
+    from {background-color: transparent;}
+    to {background-color: $light-text;}
+}
+
 .submit-button {
     text-transform: uppercase;
     background-color: transparent;
     border: 2px solid $light-text;
     color: $light-text;
+}
 
-    &:hover {
+@media (pointer: fine)
+{
+    .submit-button:hover {
         border: 2px solid $light-text;
         background-color: $light-text;
         color: #700C0E;
+        animation-name: submit_button_hover;
+        animation-duration: 1s;
     }
 }
