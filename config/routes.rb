@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   # Required for contact form
   resources :email_contact, only: [:new, :create]
+
 end
