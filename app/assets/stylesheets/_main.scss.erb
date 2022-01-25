@@ -513,9 +513,16 @@ div.button-div {
     padding: 50px 0 15px 0;
     text-align: center;
 }
+div.button-div-fixed {
+    padding: 15px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 a.button,
-a.footer-button {
+a.footer-button,
+a.button-fixed {
     padding: 15px 22px 14px 21px;
     border: 2px solid $button-border;
     border-radius: 30px;
@@ -557,6 +564,12 @@ a.footer-button {
         color: $background-footer-bottom;
         animation-name: none;
     }
+}
+
+a.button-fixed {
+    display: inline-block;
+    margin-bottom: 1em;
+    width: 20em;
 }
 
 a.footer-social {
