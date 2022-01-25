@@ -354,8 +354,10 @@ footer {
 }
 
 .footer-bottom {
-    padding: 30px 0 0 0;
+    padding: 30px 15px 15px 15px;
+    overflow: auto;
     background-color: $background-footer-bottom;
+    border-bottom: 5px solid rgb(145, 33, 17);
 
     .buttons {
         display: flex;
@@ -366,12 +368,15 @@ footer {
 }
 
 .copyright {
-    padding: 0 20px 20px 20px;
-    margin: 0;
     font-family: 'Quasimoda', sans-serif;
     font-weight: 300;
     font-size: 12pt;
     color: $light-text;
+}
+
+.socials {
+    margin-top: 1em;
+    text-align:center;
 }
 
 @media screen and (min-width:750px) {
@@ -394,6 +399,12 @@ footer {
 
     .copyright {
         font-size: 14pt;
+        display: inline;
+    }
+
+    .socials {
+        float: right;
+        margin: auto;
     }
 }
 
@@ -545,5 +556,18 @@ a.footer-button {
         background-color: $light-text;
         color: $background-footer-bottom;
         animation-name: none;
+    }
+}
+
+a.footer-social {
+    padding: 15px 7px;
+    color: $light-text;
+
+    &:hover {
+        filter: invert(93%) sepia(93%)
+           }
+
+    img {
+        width: 40px;
     }
 }

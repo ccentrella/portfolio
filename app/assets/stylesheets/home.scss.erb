@@ -8,13 +8,13 @@
     order: 2;
     flex: 1 0 0;
     align-items: center;
-    height: calc(var(--vh, 1vh) * 100 - 30px);
-    border-bottom: 30px solid #3c4006c7;
+    height: calc(var(--vh, 1vh) * 100 - 9px);
     padding-bottom: 20px;
     background-color: #3D5D212e;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(<%= asset_path 'background-home.png' %>);
+    border-bottom: 10px solid #3c4006c7;
 }
 
 .hero-overlay {
@@ -33,7 +33,13 @@
 @media screen and (min-width:750px) {
     .hero {
         display: flex;
-        border-bottom: 5px dashed #3c4006c7;
+        background-color: black;
+        margin-bottom: 4em;
+        border-bottom: 10px solid #3B4D0A;
+
+        p, a, h1 {
+            color: whitesmoke;
+        }
 
         main {
             margin-top: 100px;
@@ -41,6 +47,7 @@
 
         .hero-image {
             padding: 0 2em;
+            border: none;
         }
 
         .hero-overlay {

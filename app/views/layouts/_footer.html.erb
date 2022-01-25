@@ -14,5 +14,16 @@
             <hr />
             <p class="copyright">© 2021 Chris Centrella.
                 All rights reserved.</p>
+            <div class="socials">
+                <%= link_to (image_tag "icons/linkedin.svg"), 
+                "https://www.linkedin.com/in/ccentrella/",class: 'footer-social',
+                target: 'blank', rel: 'noopener'%>
+                <%= link_to (image_tag "icons/mail.svg"), 
+                contact_path, class: 'footer-social',
+                target: 'blank', rel: 'noopener'%>
+                <%= link_to (image_tag "icons/facebook.svg"), 
+                "https://www.facebook.com/ccentrella.j/",class: 'footer-social',
+                target: 'blank', rel: 'noopener'%>
+            </div>
         </div>
     </footer>
