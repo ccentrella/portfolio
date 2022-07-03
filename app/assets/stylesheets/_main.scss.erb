@@ -13,6 +13,7 @@ $navbar-active: #2A3808;
 $navbar-border: #7C9341;
 $timeline: #496600;
 $timeline-text: #627E2D;
+$background-green: #2E4000;
 $background-footer-top: #2E4000;
 $background-footer-border: #B5C081;
 $background-footer-bottom: #3F0708;
@@ -21,7 +22,13 @@ $banner-border: #7C9341;
 $logo-text: $light-text;
 $logo-text-hover: #ecf7ed;
 $button-border: #4C8E13;
+$button-text: #4F6513;
 $button-hover: #3B4D0A;
+$button-dark-border: #fcfcfc;
+$button-dark-text: #fcfcfc;
+$button-dark-hover: #fcfcfc;
+$button-dark-hover-text: #4F6513;
+$button-background-secondary: #5C7A0D;
 $flash-success: #657C3B;
 $flash-warning: #D97109;
 $flash-error: #D92E2E;
@@ -46,7 +53,14 @@ p {
     &.small {
         font-size: 0.8em;
     }
+
 }
+
+span.keyword {
+    color: #496600;
+    font-weight: 500;
+}
+
 
 a {
     text-decoration: none;
@@ -82,7 +96,7 @@ h2 {
 
 main {
     margin: 0;
-    padding: 0 30px 0 20px;
+    padding: 0 2.5em 0 2em;
 }
 
 hr {
@@ -424,6 +438,7 @@ footer {
     line-height: 1.15;
     font-size: 17vw;
     color: $logo-text;
+    text-shadow: 0 6px 6px #4f832863;
 
     a {
         color: $logo-text
@@ -495,7 +510,7 @@ footer {
 @keyframes button_hover {
     from {
         background-color: transparent;
-        color: black;
+        color: $button-text;
     }
 
     to {
@@ -503,14 +518,25 @@ footer {
         color: $light-text;
     }
 }
-
-@keyframes button_hover_width {
+@keyframes button_dark_hover {
     from {
-        padding-left: 0.5em;
+        background-color: transparent;
+        color: $button-dark-text;
     }
 
     to {
-        padding-left: 1em;
+        background-color: $button-dark-hover;
+        color: $button-dark-hover-text;
+    }
+}
+
+@keyframes button_width {
+    from {
+       padding-left: 1.5em;
+    }
+
+    to {
+       padding-left: 2em;
     }
 }
 
@@ -518,30 +544,47 @@ div.button-div {
     padding: 50px 0 15px 0;
     text-align: center;
 }
-div.button-div-fixed {
+div.button-div-fixed, .button-div-fixed-dark {
     padding: 15px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.button-div-fixed-dark {
+    padding: 5.5em 0 4.5em 0;
+    margin: 5em -2.5em 5em -2em;
+    background: $background-green;
+
+    .button-fixed {
+        border-color: $button-dark-border;
+        color: $button-dark-text;
+
+        &:hover {
+            color: $button-dark-hover-text;
+            background-color: $button-dark-hover;
+            animation-name: button_dark_hover;
+            animation-duration: 1s;
+        }
+    }
+}
 
 a.button,
 a.footer-button,
 a.button-fixed {
-    padding: 15px 22px 14px 21px;
+    padding: 1.4em 2em;
     border: 2px solid $button-border;
-    border-radius: 30px;
+    border-radius: 50px;
     background-color: transparent;
     font-family: 'rooney-sans', sans-serif;
     font-weight: 500;
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-decoration: none;
-    color: black;
+    color: $button-text;
     text-transform: uppercase;
     text-align: center;
 
     .icon {
-        padding-left: 0.5em;
+        padding-left: 1.5em;
     }
 
     &:hover {
@@ -551,9 +594,9 @@ a.button-fixed {
         animation-duration: 1s;
 
         .icon {
-            padding-left: 1em;
-            animation-name: button_hover_width;
+            animation-name: button_width;
             animation-duration: 1s;
+            padding-left: 2em;
         }
     }
 }
@@ -573,9 +616,17 @@ a.footer-button {
 
 a.button-fixed {
     display: inline-block;
+    padding: 1.4em 0;
     margin-bottom: 1em;
-    width: 20em;
-    max-width: 80%;
+    width: 15em;
+    max-width: 75%;
+
+    &.button-wide {
+        width: 18em;
+    }
+}
+a.highlight-button {
+    background-color: $button-background-secondary;
 }
 
 a.footer-social {
@@ -590,3 +641,10 @@ a.footer-social {
         width: 40px;
     }
 }
+
+<%# @media screen and (min-width:750px)
+{
+    .button-div-fixed-dark {
+        margin: 0 -15%;
+    }
+} %>

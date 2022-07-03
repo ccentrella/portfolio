@@ -24,50 +24,26 @@
           </div>
         </div>
         <div class="hero-about">
-          <h1>About Me</h1>
-          <p class="large">
-            I’m an aspiring software engineer. I especially love creating user interfaces, because it allows me to
-            uniquely
-            express what matters most—to myself, my clients, or my company.
-          </p>
-          <div class="button-div">
-            <%= link_to "Work Experience<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button' %>
-          </div>
+          <h1>Introduction</h1>
+          <p class="large">A learning-oriented and fast-paced early professional, I’m passionate about integrating cutting-edge technology with a love for <span class="keyword">people</span> and the <span class="keyword">environment</span>. </p>
+          <p class="large">Especially intriguing to me is the field of <span class="keyword">artificial intelligence</span> and <span class="keyword">machine learning</span>, where I can use my skills to deliver <span class="keyword">authentic value</span> to the world through the use of sophisticated automation and intelligence. </p>
         </div>
       </div>
       <main>
-      <h1>Vision</h1>
+          <div class="button-div-fixed-dark">
+            <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
+            <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
+            <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, resume_path, class: 'button-fixed' %>
+            <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
+          </div>
+      <h1>Projects</h1>
       <p class="large">
-        To bring the love and healing of Jesus to His children, through technology.
+        What better way to show that you know something than to actually use that knowledge? Here are some projects which I’ve worked on:
       </p>
-      <div class="button-div">
-        <%= link_to "Mission Statement<i class='icon fa fa-chevron-right'></i>".html_safe, mission_path, class: 'button' %>
-      </div>
-      <h1>Captivate</h1>
-      <p class="large">
-        It’s my passion to capture the moment through the gift of photography. Beautiful things bring hope and light
-        to
-        those who are depressed. Photography allows me to capture and preserve what’s beautiful. </p>
-      <div class="button-div">
-        <%= link_to "Photo Gallery<i class='icon fa fa-chevron-right'></i>".html_safe, photos_path, class: 'button' %>
-      </div>
-      <h1>Love</h1>
-      <p class="large">
-        Naked on the cross, Jesus cried out to His Father to have mercy on those who killed Him: “Father, forgive
-        them,
-        for they know not what they do.” Likewise, Jesus calls me to love each of His children, no matter what they
-        have
-        done or where they have been.</p>
-      <div class="button-div">
-        <%= link_to "Personal Blog<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'button' %>
-      </div>
-      <h1>Get in Touch</h1>
-      <p class="large">
-        Do you need assistance from a web designer or software engineer? Please don't hesitate to reach out to me and I will do my best to get back to you!
-      </p>
-      <div class="button-div">
-        <%= link_to "Contact Me<i class='icon fa fa-chevron-right'></i>".html_safe, contact_path, class: 'button' %>
-      </div>
+          <div class="button-div-fixed-dark">
+            <%= link_to "Personal Portfolio<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed button-wide' %>
+            <%= link_to "Browse Repository<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed highlight-button button-wide', target: '_blank' %>
+          </div>
     </main>
     <%= render 'layouts/footer' %>
   </body>
