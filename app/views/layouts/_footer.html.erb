@@ -1,29 +1,22 @@
     <!--Footer-->
+    <p class="large main">
+    Thank you so much for taking the time to view my portfolio! Have a look at my resumé, by clicking the button below.
+    </p>
+    <div class="button-div resume-button-div">
+        <%= link_to "Download Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, resume_path, class: 'button resume-button' %>
+    </div>
     <footer>
         <div class="footer-top">
             <h2 class='logo-small'><%= link_to 'Chris Centrella', root_path %></h2>
         </div>
+          <div class="button-div-fixed-dark">
+            <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
+            <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
+            <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, resume_path, class: 'button-fixed' %>
+            <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
+          </div>
         <div class="footer-bottom">
-            <div class="buttons">
-                <%= link_to "Vision<i class='icon fa fa-chevron-right'></i>".html_safe, mission_path, class: 'footer-button' %>
-                <%= link_to "Work<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'footer-button' %>
-                <div class="flex-break"></div>
-                <%= link_to "Photos<i class='icon fa fa-chevron-right'></i>".html_safe, photos_path, class: 'footer-button' %>
-                <%= link_to "Blog<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'footer-button' %>
-            </div>
-            <hr />
-            <p class="copyright">© 2021 Chris Centrella.
+            <p class="copyright">© 2021 – 2022 Chris Centrella.
                 All rights reserved.</p>
-            <div class="socials">
-                <%= link_to (image_tag "icons/linkedin.svg"), 
-                "https://www.linkedin.com/in/ccentrella/",class: 'footer-social',
-                target: 'blank', rel: 'noopener'%>
-                <%= link_to (image_tag "icons/mail.svg"), 
-                contact_path, class: 'footer-social',
-                target: 'blank', rel: 'noopener'%>
-                <%= link_to (image_tag "icons/facebook.svg"), 
-                "https://www.facebook.com/ccentrella.j/",class: 'footer-social',
-                target: 'blank', rel: 'noopener'%>
-            </div>
         </div>
     </footer>

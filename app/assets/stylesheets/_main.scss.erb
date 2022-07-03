@@ -14,9 +14,8 @@ $navbar-border: #7C9341;
 $timeline: #496600;
 $timeline-text: #627E2D;
 $background-green: #2E4000;
-$background-footer-top: #2E4000;
-$background-footer-border: #B5C081;
-$background-footer-bottom: #3F0708;
+$background-footer-top: #2E3400;
+$background-footer-bottom: #242222;
 $overlay: #3D5D2123;
 $banner-border: #7C9341;
 $logo-text: $light-text;
@@ -94,7 +93,7 @@ h2 {
     display: none;
 }
 
-main {
+main, .main {
     margin: 0;
     padding: 0 2.5em 0 2em;
 }
@@ -361,34 +360,28 @@ header {
 
 /** Footer **/
 footer {
-    padding-top: 110px;
+    margin-top: 5em;
+
+    .button-div-fixed-dark {
+        margin: 0;
+        padding: 3.5em 0 2em 0;
+    }
 }
 
 .footer-top {
-    height: auto;
-    padding-bottom: 10%;
-    border-top: 3px solid $background-footer-border;
+    padding: 3em 0.5em 1.75em 0.5em;
     background-color: $background-footer-top;
 }
 
 .footer-bottom {
-    padding: 30px 15px 15px 15px;
-    overflow: auto;
+    padding: 1em 2.5em;
     background-color: $background-footer-bottom;
-    border-bottom: 5px solid #732718;
-
-    .buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
 }
 
 .copyright {
     font-family: 'Quasimoda', sans-serif;
     font-weight: 300;
-    font-size: 12pt;
+    font-size: 1em;
     color: $light-text;
 }
 
@@ -408,10 +401,6 @@ footer {
         }
     }
 
-    .footer-bottom .buttons {
-        gap: 15px 150px;
-    }
-    
     hr {
         margin-bottom: 20px;
     }
@@ -454,7 +443,7 @@ footer {
 }
 
 .logo-small {
-    padding: 30px 25px 0 25px;
+    padding: 0 1em;
     font-size: 12vw;
 
     a:hover {
@@ -551,7 +540,7 @@ div.button-div-fixed, .button-div-fixed-dark {
     align-items: center;
 }
 .button-div-fixed-dark {
-    padding: 5.5em 0 4.5em 0;
+    padding: 5.5em 0 4em 0;
     margin: 5em -2.5em 5em -2em;
     background: $background-green;
 
@@ -617,7 +606,7 @@ a.footer-button {
 a.button-fixed {
     display: inline-block;
     padding: 1.4em 0;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     width: 15em;
     max-width: 75%;
 
@@ -627,6 +616,9 @@ a.button-fixed {
 }
 a.highlight-button {
     background-color: $button-background-secondary;
+}
+div.resume-button-div {
+    margin-top: 1.5em;
 }
 
 a.footer-social {
