@@ -1,18 +1,18 @@
     <!--Footer-->
-    <p class="large main">
+    <p class="large main resume-button-text">
     Thank you so much for taking the time to view my portfolio! Have a look at my resumé, by clicking the button below.
     </p>
-    <div class="button-div resume-button-div">
-        <%= link_to "Download Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, resume_path, class: 'button resume-button' %>
+    <div class="button-container resume-button-container">
+        <%= link_to "Download Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button resume-button', target: '_blank' %>
     </div>
     <footer>
         <div class="footer-top">
-            <h2 class='logo-small'><%= link_to 'Chris Centrella', root_path %></h2>
+            <h2 class='logo'><%= link_to 'Chris Centrella', root_path %></h2>
         </div>
-          <div class="button-div-fixed-dark">
+          <div class="button-fixed-container-dark">
             <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
             <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
-            <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, resume_path, class: 'button-fixed' %>
+            <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
             <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
           </div>
         <div class="footer-bottom">
