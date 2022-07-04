@@ -1,6 +1,16 @@
 .hero {
     display: block;
     align-items: center;
+
+    .logo {
+        font-size: 3.2em;
+        margin: 0;
+        padding: 0.25em;
+    }
+
+    .logo-tagline {
+        padding: 0 0.5em 0 0.75em
+    }
 }
 
 .hero-image {
@@ -17,15 +27,15 @@
     border-bottom: 10px solid #3c4006c7;
 }
 
-<%# .hero-overlay {
+/* .hero-overlay {
     margin-top: 150px;
     padding-bottom: 50px;
     width: 100%;
     background-color: #3D5D2123;
-} %>
+} */
 
 .hero-about {
-    padding: 3em 2.5em 0 2em;
+    padding: 3em 2em 0 2.25em;
     order: 1;
     flex: 1 0 0;
 }
@@ -34,7 +44,7 @@
     .hero {
         display: flex;
         background-color: black;
-        margin-bottom: 4em;
+        margin-bottom: -5em;
         border-bottom: 10px solid #3B4D0A;
 
         p, a, h1 {
