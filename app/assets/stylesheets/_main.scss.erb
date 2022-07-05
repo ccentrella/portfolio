@@ -124,8 +124,8 @@ hr {
 /** Logo **/
 
 .logo {
-    margin: 0 0.5em;
-    padding: 1em 0.25em 0.5em 0.25em;
+    margin: 0;
+    padding: 1em 0.75em 0.5em 0.75em;
     font-family: jaf-domus-titling-web, sans-serif;
     font-weight: 600;
     line-height: 1.15;
@@ -134,11 +134,12 @@ hr {
     text-shadow: 0 6px 6px #4f832863;
 
     a {
-        color: $logo-text
-    }
-
-    a:hover {
-        color: $logo-text-hover
+        color: $logo-text;
+        transition: all 250ms;
+    
+        &:hover {
+            color: $logo-text-hover;
+        }
     }
 }
 
@@ -148,31 +149,21 @@ hr {
     font-family: jaf-domus-titling-web, sans-serif;
     font-weight: 500;
     line-height: 1.15;
-    font-size: 8vw;
+    font-size: 2em;
     color: $logo-text;
     text-shadow: 0 6px 6px #4f832863;
-}
-
-@media screen and (min-width: 450px)
-{
-    .logo {
-        font-size: 12vw;
-    }
-
-    .logo-tagline {
-        padding: 0.2em 1em;
-        font-size: 6vw;
-    }
 }
 
 @media screen and (min-width: 750px)
 {
     .logo {
-        font-size: 6vw;
+        font-size: 2.5em;
+        padding-top: 1.5em;
+        padding-bottom: 1em;
     }
 
     .logo-tagline {
-        font-size: 4vw;
+        font-size: 1.5em;
     }
 }
 
@@ -187,14 +178,10 @@ header {
     flex-wrap: wrap;
 }
 
-@keyframes menu_toggle {
-    from {opacity: 1}
-    to {opacity: 0.7;}
-}
 .menu-toggle {
     margin: 0 1em 1em 0.5em;
     height: 1em;
-    cursor:pointer;
+    cursor: pointer;
     transition: all 1s;
 
     &:hover {
@@ -358,49 +345,6 @@ header {
 
 /** Buttons **/
 
-@keyframes button_hover {
-    from {
-        background-color: transparent;
-        color: $button-text;
-    }
-
-    to {
-        background-color: $button-hover;
-        color: $button-hover-text;
-    }
-}
-@keyframes button_dark_hover {
-    from {
-        background-color: transparent;
-        color: $button-dark-text;
-    }
-
-    to {
-        background-color: $button-dark-hover;
-        color: $button-dark-hover-text;
-    }
-}
-
-@keyframes button_width {
-    from {
-       padding-left: 1.5em;
-    }
-
-    to {
-       padding-left: 2em;
-    }
-}
-
-@keyframes button_width_rev {
-    from {
-       padding-left: 2em;
-    }
-
-    to {
-       padding-left: 1.5em;
-    }
-}
-
 .button-container {
     padding: 2.5em 0;
     text-align: center;
@@ -501,12 +445,20 @@ header {
 .dot-end {
     margin-left: 0.05em;
     margin-right: -0.25em;
-    margin-block: -0.35em;
+    margin-bottom: -0.35em;
     display: inline-block;
     height: 1.15em;
     width: 1.15em;
     background-color: $timeline;
     border-radius: 50%;
+}
+
+.dot-small {
+    margin-left: 0.2em;
+    margin-right: 0;
+    margin-bottom: -0.2em;
+    height: 0.85em;
+    width: 0.85em;
 }
 
 .dot-beginning {
@@ -523,14 +475,6 @@ header {
     display: block;
     height: 1.5em;
     width: 1.5em;
-}
-
-.dot-small {
-    margin-left: 0.2em;
-    margin-right: 0;
-    margin-block: -0.2em;
-    height: 0.85em;
-    width: 0.85em;
 }
 
 .timeline {
@@ -589,7 +533,7 @@ footer {
 
     .logo {
         padding: 0 1em;
-        font-size: 12vw;
+        font-size: 2.5em;
     }
 
     .button-fixed-container-dark {
@@ -599,7 +543,7 @@ footer {
 }
 
 .footer-top {
-    padding: 3em 0.5em 1.75em 0.5em;
+    padding: 3em 0.5em 2em 0.5em;
     background-color: $footer-top-background;
 }
 
@@ -618,10 +562,6 @@ footer {
 @media screen and (min-width:750px) {
 
     footer {
-        .logo {
-            padding: 50px 0 70px 20px;
-            font-size: 3em;
-        }
 
         .button-fixed-container-dark {
             flex-direction: row;
@@ -641,7 +581,7 @@ footer {
         padding-right: calc(50vw - 425px);
     }
     .footer-top {
-        padding-bottom: 0;
+        padding-bottom: 2.5em;
     }
 
     hr {
@@ -649,6 +589,7 @@ footer {
     }
 
     .copyright {
-        font-size: 14pt;
+        font-size: 0.8em;
+        text-align: center;
     }
 }
