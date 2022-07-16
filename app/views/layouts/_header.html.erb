@@ -10,10 +10,13 @@
         <div class="navbar">
           <ul>
             <li class="nav-item <%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', root_path %></li>
-            <li class="nav-item <%= 'active' if current_page?(about_path) %>"><%= link_to 'Work', about_path %></li>
-            <li class="nav-item <%= 'active' if current_page?(mission_path) %>"><%= link_to 'Vision', mission_path %></li>
+            <li class="nav-item <%= 'active' if current_page?(about_path) %>"><%= link_to 'About', about_path %></li>
+            <li class="nav-item"><%= link_to 'LinkedIn', linkedin_url, target: '_blank' %></li>
+            <li class="nav-item"><%= link_to 'Resume', asset_url('resume-p.pdf'), target: '_blank' %></li>
+
+            <!--<li class="nav-item <%= 'active' if current_page?(mission_path) %>"><%= link_to 'Vision', mission_path %></li>
             <li class="nav-item <%= 'active' if current_page?(photos_path) %>"><%= link_to 'Photos', photos_path %></li>
-            <li class="nav-item <%= 'active' if current_page?(blog_path) %>"><%= link_to 'Blog', blog_path %></li>
+            <li class="nav-item <%= 'active' if current_page?(blog_path) %>"><%= link_to 'Blog', blog_path %></li>-->
             <li class="nav-item <%= 'active' if current_page?(contact_path) %>"><%= link_to 'Contact Me', contact_path %></li>
           </ul>
         </div>
