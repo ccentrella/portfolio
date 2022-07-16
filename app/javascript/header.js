@@ -4,7 +4,6 @@ function stickyNavbar()
     let position = header.getBoundingClientRect();
     let stickyNavbar = document.getElementsByClassName("navbar-sticky")[0];
     
-    console.log(position.top)
     if (position.bottom <= 0)
     {
         stickyNavbar.style.display = "block";
