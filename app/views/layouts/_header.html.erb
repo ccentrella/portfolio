@@ -30,6 +30,7 @@
 <div class="flash-container">
   <div class="flash flash-warning" style="margin-bottom:15px">
     <p><strong>Website under construction.</strong><br/>
-      Chech back soon for updated content!</p>
+      <%= current_page?(about_path) ? "This page is currently being updated. Please check back soon!" : "Check back soon for new content!" %>
+      </p>
   </div>
 </div>
