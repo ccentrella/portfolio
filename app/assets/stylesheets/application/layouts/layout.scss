@@ -1,0 +1,31 @@
+/* SCSS Document */
+
+
+/** Layout **/
+
+.hidden {
+    display: none;
+}
+
+main, .main {
+    margin: 0;
+    padding: 0 2em 0 2.25em;
+}
+
+hr {
+    margin: 2em 0;
+    border: 1px dashed $light-text;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:750px) {
+    main, .main {
+        margin: auto;
+        max-width: 850px;
+    }
+}

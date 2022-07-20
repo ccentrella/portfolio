@@ -1,0 +1,69 @@
+/* SCSS Document */
+
+/** Footer **/
+
+footer {
+    margin-top: 4em;
+
+    .logo {
+        padding: 0 1em;
+        font-size: 2.5em;
+    }
+
+    .button-fixed-container-dark {
+        margin: 0;
+        padding: 3.5em 0 2em 0;
+    }
+}
+
+.footer-top {
+    padding: 3em 0.5em 2em 0.5em;
+    background-color: $footer-top-background;
+}
+
+.footer-bottom {
+    padding: 1em 2.5em;
+    background-color: $footer-bottom-background;
+}
+
+.copyright {
+    font-family: 'Quasimoda', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: $light-text;
+}
+
+@media screen and (min-width:750px) {
+
+    footer {
+
+        .button-fixed-container-dark {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-left: calc(50vw - 425px);
+            padding-right: calc(50vw - 425px);
+    
+            a {
+                flex-basis: 40%;
+                margin: 1em auto;
+            }
+        }
+    }
+
+    .footer-top, .footer-bottom {
+        padding-left: calc(50vw - 425px);
+        padding-right: calc(50vw - 425px);
+    }
+    .footer-top {
+        padding-bottom: 2.5em;
+    }
+
+    hr {
+        margin-bottom: 20px;
+    }
+
+    .copyright {
+        font-size: 0.8em;
+        text-align: center;
+    }
+}

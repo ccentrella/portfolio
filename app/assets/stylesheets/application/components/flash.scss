@@ -1,0 +1,40 @@
+/* SCSS Documents */
+
+/** Flash **/
+
+.flash-container {
+    margin: 0 1em;
+}
+
+.flash, .flash-success, .flash-warning {
+    margin: 0 0.5em 0.5em;
+    padding: 1em 1.25em;
+    text-align: center;
+    background-color: $flash-success;
+    border-radius: 4em;
+
+    p {
+        color: $light-text;
+    }
+
+}
+
+.flash-warning {
+    background-color: $flash-warning;
+}
+
+.flash-error {
+    background-color: $flash-error;
+}
+
+.flash p {
+    margin: 0.5em;
+}
+
+@media screen and (min-width:750px)
+{
+    .flash-container {
+        margin: auto;
+        max-width: 850px;
+    }
+}

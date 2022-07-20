@@ -1,0 +1,48 @@
+/* SCSS Document */
+
+/** Logo **/
+
+.logo {
+    margin: 0;
+    padding: 1em 0.75em 0.5em 0.75em;
+    font-family: jaf-domus-titling-web, sans-serif;
+    font-weight: 600;
+    line-height: 1.15;
+    font-size: 3em;
+    color: $logo-text;
+    text-shadow: 0 6px 6px #4f832863;
+
+    a {
+        color: $logo-text;
+        transition: color 250ms;
+    
+        &:hover {
+            color: $logo-text-hover;
+        }
+    }
+}
+
+.logo-tagline {
+    margin: 0;
+    padding: 0.2em 1em;
+    font-family: jaf-domus-titling-web, sans-serif;
+    font-weight: 500;
+    line-height: 1.15;
+    font-size: 2em;
+    color: $logo-text;
+    text-shadow: 0 6px 6px #4f832863;
+}
+
+@media screen and (min-width: 750px)
+{
+    .logo {
+        font-size: 2.5em;
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+    }
+
+    .logo-tagline {
+        font-size: 1.5em;
+    }
+}
+

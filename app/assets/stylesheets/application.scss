@@ -1,4 +1,3 @@
-
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -12,8 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
 
+ // Required since Sprockets will not work well with multiple SASS files
+ @import "base/*";
+ @import "**/*";
  @import url("https://use.typekit.net/dby5tzk.css");
  @import "font-awesome";

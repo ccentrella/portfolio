@@ -1,6 +1,3 @@
-/* Variables and mixins*/
-$light-text: #fcfcfc;
-
 .contact-form{
     margin: 5em 0 5em 0;
     padding: 6em 1em;
@@ -24,6 +21,10 @@ $light-text: #fcfcfc;
 .field-message {
     height: 12em;
     border-radius: 40px;
+
+    &.long {
+        height: 25em;
+    }
 }
 
 @keyframes submit_button_hover{
@@ -33,20 +34,23 @@ $light-text: #fcfcfc;
 
 .submit-button {
     margin: 1em 0 0 0;
+    padding: 1.4em 2em;
     text-transform: uppercase;
     background-color: transparent;
     border: 2px solid $light-text;
+    border-radius: 50px;
     color: $light-text;
+    font-family: 'rooney-sans', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
     width: 15em;
+    transition: color 1s, background-color 1s;
 }
 
 @media (pointer: fine)
 {
     .submit-button:hover {
-        border: 2px solid $light-text;
         background-color: $light-text;
         color: #700C0E;
-        animation-name: submit_button_hover;
-        animation-duration: 1s;
     }
 }

@@ -1,0 +1,143 @@
+/* SCSS Document */
+
+/** Header **/
+
+header {
+    margin: 0 0 3em 0;
+}
+
+.navbar-outer {
+    text-align: right;
+    flex-wrap: wrap;
+}
+
+.menu-toggle {
+    margin: 0 1em 1em 0.5em;
+    height: 1em;
+    cursor: pointer;
+    transition: opacity 1s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.navbar {
+    background-color: $navbar;
+    border-top: 1px solid $navbar-border;
+    text-align: center;
+    display: none;
+    flex-basis: 100%;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        float: none;
+        list-style-type: none;
+    }
+
+    /* Create a separator aligned perfectly, by using an outer item for height,
+    but an inner item for width */
+    .nav-item {
+        padding: 0.6em 0;
+
+        &:nth-child(odd) {
+            background-color: $navbar-item;
+        }
+
+        a {
+            font-size: 1.1em;
+            display: block;
+            color: $light-text;
+            padding: 0 0.6em;
+        }
+
+        &:hover {
+            background-color: $navbar-hover;
+        }
+
+        &.active {
+            background-color: $navbar-active;
+        }
+    }
+}
+
+.navbar-sticky {
+    will-change: transform;
+    text-align: center;
+    background-color: $navbar;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+
+    .logo {
+        font-size: 1.75em;
+        padding: 0.5em 0 0.7em;
+    }
+}
+
+#toggle {
+    display: none;
+
+    &:checked ~ .navbar {
+        display: block;
+    }
+}
+
+.banner-image {
+    border-bottom: 4px solid $banner-border;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(<%= asset_path 'banner.png' %>);
+}
+
+.banner-overlay {
+    background-color: $overlay;
+}
+
+@media screen and (min-width:750px)
+{
+    header {
+        margin-bottom: 3em;
+    }
+
+    .banner-image {
+        background-size: cover;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .navbar-outer {
+        display: flex;
+    }
+
+    .navbar {
+        display: block;
+        padding-top: 4px;
+
+        .nav-item, .nav-item:nth-child(odd) {
+            float: left;
+            width: 8em;
+            background-color: $navbar;
+
+            a {
+                border-right: 1px solid $light-text;
+            }
+
+            &:hover {
+                background-color: $navbar;
+                border-top: 4px solid #c0c0c0;
+                margin-top: -4px;
+            }
+             &.active {
+                background-color: $navbar;
+                border-top: 4px solid $light-text;
+                margin-top: -4px;
+            }
+        }
+    }
+}

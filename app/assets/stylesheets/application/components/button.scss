@@ -1,0 +1,98 @@
+/* SCSS Document */
+
+/** Buttons **/
+
+.button-container {
+    padding: 2.5em 0;
+    text-align: center;
+}
+
+.button-fixed-container, .button-fixed-container-dark {
+    margin: 3.5em -2em 1.5em -2.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $container-background;
+}
+
+.button-fixed-container-dark {
+    margin: 5em -2em 4em -2.25em;
+    padding: 5.5em 0 4em 0;
+    background: $container-dark-background;
+
+    .button-fixed {
+        border-color: $button-dark-border;
+        background-color: $button-dark-background;
+        color: $button-dark-text;
+        transition: color 1s, background-color 1s;
+
+        &:hover {
+            color: $button-dark-hover-text;
+            background-color: $button-dark-hover;
+        }
+    }
+
+    .highlight-button {
+        background-color: $button-highlight-background;
+    }
+}
+
+.resume-button-container {
+    margin: 1.5em 0;
+}
+.resume-button-text {
+    margin-top: 3em;
+}
+
+.button,
+.button-fixed {
+    padding: 1.4em 2em;
+    border: 2px solid $button-border;
+    border-radius: 50px;
+    background-color: $button-background;
+    font-family: 'rooney-sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: $button-text;
+    text-transform: uppercase;
+    text-align: center;
+    transition: color 1s, background-color 1s;
+
+    .icon {
+        padding-left: 1.5em;
+        transition: padding-left 1s;
+    }
+
+    &:hover {
+        color: $button-hover-text;
+        background-color: $button-hover;
+
+        .icon {
+            padding-left: 2em;
+        }
+    }
+}
+
+.button-fixed {
+    display: inline-block;
+    padding: 1.4em 0;
+    margin-bottom: 1.5em;
+    width: 15em;
+    max-width: 75%;
+
+    &.button-wide {
+        width: 18em;
+    }
+}
+
+.highlight-button {
+    background-color: $button-highlight-background;
+}
+
+@media screen and (min-width: 850px) {
+    .button-fixed-container, .button-fixed-container-dark {
+        margin-left: calc(-50vw + 400px);
+        margin-right: calc(-50vw + 400px);
+    }
+}
