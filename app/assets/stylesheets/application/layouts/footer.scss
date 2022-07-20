@@ -12,12 +12,12 @@ footer {
 
     .button-fixed-container-dark {
         margin: 0;
-        padding: 3.5em 0 2em 0;
+        padding: 3.5em 0 2em;
     }
 }
 
 .footer-top {
-    padding: 3em 0.5em 2em 0.5em;
+    padding: 3em 0.5em 2em;
     background-color: $footer-top-background;
 }
 
@@ -50,10 +50,6 @@ footer {
         }
     }
 
-    .footer-top, .footer-bottom {
-        padding-left: calc(50vw - 425px);
-        padding-right: calc(50vw - 425px);
-    }
     .footer-top {
         padding-bottom: 2.5em;
     }

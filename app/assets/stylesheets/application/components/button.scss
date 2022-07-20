@@ -8,7 +8,7 @@
 }
 
 .button-fixed-container, .button-fixed-container-dark {
-    margin: 3.5em -2em 1.5em -2.25em;
+    margin: 3.5em 0 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,6 +19,11 @@
     margin: 5em -2em 4em -2.25em;
     padding: 5.5em 0 4em 0;
     background: $container-dark-background;
+
+    @media screen and (min-width:850px) {
+        margin-left: calc(-50vw + 400px);
+        margin-right: calc(-50vw + 400px);
+    }
 
     .button-fixed {
         border-color: $button-dark-border;
@@ -88,11 +93,4 @@
 
 .highlight-button {
     background-color: $button-highlight-background;
-}
-
-@media screen and (min-width: 850px) {
-    .button-fixed-container, .button-fixed-container-dark {
-        margin-left: calc(-50vw + 400px);
-        margin-right: calc(-50vw + 400px);
-    }
 }
