@@ -1,11 +1,13 @@
 <% provide(:title, "Blog Index Page") %>
 <main class="container">
   <h1>Articles</h1>
-  <p>You can view all articles I've written here!</p>
   <% @posts.each do |post|%>
-    <h2><%= link_to post.title, post_path(post) %></h2>
-    <p><%= post.created_at.strftime('%B %d, %Y') %><p>
-    <p><%= post.description %></h2>
-    <p><%= post.content %></p>
+    <article class="post-item">
+      <h2 class="post-item-title"><%= link_to post.title, post_path(post) %></h2>
+      <p class="post-item-date"><%= post.created_at.strftime('%B %d, %Y') %><p>
+      <% if post.description.present? %>
+        <p class="post-item-description"><%= post.description %></h2>
+      <% end %>
+    </article>
   <% end %>
 </main>

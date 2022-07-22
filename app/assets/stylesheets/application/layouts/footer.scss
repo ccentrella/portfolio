@@ -36,30 +36,25 @@ footer {
 @media screen and (min-width:750px) {
 
     footer {
-
         .button-fixed-container-dark {
             flex-direction: row;
             flex-wrap: wrap;
             padding-left: calc(50vw - 425px);
             padding-right: calc(50vw - 425px);
+            gap: 0 1em;
     
             a {
-                flex-basis: 40%;
-                margin: 1em auto;
+                flex-basis: 27%;
             }
         }
     }
 
     .footer-top {
-        padding-bottom: 2.5em;
-    }
-
-    hr {
-        margin-bottom: 20px;
+        padding-bottom: 2em;
     }
 
     .copyright {
-        font-size: 0.8em;
+        font-size: 0.9em;
         text-align: center;
     }
 }
