@@ -13,11 +13,15 @@
             <li class="nav-item <%= 'active' if current_page?(about_path) %>"><%= link_to 'About', about_path %></li>
             <li class="nav-item"><%= link_to 'LinkedIn', linkedin_url, target: '_blank' %></li>
             <li class="nav-item"><%= link_to 'Resume', asset_url('resume-p.pdf'), target: '_blank' %></li>
-
+            <li class="nav-item <%= 'active' if params[:controller] == 'posts' %>"><%= link_to 'Blog', posts_path %></li>
             <!--<li class="nav-item <%= 'active' if current_page?(mission_path) %>"><%= link_to 'Vision', mission_path %></li>
-            <li class="nav-item <%= 'active' if current_page?(photos_path) %>"><%= link_to 'Photos', photos_path %></li>
-            <li class="nav-item <%= 'active' if current_page?(blog_path) %>"><%= link_to 'Blog', blog_path %></li>-->
+            <li class="nav-item <%= 'active' if current_page?(photos_path) %>"><%= link_to 'Photos', photos_path %></li>-->
             <li class="nav-item <%= 'active' if current_page?(contact_path) %>"><%= link_to 'Contact Me', contact_path %></li>
+            <% if user_signed_in? %>
+              <li class="nav-item active">
+                <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %>
+              </li>
+            <% end %>
           </ul>
         </div>
       </div>
@@ -27,10 +31,20 @@
 <div class="navbar-sticky">
   <h1 class='logo'><%= link_to 'CC', root_path %></h1>
 </div>
+
+<% if params[:controller] == 'posts' %>
 <div class="flash-container">
-  <div class="flash flash-warning" style="margin-bottom:15px">
-    <p><strong>Website under construction.</strong><br/>
-      <%= current_page?(about_path) ? "This page is currently being updated. Please check back soon!" : "Check back soon for new content!" %>
+  <div class="flash flash-notice">
+    <p><strong>This feature has just been released!</strong></p>
+    <p>Please be patient as additional functionality is added.</p>
+  </div>
+</div>
+<% else %>
+<div class="flash-container">
+  <div class="flash flash-warning">
+    <p><strong>Website under construction.</strong></p>
+      <p><%= current_page?(about_path) ? "This page is currently being updated. Please check back soon!" : "Check back soon for new content!" %>
       </p>
   </div>
 </div>
+<% end %>

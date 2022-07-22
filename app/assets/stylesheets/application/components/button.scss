@@ -16,14 +16,9 @@
 }
 
 .button-fixed-container-dark {
-    margin: 5em -2em 4em -2.25em;
-    padding: 5.5em 0 4em 0;
+    margin: 5em 0 4em;
+    padding: 5.5em 0 4em;
     background: $container-dark-background;
-
-    @media screen and (min-width:850px) {
-        margin-left: calc(-50vw + 400px);
-        margin-right: calc(-50vw + 400px);
-    }
 
     .button-fixed {
         border-color: $button-dark-border;
@@ -43,7 +38,7 @@
 }
 
 .resume-button-container {
-    margin: 1.5em 0;
+    margin: 0;
 }
 .resume-button-text {
     margin-top: 3em;

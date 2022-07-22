@@ -32,22 +32,22 @@
           </div>
         </div>
       </div>
-      <main>
           <div class="button-fixed-container-dark">
             <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
             <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
             <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
             <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
           </div>
-      <h1>Projects</h1>
-      <p class="large">
-        What better way to show that you know something than to actually use that knowledge? Here are some projects which I’ve worked on:
-      </p>
+          <div class="container">
+            <h1>Projects</h1>
+            <p class="large">
+              What better way to show that you know something than to actually use that knowledge? Here are some projects which I’ve worked on:
+            </p>
+          </div>
           <div class="button-fixed-container-dark">
             <%= link_to "Personal Portfolio<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed button-wide' %>
             <%= link_to "Browse Repository<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed highlight-button button-wide', target: '_blank' %>
           </div>
-    </main>
     <%= render 'layouts/footer' %>
   </body>
 </html>
