@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get '/user/home', to: "users#home", as: :user_root
 
   # Define the root path route ("/")
   root "static_pages#home"
@@ -10,7 +11,6 @@ Rails.application.routes.draw do
   get '/mission', to: "static_pages#mission"
   get '/contact', to: "email_contact#new"
   post "/contact_form", to: "email_contact#create", as: "email_contacts"
-  get '/blog', to: "posts#index"
   get '/photos', to: "photos#index"
 
   # Define external URLs
@@ -26,5 +26,8 @@ Rails.application.routes.draw do
   resources :email_contact, only: [:new, :create]
 
   resources :resources, path: '/resources'
+
+  # Define root path for blog posts
+  resources :posts, path: '/blog'
 
 end
