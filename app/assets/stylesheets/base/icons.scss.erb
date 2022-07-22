@@ -1,0 +1,23 @@
+i {
+    display: inline-block;
+    width: 1em;
+    vertical-align: -0.1em;
+    margin: 0 0.5em;
+
+    &.large {
+        width: 2em;
+        vertical-align: -0.6em;
+    }
+}
+
+i.calendar::before {
+    content: url(<%= asset_path 'icons/calendar.svg' %>);
+}
+
+i.person::before {
+    content: url(<%= asset_path 'icons/person.svg' %>);
+}
+
+i.clock::before {
+    content: url(<%= asset_path 'icons/clock.svg' %>);
+}

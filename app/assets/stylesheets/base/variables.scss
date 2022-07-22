@@ -4,23 +4,31 @@
 
 $light-text: #fcfcfc;
 $dark-text: #353535;
+$grey-text: #7E7777;
 $primary: #9A0002;
 $secondary: #3D5D21;
+$keyword: #729519;
+
 $overlay: transparent;
 $banner-border: #7C9341;
 $logo-text: $light-text;
 $logo-text-hover: #ecf7ed;
+
 $navbar: #425218;
 $navbar-item: #4E5D27;
 $navbar-hover: #35430F;
 $navbar-active: #2A3808;
 $navbar-border: #7C9341;
+
 $flash-success: #657C3B;
 $flash-warning: #D97109;
 $flash-error: #D92E2E;
 
 $container-background: transparent;
 $container-dark-background: #2E4000;
+$container-dark-background-red: #520001;
+$container-background-gray: #707070;
+
 $button-border: #4C8E13;
 $button-background: transparent;
 $button-text: #4F6513;
@@ -35,6 +43,6 @@ $button-highlight-background: #5C7A0D;
 
 $timeline: #496600;
 $timeline-text: #627E2D;
-$keyword: #729519;
+
 $footer-top-background: #2E3400;
 $footer-bottom-background: #242222;

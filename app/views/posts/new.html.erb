@@ -1,0 +1,17 @@
+<% provide(:title, "New Post") %>
+<div class="container">
+    <h1>New Blog Post</h1>
+</div>
+<%= form_with(model: @post, local: true, class: 'contact-form') do |f| %>
+    <%= render 'error_messages' %>
+
+    <%= f.text_field :title, placeholder: 'Title', class: 'field' %><br/>
+    <%= f.text_area :description, placeholder: 'Description', class: 'field' %><br/>
+    <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
+    <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
+    <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
+    <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>        
+    <%= f.text_area :content, placeholder: 'Content', class: 'field field-message long' %><br/>
+
+    <%= f.submit 'Create Post', class: 'field submit-button' %>
+<% end %>
