@@ -1,8 +1,18 @@
 .contact-form{
     margin: 5em 0 5em 0;
-    padding: 6em 1em;
+    padding: 3em 1em;
     background-color: #520001;
     text-align: center;
+    
+    .form-container {
+        max-width: 32em;
+        width: 90%;
+
+        p, h1, h2 {
+            color: $light-text;
+            text-align: left;
+        }
+    }
 }
 
 .field {
