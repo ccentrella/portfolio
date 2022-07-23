@@ -1,4 +1,5 @@
 <% provide(:title, "Get in Touch") %>
+<%= render 'error_messages' %>
 <div class="container">
   <h1>Get in Touch</h1>
   <p class="large">Thank you so much for reaching out to me! I will do my best to respond as soon as possible, and I look forward to getting back to you!</p>
@@ -6,8 +7,6 @@
     (Exodus 15:2)</p>
 </div>
 <%= form_with(model: @email_contact, local: true, class: 'contact-form') do |f| %>
-    <%= render 'error_messages' %>
-
     <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
     <br/>
     <%= f.email_field :email, placeholder: 'Email', class: 'field' %>

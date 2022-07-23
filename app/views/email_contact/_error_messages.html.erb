@@ -1,12 +1,12 @@
 <% if @email_contact.errors.any? %>
-  <div>
-    <div class = "flash flash-error">
-      <p>The form contains <%= pluralize(@email_contact.errors.count, "error") %>.</p>
-    </div>
-      <ul>
-        <% @email_contact.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+  <div class="flash-container">
+    <div class = "flash flash-warning">
+        <p><strong>Form could not be saved. Please fix the following <%= pluralize(@email_contact.errors.count, "problem") %>:</strong></p>
+        <ul>
+            <% @email_contact.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+        </ul>
+      </div>
     </div>
 <% end %>

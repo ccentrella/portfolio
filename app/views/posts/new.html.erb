@@ -1,6 +1,6 @@
 <% provide(:title, "New Post") %>
-<%= form_with(model: @post, local: true, class: 'create-post-form container') do |f| %>
     <%= render 'error_messages' %>
+<%= form_with(model: @post, local: true, class: 'create-post-form container') do |f| %>
     <div class="button-fixed-container create-post-button-container">
         <%= f.submit 'Publish', class: 'button-fixed' %>
     </div>
@@ -10,6 +10,7 @@
     <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
     <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
     <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
-    <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>        
+    <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>
+    <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>              
     <%= f.submit 'Publish', class: 'field submit-button' %>
 <% end %>

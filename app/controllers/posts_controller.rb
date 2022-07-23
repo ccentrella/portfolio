@@ -21,8 +21,7 @@ class PostsController < ApplicationController
             flash[:notice] = "Post successfully created!"
             redirect_to post_path(@post)
         else
-            flash[:warning] = "Please enter required fields."
-            redirect_to action: 'new'
+            render :new, status: :unprocessable_entity
         end
     end
 
@@ -45,8 +44,7 @@ class PostsController < ApplicationController
             flash[:notice] = "Post updated successfully!"
             redirect_to post_path(@post)
         else
-            flash[:warning] = "Post was not updated."
-            redirect_to action: 'edit'
+            render :new, status: :unprocessable_entity
         end
     end
 
