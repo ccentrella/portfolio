@@ -1,0 +1,38 @@
+Arguments: 
+  /opt/homebrew/Cellar/node/18.6.0/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js init
+
+PATH: 
+  /Users/christophercentrella/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/christophercentrella/anaconda3/bin:/Users/christophercentrella/anaconda3/condabin:/Users/christophercentrella/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.6.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/christophercentrella/Sites/portfolio/package.json: Unexpected string in JSON at position 42
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "app",
+    "private": "true"
+  }
+  
+  "scripts": {
+    "build:css": "./bin/build-css"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

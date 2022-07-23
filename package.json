@@ -1,8 +1,14 @@
 {
-  "name": "app",
-  "private": "true"
-}
-
-"scripts": {
-  "build:css": "./bin/build-css"
+  "name": "portfolio",
+  "private": true,
+  "version": "1.5",
+  "description": "Personal portfolio application/website",
+  "main": "home.html.erb",
+  "repository": "git@github.com:ccentrella/portfolio.git",
+  "author": "Christopher Centrella <ccentrella.j@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@rails/actiontext": "^7.0.3-1",
+    "trix": "^2.0.0-beta.0"
+  }
 }

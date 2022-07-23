@@ -1,17 +1,15 @@
 <% provide(:title, "New Post") %>
-<div class="container">
-    <h1>New Blog Post</h1>
-</div>
-<%= form_with(model: @post, local: true, class: 'contact-form') do |f| %>
+<%= form_with(model: @post, local: true, class: 'create-post-form container') do |f| %>
     <%= render 'error_messages' %>
-
-    <%= f.text_field :title, placeholder: 'Title', class: 'field' %><br/>
+    <div class="button-fixed-container create-post-button-container">
+        <%= f.submit 'Publish', class: 'button-fixed' %>
+    </div>
+    <%= f.text_area :title, placeholder: 'Title', class: 'create-post-title' %><br/>
+    <%= f.rich_text_area :content, placeholder: 'Content', class: 'create-post-content' %><br/>
     <%= f.text_area :description, placeholder: 'Description', class: 'field' %><br/>
     <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
     <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
     <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
     <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>        
-    <%= f.text_area :content, placeholder: 'Content', class: 'field field-message long' %><br/>
-
-    <%= f.submit 'Create Post', class: 'field submit-button' %>
+    <%= f.submit 'Publish', class: 'field submit-button' %>
 <% end %>
