@@ -30,4 +30,7 @@ Rails.application.routes.draw do
   # Define root path for blog posts
   resources :posts, path: '/blog'
 
+  # Define root path for subscribe
+  resources :subscribers, only: [:new, :create]
+
 end

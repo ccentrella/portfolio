@@ -2,6 +2,7 @@
     <article class="post">
         <section class="post-header">
             <div class="post-header-top">
+                <%= link_to "<i class='icon left-arrow'></i>".html_safe, posts_path, class: "posts-back-icon", title: "View All Articles" %>
                 <h1><%= @post.title %></h1>
             </div>
             <div class="post-header-bottom">
@@ -18,7 +19,5 @@
         <section class="post-content container">
             <p><%= @post.content %></p>
         </section>
-        <section class="subscribe container">
-            <%# <h2>Subscribe</h2> %>
-        </section>
     </article>
+    <%= render @subscriber %>

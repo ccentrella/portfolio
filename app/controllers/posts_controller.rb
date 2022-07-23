@@ -4,11 +4,12 @@ class PostsController < ApplicationController
 
     def index
         @posts = Post.all
+        @subscriber = Subscriber.new
     end
 
     def new
         if current_user.id == 1
-            @post = Post.new;
+            @post = Post.new
         else
             flash[:warning] = "You do not have permission to create an article."
             redirect_to posts_path
@@ -27,11 +28,12 @@ class PostsController < ApplicationController
 
     def show
         @post = Post.find(params[:id])
+        @subscriber = Subscriber.new
     end
 
     def edit
         if current_user.id == 1
-            @post = Post.find(params[:id]);
+            @post = Post.find(params[:id])
         else
             flash[:warning] = "You do not have permission to edit this article."
             redirect_to posts_path
@@ -50,7 +52,7 @@ class PostsController < ApplicationController
 
     def destroy
         if current_user.id == 1
-            @post = Post.find(params[:id]);
+            @post = Post.find(params[:id])
         else
             flash[:warning] = "You do not have permission to delete this article."
             redirect_to posts_path
