@@ -6,7 +6,7 @@
     </div>
     <%= f.text_area :title, placeholder: 'Title', class: 'create-post-title', onkeyup: 'preventLineBreaks(post_title);', oninput: 'updatePostTitleHeight();' %><br/>
     <%= f.rich_text_area :content, placeholder: 'Content', class: 'create-post-content post-content' %><br/>
-    <%= f.text_area :description, placeholder: 'Description', class: 'field' %><br/>
+    <%= f.text_area :description, placeholder: 'Description', class: 'field create-post-description' %><br/>
     <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
     <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
     <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>

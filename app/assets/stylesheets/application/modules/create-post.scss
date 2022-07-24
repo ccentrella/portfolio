@@ -33,4 +33,27 @@
     &:focus, &:active {
         outline-style: none;
     }
+
+    p, div  {
+        margin-bottom: 1em;
+        font-size: 1.05em;
+        text-align: justify;
+        overflow-wrap: break-word;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 1.25em 0 0.5em;
+    }
+}
+
+.create-post-description {
+    height: 8em;
+    resize: none;
+}
+
+.create-post-form {
+    .field {
+        max-width: none;
+    }
 }
