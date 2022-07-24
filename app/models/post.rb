@@ -10,4 +10,8 @@ class Post < ApplicationRecord
     def get_time()
         return '5 mins.'
     end
+
+    def get_author()
+        return 'Chris Centrella'
+    end
 end

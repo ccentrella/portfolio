@@ -1,4 +1,21 @@
-<main class="container">
-    <h1>Welcome!</h1>
-    <h2>User Panel</h2>
+<main>
+    <h1 class="container account-title">Welcome!</h1>
+    <div class="button-fixed-container-dark account-overview">
+       <h2 class="container">Overview</h2>
+        <%= link_to "Edit Profile<i class='icon fa fa-chevron-right'></i>".html_safe, edit_user_registration_path, class: 'button-fixed' %>
+        <%= link_to "New Blog Post<i class='icon fa fa-chevron-right'></i>".html_safe, new_post_path, class: 'button-fixed' %>
+        <!--<%= link_to "Upload Photo<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
+        <%= link_to "View Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>-->
+    </div>
+    <h2 class="container">Blog</h2>
+    <div class="button-fixed-container-dark red thin">
+        <%= link_to "Create New Post<i class='icon fa fa-chevron-right'></i>".html_safe, new_post_path, class: 'button-fixed' %>
+        <%= link_to "View All Posts<i class='icon fa fa-chevron-right'></i>".html_safe, admin_index_posts_path, class: 'button-fixed' %>
+    </div>
+    <h2 class="container">Photos</h2>
+    <div class="button-fixed-container-dark red thin">
+        <%= link_to "Upload Photo<i class='icon fa fa-chevron-right'></i>".html_safe, "", class: 'button-fixed' %>
+        <%= link_to "View All Photos<i class='icon fa fa-chevron-right'></i>".html_safe, "", class: 'button-fixed' %>
+        <%= link_to "Configure Tasks<i class='icon fa fa-chevron-right'></i>".html_safe, "", class: 'button-fixed' %>
+    </div>
 </main>

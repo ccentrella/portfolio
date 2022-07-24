@@ -7,6 +7,11 @@ class PostsController < ApplicationController
         @subscriber = Subscriber.new
     end
 
+    def admin_index
+        @posts = Post.all
+        @subscriber = Subscriber.new
+    end
+
     def new
         if current_user.id == 1
             @post = Post.new

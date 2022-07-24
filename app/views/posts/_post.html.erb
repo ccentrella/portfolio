@@ -1,7 +1,7 @@
-<div class="post">
-    <%= image_tag post.featured_image, class: "post-image"%>
-    <h1><%= post.title %></h1>
-    <p class="large"> <%= getContent(post.content) %></p>
-    <div class="post-details">
-    </div>
-</div>
+<article class="post-item">
+      <h2 class="post-item-title"><%= link_to post.title, post_path(post) %></h2>
+      <p class="post-item-date"><%= post.created_at.strftime('%B %d, %Y') %></p>
+      <% if post.description.present? %>
+        <p class="post-item-description"><%= post.description %></p>
+      <% end %>
+</article>

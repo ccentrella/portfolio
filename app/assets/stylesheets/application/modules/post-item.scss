@@ -1,12 +1,13 @@
-.post-item {
+.post-item{
     margin: 1em 0;
 }
+
 .post-item-title {
     font-family: 'Quasimoda', sans-serif;
     font-weight: 300;
     font-size: 1.25em;
-    margin-top: 1em;
-    margin-bottom: 0;
+    margin-top: 1.25em;
+    margin-bottom: 0.25em;
 
     a {
         color: $secondary-light;
@@ -17,11 +18,22 @@
         }
     }
 }
+.post-2-author-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .post-item-date {
     color: $grey-text;
     font-style: italic;
     font-size: 0.8em;
     text-align: right;
+}
+.post-item-author, .post-item-category {
+    color: $grey-text;
+    font-style: italic;
+    font-size: 0.8em;
+    text-align: left;
 }
 .post-item-description {
     color: $grey-text;

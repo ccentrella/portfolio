@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get '/user/home', to: "users#home", as: :user_root
+  get '/profile', to: "users#home", as: :user_root
 
   # Define the root path route ("/")
   root "static_pages#home"
@@ -28,7 +28,9 @@ Rails.application.routes.draw do
   resources :resources, path: '/resources'
 
   # Define root path for blog posts
-  resources :posts, path: '/blog'
+  resources :posts, path: '/blog' do
+    get :admin_index, on: :collection
+  end
 
   # Define root path for subscribe
   resources :subscribers, only: [:new, :create]

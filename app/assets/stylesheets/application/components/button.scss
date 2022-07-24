@@ -16,7 +16,7 @@
 }
 
 .button-fixed-container-dark {
-    margin: 5em 0 4em;
+    margin: 5em 0;
     padding: 5.5em 0 4em;
     background: $container-dark-background;
 
@@ -34,6 +34,14 @@
 
     .highlight-button {
         background-color: $button-highlight-background;
+    }
+    
+    &.red {
+        background-color: $container-dark-background-red;
+    }
+
+    &.thin {
+        margin: 3em 0;
     }
 }
 

@@ -4,7 +4,7 @@
     <div class="button-fixed-container create-post-button-container">
         <%= f.submit 'Publish', class: 'button-fixed' %>
     </div>
-    <%= f.text_area :title, placeholder: 'Title', class: 'create-post-title' %><br/>
+    <%= f.text_area :title, placeholder: 'Title', class: 'create-post-title', onkeyup: 'preventLineBreaks(post_title);', oninput: 'updatePostTitleHeight();' %><br/>
     <%= f.rich_text_area :content, placeholder: 'Content', class: 'create-post-content post-content' %><br/>
     <%= f.text_area :description, placeholder: 'Description', class: 'field' %><br/>
     <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
