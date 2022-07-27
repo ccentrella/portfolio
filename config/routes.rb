@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get '/profile', to: "users#home", as: :user_root
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    unlocks: 'users/unlocks',
+    passwords: 'users/passwords',
+    confirmations: 'users/confirmations',
+    # omniauth_callbacks: 'users/omniauth_callbacks',
+  }
+
+  devise_scope :user do
+    get '/profile', to: "users/sessions#home", as: :user_root
+  end
 
   # Define the root path route ("/")
   root "static_pages#home"
