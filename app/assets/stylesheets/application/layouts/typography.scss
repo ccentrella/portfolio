@@ -8,8 +8,10 @@ p {
     font-weight: 300;
     color: $dark-text;
     font-size: 1.05em;
+
     &.large {
         font-size: 1.15em;
+        margin-bottom: 0.75em;
     }
 
     &.small {
@@ -25,6 +27,8 @@ p {
 p.justify {
     text-align: justify;
     text-justify: inter-character;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 span.keyword {
