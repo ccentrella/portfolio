@@ -1,16 +1,25 @@
 <% provide(:title, "New Post") %>
 <%= render partial: "shared/error_messages", object: @post %>
-<%= form_with(model: @post, local: true, class: 'create-post-form container') do |f| %>
-    <div class="button-fixed-container create-post-button-container">
-        <%= f.submit 'Publish', class: 'button-fixed' %>
+<%= form_with(model: @post, local: true, class: 'create-post-form') do |f| %>
+    <div class='container'>
+        <div class="button-fixed-container create-post-button-container">
+            <%= f.submit 'Publish', class: 'button-fixed' %>
+        </div>
+        <%= f.text_area :title, placeholder: 'Title', class: 'create-post-title', onkeyup: 'preventLineBreaks(post_title);', oninput: 'updatePostTitleHeight();' %><br/>
+        <%= f.rich_text_area :content, placeholder: 'Content', class: 'create-post-content post-content' %><br/>
     </div>
-    <%= f.text_area :title, placeholder: 'Title', class: 'create-post-title', onkeyup: 'preventLineBreaks(post_title);', oninput: 'updatePostTitleHeight();' %><br/>
-    <%= f.rich_text_area :content, placeholder: 'Content', class: 'create-post-content post-content' %><br/>
-    <%= f.text_area :description, placeholder: 'Description', class: 'field create-post-description' %><br/>
-    <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
-    <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
-    <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
-    <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>
-    <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>              
-    <%= f.submit 'Publish', class: 'field submit-button' %>
+    <div class='contact-form'>
+        <div class='container form-container'>
+            <h2>Options</h2>
+        </div>
+        <%= f.text_area :description, placeholder: 'Description', class: 'field create-post-description' %><br/>
+        <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
+        <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
+        <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
+        <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>
+        <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>              
+    </div>
+    <div class="button-fixed-container">
+        <%= f.submit "Publish".html_safe, class: 'button-fixed' %>
+    </div>
 <% end %>
