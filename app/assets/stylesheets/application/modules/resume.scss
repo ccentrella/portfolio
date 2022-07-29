@@ -25,30 +25,34 @@
 }
 
 .dot-beginning {
-    margin-left: -0.85em;
+    margin-left: -1.1em;
     margin-bottom: 2em;
     display: block;
-    height: 1.5em;
-    width: 1.5em;
+    height: 2em;
+    width: 2em;
 }
 
 .dot-end {
-    margin-left: -0.85em;
-    margin-top: 1.5em;
+    margin-left: -1.1em;
+    margin-top: 2em;
     display: block;
-    height: 1.5em;
-    width: 1.5em;
+    height: 2em;
+    width: 2em;
 }
 
 .timeline {
     margin-top: 3em;
     margin-left: 3em;
     border-left: 0.25em solid $timeline;
+
+    @media screen and (min-width:750px) {
+        margin-left: 5.5em;
+    }
 }
 
 .timeline-item {
 
-    > h2 {
+    > h2, h3 {
         margin-left: 2em;
         text-indent: -5.5em;
         padding-right: 0.5em;
