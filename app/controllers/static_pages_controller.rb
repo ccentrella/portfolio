@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    render :layout => false
+    render layout: "no-flash-header"
   end
 
   def about
