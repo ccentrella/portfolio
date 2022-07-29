@@ -35,17 +35,15 @@ footer {
 
 @media screen and (min-width:750px) {
 
-    footer {
-        .button-fixed-container-dark {
-            flex-direction: row;
-            flex-wrap: wrap;
-            padding-left: calc(50vw - 425px);
-            padding-right: calc(50vw - 425px);
-            gap: 0 1em;
-    
-            a {
-                flex-basis: 27%;
-            }
+    footer .button-fixed-container-dark {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        gap: 0 1em;
+
+        a {
+            flex-basis: 30%;
         }
     }
 
@@ -56,5 +54,17 @@ footer {
     .copyright {
         font-size: 0.9em;
         text-align: center;
+    }
+}
+
+@media screen and (min-width:925px) {
+
+    footer .button-fixed-container-dark {
+        padding-left: calc(50vw - 425px);
+        padding-right: calc(50vw - 425px);
+
+        a {
+            flex-basis: 27%;
+        }
     }
 }
