@@ -22,6 +22,10 @@ hr {
     justify-content: space-between;
 }
 
+.flex-col {
+    flex-basis: 50%;
+}
+
 @media screen and (min-width:750px) {
     .container {
         margin-left: auto;
