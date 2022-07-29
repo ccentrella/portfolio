@@ -34,6 +34,7 @@ class PostsController < ApplicationController
     def show
         @post = Post.find(params[:id])
         @subscriber = Subscriber.new
+        render layout: "no-flash"
     end
 
     def edit
@@ -58,9 +59,16 @@ class PostsController < ApplicationController
     def destroy
         if current_user.id == 1
             @post = Post.find(params[:id])
+            if @post.destroy
+                flash[:warning] = "Post deleted successfully."
+                redirect_to posts_path, status: :see_other
+            else
+                flash[:warning] = "Post deletion failed. Please try again."
+                redirect_to edit_post_path(@post), status: :see_other
+            end
         else
             flash[:warning] = "You do not have permission to delete this article."
-            redirect_to posts_path
+            redirect_to posts_path, status: :see_other
         end
     end
 
