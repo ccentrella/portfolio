@@ -1,12 +1,17 @@
 i {
     display: inline-block;
     width: 1em;
-    vertical-align: -0.1em;
+    vertical-align: -0.05em;
     margin: 0 0.5em;
+
+    &.medium {
+        width: 1.25em;
+        vertical-align: -0.15em;
+    }
 
     &.large {
         width: 2em;
-        vertical-align: -0.6em;
+        vertical-align: -0.3em;
     }
 }
 
@@ -24,4 +29,49 @@ i.clock::before {
 
 i.left-arrow::before {
     content: url(<%= asset_path 'icons/left-arrow.svg' %>);
+}
+
+i.pencil::before {
+    content: url(<%= asset_path 'icons/pencil.svg' %>);
+}
+
+.circle-icon {
+    margin: 0 2em;
+    border-radius: 50%;
+    background-color: $light-text;
+    display: inline-block;
+
+    img {
+        height: 4em;
+        margin: 2em;
+    }
+
+    &.transparent {
+        background-color: transparent;
+
+        img {
+            height: 8em;
+            margin: 0em;
+        }
+    }
+
+    @media screen and (max-width: 374px) {
+        margin: 0 1em;
+
+        img {
+            margin: 1.5em;
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+        img {
+            height: 8em;
+            margin: 3em; 
+        }
+
+        &.transparent img
+        {
+            height: 14em;
+        }
+    }
 }
