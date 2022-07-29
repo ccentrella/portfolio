@@ -1,51 +1,44 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Portfolio | Chris Centrella</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="author" content="Chris Centrella">
-    <meta name="description" content="Christian web designer, software engineer">
-    <meta name="keywords" content="Chris Centrella, christian, web, designer, developer, software, engineer, website">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-  <body>
-      <div class="hero">
-        <div class="hero-image">
-          <div class="hero-overlay">
-            <h1 class="logo">Chris<br />
-              Centrella</h1>
-            <h2 class="logo-tagline">Software Engineer</h2>
-          </div>
-        </div>
-        <div class="hero-about">
-          <h1>About Me</h1>
-          <p class="large justify">A learning-oriented and fast-paced early professional, I’m passionate about integrating cutting-edge technology with a love for <span class="keyword">people</span> and the <span class="keyword">environment</span>. </p>
-          <p class="large justify">Especially intriguing to me is the field of <span class="keyword">artificial intelligence</span> and <span class="keyword">machine learning</span>, where I can use my skills to deliver <span class="keyword">authentic value</span> to the world through the use of sophisticated automation and intelligence. </p>
-          <div class="button-container about-button">
-            <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button' %>
-          </div>
-        </div>
-      </div>
-          <div class="button-fixed-container-dark quick-links">
-            <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
-            <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
-            <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
-            <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
-          </div>
-          <div class="container">
-            <h1>Projects</h1>
-            <p class="large justify">
-              What better way to show that you know something than to actually use that knowledge? Here are some projects which I’ve worked on:
-            </p>
-          </div>
-          <div class="button-fixed-container-dark">
-            <%= link_to "Personal Portfolio<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed button-wide' %>
-            <%= link_to "Browse Repository<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed highlight-button button-wide', target: '_blank' %>
-          </div>
-    <%= render 'layouts/footer' %>
-  </body>
-</html>
+<div class="hero">
+  <div class="hero-image">
+    <div class="hero-overlay">
+      <h1 class="logo">Chris<br />
+        Centrella</h1>
+      <h2 class="logo-tagline">Software Engineer</h2>
+    </div>
+  </div>
+  <div class="hero-about">
+    <h2 class="hero-title">About Me</h2>
+    <p class="large justify">With an eye for <span class="keyword">detail</span> and a love for <span class="keyword">visual design</span>, I’m a young software engineer who wants to make a real and lasting <span class="keyword">difference</span> in this world we live in.</p>
+    <p class="large justify">Above all, I’m a <span class="keyword">Christian</span> and take Jesus Christ as my personal <span class="keyword">Savior</span> and <span class="keyword">Lord</span>. I believe Jesus is the <span class="keyword">only cure</span> to our broken and hurting world and that it is only <span class="keyword">His love</span> that can bring true and <span class="keyword">authentic meaning</span> to our lives and everything that we do, in and outside of the workplace.</p>
+    <div class="button-container about-button">
+      <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button' %>
+    </div>
+  </div>
+</div>
+<div class="button-fixed-container-dark quick-links">
+  <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed highlight-button' %>
+  <%= link_to "View My Blog<i class='icon fa fa-chevron-right'></i>".html_safe, posts_path, class: 'button-fixed highlight-button', target: '_blank' %>
+  <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
+  <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
+  <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
+</div>
+<div class="container">
+  <h2>Projects</h2>
+  <p class="large justify">
+    What better way to show that you know something than to actually use that knowledge? Here are some projects which I’ve worked on:
+  </p>
+</div>
+<div class="button-fixed-container-dark">
+  <%= link_to "Personal Portfolio<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed button-wide' %>
+  <%= link_to "Browse Repository<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed highlight-button button-wide', target: '_blank' %>
+</div>
+
+<div class="container">
+  <h2>Blog</h2>
+  <p class="large justify">
+    Do you want some hope and encouragement amid the brokenness of our world? Have a look at my blog! "For I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes." (Romans 1:16).
+  </p>
+</div>
+<div class="button-fixed-container-dark red">
+  <%= link_to "View My Blog<i class='icon fa fa-chevron-right'></i>".html_safe, posts_path, class: 'button-fixed' %>
+</div>
