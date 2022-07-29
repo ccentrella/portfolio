@@ -1,54 +1,101 @@
 <% provide(:title, "About" ) %>
-    <main class="container">
+<main>
+    <div class="container">
         <h1>About Me</h1>
-        <p class="large">
-            I’m an aspiring software engineer. I especially love creating user interfaces, because it allows me to
-            uniquely express what matters most—to myself, my clients, or my company.
-        </p>
+        <p class="large justify">With an eye for <span class="keyword">detail</span> and a love for <span class="keyword">visual design</span>, I’m a young software engineer who wants to make a real and lasting <span class="keyword">difference</span> in this world we live in. My favorite specialties are <span class="keyword">UX</span> and <span class="keyword">artificial intelligence</span>, especially the field of <span class="keyword">computer vision</span>, where I can apply my love for visual design with state-of-the-art technology. Writing my first line of code when I was fourteen years old, I’ve since worked with several technologies, including HTML & CSS, Ruby on Rails, Python, C# and the .NET Framework, and a bit of Java and React. I also believe in the importance of <span class="keyword">prototyping</span> and using <span class="keyword">best practices</span> and methodologies including Git, Agile, and project management software.</p>
+        
+        <p class="large justify">Some <span class="keyword">activities</span> that I really enjoy are <span class="keyword">playing the guitar</span> and capturing beauty through <span class="keyword">photography</span>. I also love spending time in the <span class="keyword">outdoors</span>, and believe that <span class="keyword">nature</span> is a powerful means of connecting to ourselves and to God. It is a place of quiet, where I can put aside the noise and business of our world and gaze at the power and awe of our <span class="keyword">Creator</span>.</p>
+       
+       <p class="large justify">Above all, I’m a <span class="keyword">Christian</span> and take Jesus Christ as my personal <span class="keyword">Savior</span> and <span class="keyword">Lord</span>. How I wish every person would encounter his burning heart of <span class="keyword">love</span>, a love that went so far as to die willingly for us on a cross. I believe Jesus is the <span class="keyword">only cure</span> to our broken and hurting world and that it is only <span class="keyword">His love</span> that can bring true and <span class="keyword">authentic meaning</span> to our lives and everything that we do, in and outside of the workplace. I firmly believe that it is the <span class="keyword">Love of God</span> that ultimately <span class="keyword">heals us</span>, gives us <span class="keyword">hope</span>, and which gives <span class="keyword">meaning</span> to our existence; it gives reason to our being on this planet during this time in the unfolding of humanity.</p>
+    </div>
+    <div class="button-fixed-container-dark circle-icon-container">
+        <div class="circle-icon-outer">
+            <div class="flex-col circle-icon-left">
+                <div class="circle-icon">
+                    <%= image_tag 'icons/paper.svg', alt: "resumé icon" %>
+                </div>
+            </div>
+            <div class="flex-col circle-icon-right">
+                <h2>View Resumé</h2>
+                <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
+            </div>
+        </div>
+        <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
+    </div>
+    <div class="button-fixed-container">
+        <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
+        <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
+    </div>
+    <div class="container">
         <h2>Projects</h2>
         <p class="large">
-            In my role as Lead Web Developer at Catholics for Hire, I've created several responsive websites from the ground up, using WordPress and the Elementor Page Builder. Here are a few of the sites that I've created:
+            In my role as Lead Web Developer at Catholics for Hire, I've created several responsive websites from the ground up, using WordPress and the Elementor Page Builder. Here are a few of the sites that I've created. I've also prototyped this entire website, i.e., my portfolio, in Adobe XD, fully responsive and mobile-first. I've built the entire thing from the ground up, including the blog functionality, with a fully-functioning admin panel and continuous improvement and version control, using git and following the Agile Methodology.
         </p>
         <div class="button-fixed-container">
             <%= link_to 'Catholics for Hire', "https://catholicsforhire.com",
-            target: 'blank', rel: 'noopener', class: 'button-fixed' %>
+            target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
             <%= link_to 'Clarifying Catholicism', "https://clarifyingcatholicism.org",
-            target: 'blank', rel: 'noopener', class: 'button-fixed' %>
+            target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
             <%= link_to 'NFC Fundraising Channel', "https://nfcfundraisingchannel.com",
-            target: 'blank', rel: 'noopener', class: 'button-fixed' %>
-        </div>
-        <p class="large">
-        I've also prototyped my own portfolio website in Adobe XD, responsive and mobile-first. I've implemented the entire website using HTML & CSS, with the Ruby on Rails Stack.
-        </p>
-        <div class="button-fixed-container">
+            target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
             <%= link_to 'View Portfolio Homepage', root_path,
-            target: 'blank', rel: 'noopener', class: 'button-fixed' %>
+            target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
         </div>
-        <h2>Experience</h1>
+    </div>
+    <div class="button-fixed-container-dark circle-icon-container">
+        <div class="circle-icon-outer">
+            <div class="flex-col circle-icon-left">
+                <div class="circle-icon transparent">
+                    <%= image_tag 'github-icon.svg', alt: "resumé icon" %>
+                </div>
+            </div>
+            <div class="flex-col circle-icon-right">
+                <h2>View Github</h2>
+                <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed circle-icon-button', target: '_blank' %>  
+            </div>
+        </div>
+        <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed circle-icon-button', target: '_blank' %>  
+    </div> 
+    <div class="container">       
+        <h2>Experience</h2>
         <div class="timeline">
             <div class="timeline-inner">
                 <span class="dot-beginning"></span>
+                 <div class="timeline-item">
+                    <h3><span class="timeline-year">2022</span><span class="dot"></span><span
+                            class="timeline-heading">Associate Application Developer at IBM</span></h3>
+                    <p>Completing training to become Java programmer</p>
+                    <p>Will soon work with on a project</p>
+                </div>               
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2022</span><span class="dot-small"></span><span
+                    <h3><span class="timeline-year">2022</span><span class="dot-small"></span><span
                             class="timeline-heading">Senior Thesis on Strategies for Modern Convolutional
-                            Networks</span></h2>
-                    <p>Strategies on improving CNN performance in 2022</p>
-                    <p>Researched modern CNN setbacks and possible solutions</p>
-                    <p>Code implemented with Keras and Tensorflow</p>
+                            Networks</span></h3>
+                    <p>Gave general overview of AI, as well as in-depth explanation of convolutional neural networks</p>
+                    <p>Studied ground-breaking articles from computer vision industry like AlexNet and ResNet</p>
+                    <p>Discussed techniques to improve performance of convolutional neural networks</p>
                 </div>
-
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2022</span><span class="dot-small"></span><span
-                            class="timeline-heading">Started Software Engineering Internship at St. Paul Center</span>
-                    </h2>
-                    <p>Transition large Wordpress site to smaller sites</p>
-                    <p>Use Ruby on Rails, HTML, CSS, and JavaScript</p>
-                    <p>Use Agile workflow, with regular meetings, demos, bug reviews, version control</p>
+                    <h3><span class="timeline-year">2022</span><span class="dot"></span><span
+                            class="timeline-heading">Software Engineering Internship at St. Paul Center</span>
+                    </h3>
+                    <p>Transitioned large Wordpress site to smaller sites</p>
+                    <p>Used Ruby on Rails, HTML, CSS, and JavaScript</p>
+                    <p>Used Agile workflow, with regular meetings, demos, bug reviews, version control</p>
                 </div>
-
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2021</span><span class="dot-small"></span><span
-                            class="timeline-heading">Class Project: Requirements for Nursing Clinicals</span></h2>
+                    <h3><span class="timeline-year">2021</span><span class="dot"></span><span
+                            class="timeline-heading">Started working on personal portfolio website</span>
+                    </h3>
+                    <p>Design entire website mobile-first</p>
+                    <p>Protype all functions of website using Adobe XD</p>
+                    <p>Build website entirely from scratch using HTML/CSS, JavaScript, and the Ruby on Rails Stack</p>
+                    <p>Create blog functionality with a pretty inteface, and an interactive, dynamic admin panel</p>
+                    <p>Use Version Control and Agile Methodology, like continuous improvement and an incremental lifecycle model</p>
+                </div>
+                <div class="timeline-item">
+                    <h3><span class="timeline-year">2021</span><span class="dot-small"></span><span
+                            class="timeline-heading">Class Project: Requirements for Nursing Clinicals</span></h3>
                     <p>Used to store and retrieve medical records</p>
                     <p>Used Agile methodology</p>
                     <p>Collaborated with team, held regular meetings, organized interviews with stakeholders</p>
@@ -56,16 +103,16 @@
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2021</span><span class="dot"></span><span
-                            class="timeline-heading">Introduction to AI and computer vision</span></h2>
+                    <h3><span class="timeline-year">2021</span><span class="dot"></span><span
+                            class="timeline-heading">Introduction to AI and computer vision</span></h3>
                     <p>Read books on AI and computer vision</p>
                     <p>Read through most of major groundbreaking computer vision papers</p>
                     <p>Implemented similar concepts with Keras, Tensorflow and Python</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2021</span><span class="dot"></span><span
-                            class="timeline-heading">Lead Web Developer for Startup</span></h2>
+                    <h3><span class="timeline-year">2021</span><span class="dot"></span><span
+                            class="timeline-heading">Lead Web Developer for Startup</span></h3>
                     <p>Perform SQL Tasks, interact with Linux server, configure domain</p>
                     <p>Collaborate and lead team, communicate with clients</p>
                     <p>Create responsive websites using Wordpress, Elementor Pro, and CSS</p>
@@ -74,57 +121,57 @@
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2021</span><span class="dot-small"></span><span
-                            class="timeline-heading">Class Project: Mobile dictionary app</span></h2>
+                    <h3><span class="timeline-year">2021</span><span class="dot-small"></span><span
+                            class="timeline-heading">Class Project: Mobile dictionary app</span></h3>
                     <p>Used Xamarin, C# and .NET</p>
                     <p>Co-created interface using XAML</p>
                     <p>Served as lead programmer and created most of backend</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2018</span><span class="dot-small"></span><span
-                            class="timeline-heading">Started job as computer lab assistant</span></h2>
+                    <h3><span class="timeline-year">2018</span><span class="dot-small"></span><span
+                            class="timeline-heading">Started job as computer lab assistant</span></h3>
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2018</span><span class="dot-small"></span><span
-                            class="timeline-heading">Created page template using HTML and web library</span></h2>
+                    <h3><span class="timeline-year">2018</span><span class="dot-small"></span><span
+                            class="timeline-heading">Created page template using HTML and web library</span></h3>
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2017</span><span class="dot"></span><span
-                            class="timeline-heading">Created three workbooks in Adobe InDesign</span></h2>
+                    <h3><span class="timeline-year">2017</span><span class="dot"></span><span
+                            class="timeline-heading">Created three workbooks in Adobe InDesign</span></h3>
                     <p>First experience with Adobe Creative Cloud</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2016</span><span class="dot-small"></span><span
-                            class="timeline-heading">Wrote apps using the Windows Presentation Foundation (WPF)</span></h2>
+                    <h3><span class="timeline-year">2016</span><span class="dot-small"></span><span
+                            class="timeline-heading">Wrote apps using the Windows Presentation Foundation (WPF)</span></h3>
                     <p>Used technologies like LINQ and data binding</p>
                     <p>Added application styles and multiple themes</p>
                     <p>Save records in text file, show reports, add additional users.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2015</span><span class="dot"></span><span
-                            class="timeline-heading">Began learning HTML & CSS fundamentals</span></h2>
+                    <h3><span class="timeline-year">2015</span><span class="dot"></span><span
+                            class="timeline-heading">Began learning HTML & CSS fundamentals</span></h3>
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2015</span><span class="dot-small"></span><span
-                            class="timeline-heading">Started learning Microsoft C#</span></h2>
+                    <h3><span class="timeline-year">2015</span><span class="dot-small"></span><span
+                            class="timeline-heading">Started learning Microsoft C#</span></h3>
                     <p>Learned important OOP and Data Structures fundamentals</p>
                     <p>.NET Framework 4.5</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h2><span class="timeline-year">2013</span><span class="dot-small"></span><span
-                            class="timeline-heading">Wrote first computer app using Visual Basic</span></h2>
+                    <h3><span class="timeline-year">2013</span><span class="dot-small"></span><span
+                            class="timeline-heading">Wrote first computer app using Visual Basic</span></h3>
                     <p>Introduction to object-oriented programming</p>
                 </div>
-
                 <span class="dot-end"></span>
             </div>
         </div>
-    </main>
+    </div>
+</main>
  
