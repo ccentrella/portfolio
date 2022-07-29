@@ -17,7 +17,7 @@
 
 .button-fixed-container-dark {
     margin: 5em 0;
-    padding: 5.5em 0 4em;
+    padding: 6.5em 0 5em;
     background: $container-dark-background;
 
     .button-fixed {
@@ -38,6 +38,10 @@
     
     &.red {
         background-color: $container-dark-background-red;
+
+        .button-fixed:hover {
+            color: $container-dark-background-red;
+        }
     }
 
     &.thin {
@@ -78,6 +82,16 @@
 
         .icon {
             padding-left: 2em;
+        }
+    }
+
+    &.red {
+        border-color: $primary;
+        color: $container-dark-background-red;
+
+        &:hover {
+            color: $light-text;
+            background-color: $container-dark-background-red;
         }
     }
 }
