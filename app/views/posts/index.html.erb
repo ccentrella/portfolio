@@ -1,4 +1,10 @@
 <% provide(:title, "Blog Index Page") %>
+<div class="flash-container">
+  <div class="flash flash-notice">
+    <p><strong>This feature has just been released!</strong></p>
+    <p>Please be patient as additional functionality is added.</p>
+  </div>
+</div>
 <main class="container">
   <h1>Articles</h1>
   <%= render partial: "post", collection: @posts %>
