@@ -53,7 +53,7 @@
 }
 
 .create-post-form {
-    .field {
-        max-width: none;
+    input[type=submit] {
+        cursor: pointer;
     }
 }
