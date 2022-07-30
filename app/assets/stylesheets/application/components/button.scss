@@ -20,6 +20,19 @@
     padding: 6.5em 0 5em;
     background: $container-dark-background;
 
+    &.highlight {
+        background-color: $button-container-highlight-background;
+    }
+    &.highlight.red {
+        background-color: $button-container-highlight-background-red;
+    }
+    &.top {
+        margin-bottom: 0;
+    }
+    &.bottom {
+        margin-top: 0;
+    }
+
     .button-fixed {
         border-color: $button-dark-border;
         background-color: $button-dark-background;
@@ -106,8 +119,4 @@
     &.button-wide {
         width: 18em;
     }
-}
-
-.highlight-button {
-    background-color: $button-highlight-background;
 }
