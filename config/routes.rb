@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   # Define additional paths
   get '/about', to: "static_pages#about"
   get '/resume', to: "resources#resume"
-  get '/mission', to: "static_pages#mission"
   get '/contact', to: "email_contact#new"
   post "/contact_form", to: "email_contact#create", as: "email_contacts"
   get '/photos', to: "photos#index"
