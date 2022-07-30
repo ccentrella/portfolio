@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   get '/resume', to: "resources#resume"
   get '/contact', to: "email_contact#new"
   post "/contact_form", to: "email_contact#create", as: "email_contacts"
-  get '/photos', to: "photos#index"
 
   # Define external URLs
   direct :github do
@@ -29,6 +28,10 @@ Rails.application.routes.draw do
 
   direct :linkedin do
     "https://linkedin.com/in/ccentrella/"
+  end
+
+  direct :photos do
+    "https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15"
   end
 
   # Required for contact form
