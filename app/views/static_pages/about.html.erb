@@ -8,7 +8,7 @@
        
        <p class="large justify">Above all, I’m a <span class="keyword">Christian</span> and take Jesus Christ as my personal <span class="keyword">Savior</span> and <span class="keyword">Lord</span>. How I wish every person would encounter his burning heart of <span class="keyword">love</span>, a love that went so far as to die willingly for us on a cross. I believe Jesus is the <span class="keyword">only cure</span> to our broken and hurting world and that it is only <span class="keyword">His love</span> that can bring true and <span class="keyword">authentic meaning</span> to our lives and everything that we do, in and outside of the workplace. I firmly believe that it is the <span class="keyword">Love of God</span> that ultimately <span class="keyword">heals us</span>, gives us <span class="keyword">hope</span>, and which gives <span class="keyword">meaning</span> to our existence; it gives reason to our being on this planet during this time in the unfolding of humanity.</p>
     </div>
-    <div class="button-fixed-container-dark circle-icon-container">
+    <div class="button-fixed-container-dark circle-icon-container top">
         <div class="circle-icon-outer">
             <div class="flex-col circle-icon-left">
                 <div class="circle-icon">
@@ -22,7 +22,7 @@
         </div>
         <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
     </div>
-    <div class="button-fixed-container">
+    <div class="button-fixed-container-dark bottom highlight red">
         <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
         <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
     </div>
@@ -31,18 +31,18 @@
         <p class="large">
             In my role as Lead Web Developer at Catholics for Hire, I've created several responsive websites from the ground up, using WordPress and the Elementor Page Builder. Here are a few of the sites that I've created. I've also prototyped this entire website, i.e., my portfolio, in Adobe XD, fully responsive and mobile-first. I've built the entire thing from the ground up, including the blog functionality, with a fully-functioning admin panel and continuous improvement and version control, using git and following the Agile Methodology.
         </p>
-        <div class="button-fixed-container">
-            <%= link_to 'Catholics for Hire', "https://catholicsforhire.com",
-            target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
-            <%= link_to 'Clarifying Catholicism', "https://clarifyingcatholicism.org",
-            target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
-            <%= link_to 'NFC Fundraising Channel', "https://nfcfundraisingchannel.com",
-            target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
-            <%= link_to 'View Portfolio Homepage', root_path,
-            target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
-        </div>
     </div>
-    <div class="button-fixed-container-dark circle-icon-container">
+    <div class="button-fixed-container-dark highlight red top">
+        <%= link_to "Catholics for Hire<i class='icon fa fa-chevron-right'></i>".html_safe, "https://catholicsforhire.com",
+                    target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
+        <%= link_to "Clarifying Catholicism<i class='icon fa fa-chevron-right'></i>".html_safe, "https://clarifyingcatholicism.org",
+        target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
+        <%= link_to "The Nonprofit Fundraising Channel<i class='icon fa fa-chevron-right'></i>".html_safe, "https://nfcfundraisingchannel.com",
+        target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
+        <%= link_to "Portfolio Homepage<i class='icon fa fa-chevron-right'></i>".html_safe, root_path,
+        target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
+    </div>
+    <div class="button-fixed-container-dark circle-icon-container bottom">
         <div class="circle-icon-outer">
             <div class="flex-col circle-icon-left">
                 <div class="circle-icon transparent">
