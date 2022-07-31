@@ -45,6 +45,6 @@ Rails.application.routes.draw do
   end
 
   # Define root path for subscribe
-  resources :subscribers, only: [:new, :create]
+  resources :subscribers
 
 end

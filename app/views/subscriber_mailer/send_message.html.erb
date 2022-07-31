@@ -1,0 +1,19 @@
+
+<p>
+  Dear <%= @subscriber.get_author %>
+</p>
+
+<p>Check out my latest blog post!</p>
+<h1><%= link_to @post.title, post_url(@post) %></h1>
+<blockquote>
+<%= @post.description %>
+</blockquote>
+
+<h2>Thank you so much for taking the time to read my articles!</h2>
+<p><strong>If you feel so called, please share on social media and with your friends and family!</strong></p>
+
+<p>Regards,</p>
+<p><strong>Chris Centrella</strong></p>
+<br/>
+<hr/>
+<p>No longer interested in receiving emails? <%= link_to "Click here", edit_resource_url(@subscriber) %> to unsubscribe or change your contact preferences.</p>
