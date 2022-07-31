@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, 
          :confirmable, :lockable
+  validates :name, presence: true
   def User.get_user_name(id)
     return User.find(id).name
   end

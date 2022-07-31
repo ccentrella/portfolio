@@ -3,6 +3,7 @@
   <div class="container form-container">
     <h1>Sign Up</h1>
   </div>
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', class: 'field' %><br/>
   <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'field' %><br/>
   <%= f.password_field :password, autocomplete: "new-password", placeholder: 'New Password', class: 'field' %><br/>
   <% if @minimum_password_length %>
