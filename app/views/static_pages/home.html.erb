@@ -19,11 +19,24 @@
   <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
   <%= link_to "View My Blog<i class='icon fa fa-chevron-right'></i>".html_safe, posts_path, class: 'button-fixed', target: '_blank' %>
 </div>
-<div class="button-fixed-container-dark bottom">
-  <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
-  <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
-  <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
+<div class="button-fixed-container-dark circle-icon-container top green">
+    <div class="circle-icon-outer">
+        <div class="flex-col circle-icon-left">
+            <div class="circle-icon">
+                <%= image_tag 'icons/paper_green.svg', alt: "resumé icon" %>
+            </div>
+        </div>
+        <div class="flex-col circle-icon-right">
+            <h2>View Resumé</h2>
+            <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
+        </div>
+    </div>
+    <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
 </div>
+<div class="button-fixed-container top">
+    <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed ', target: '_blank' %>
+    <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed ', target: '_blank' %>
+    </div>
 <div class="container">
   <h2>Projects</h2>
   <p class="large justify">
@@ -36,7 +49,7 @@
     <div class="circle-icon-outer">
         <div class="flex-col circle-icon-left">
             <div class="circle-icon transparent">
-                <%= image_tag 'github-icon.svg', alt: "resumé icon" %>
+                <%= image_tag 'github-icon.svg', alt: "github logo" %>
             </div>
         </div>
         <div class="flex-col circle-icon-right">
@@ -54,7 +67,7 @@
   <%= link_to "The Nonprofit Fundraising Channel<i class='icon fa fa-chevron-right'></i>".html_safe, "https://nfcfundraisingchannel.com",
   target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
 </div>
-<div class="button-fixed-container-dark circle-icon-container top">
+<div class="button-fixed-container-dark circle-icon-container">
     <div class="circle-icon-outer wide">
         <div class="flex-col circle-icon-left">
             <div class="circle-icon">

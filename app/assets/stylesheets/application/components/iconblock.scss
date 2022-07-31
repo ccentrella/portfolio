@@ -9,6 +9,14 @@
     .button-fixed:hover {
         color: $container-dark-background-red;
     }
+
+    &.green {
+        background: $container-dark-background;
+
+        .button-fixed:hover {
+            color: $container-dark-background;
+        }
+    }
 }
 
 .circle-icon-outer {
