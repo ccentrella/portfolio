@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
+  devise_for :users, skip: [:registrations], controllers: {
     sessions: 'users/sessions',
-    registrations: 'users/registrations',
     unlocks: 'users/unlocks',
     passwords: 'users/passwords',
     confirmations: 'users/confirmations',
@@ -10,8 +9,9 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get '/profile', to: "users/sessions#home", as: :user_root
+    get '/users/edit', to: "users/registrations#edit", as: :edit_user_registration
+    patch '/users/id', to: "users/registrations#update", as: :user_registration
   end
-
   # Define the root path route ("/")
   root "static_pages#home"
 
