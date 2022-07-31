@@ -16,9 +16,17 @@
 
     &.top {
         margin-bottom: 0;
+
+        &.thin {
+            margin-bottom: 3em
+        }
     }
     &.bottom {
         margin-top: 0;
+
+        &.thin {
+            margin-top: 4.5em;
+        }
     }
 }
 
