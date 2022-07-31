@@ -5,10 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, 
          :confirmable, :lockable
   def User.get_user_name(id)
-    if id == 1
-      return 'Chris Centrella'
-    else
-      return 'Author'
-    end
+    return User.find(id).name
   end
 end
