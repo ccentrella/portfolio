@@ -13,6 +13,13 @@
     flex-direction: column;
     align-items: center;
     background: $container-background;
+
+    &.top {
+        margin-bottom: 0;
+    }
+    &.bottom {
+        margin-top: 0;
+    }
 }
 
 .button-fixed-container-dark {
@@ -25,12 +32,6 @@
     }
     &.highlight.red {
         background-color: $button-container-highlight-background-red;
-    }
-    &.top {
-        margin-bottom: 0;
-    }
-    &.bottom {
-        margin-top: 0;
     }
 
     .button-fixed {

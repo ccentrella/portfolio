@@ -2,7 +2,7 @@
     background: $container-dark-background-red;
     padding: 3em 0;
 
-     h2 {
+     p, h1, h2 {
         color: $light-text;
     }
 
@@ -15,6 +15,12 @@
     display: flex;
     padding: 2em 0 3em;
     align-items: center;
+
+    &.wide {
+        @media screen and (max-width:749px) {
+            display: block;
+        }
+    }
 }
 
 .flex-col.circle-icon-left {
