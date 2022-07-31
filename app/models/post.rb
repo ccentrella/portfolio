@@ -12,6 +12,6 @@ class Post < ApplicationRecord
     end
 
     def get_author()
-        return 'Chris Centrella'
+        return User.get_user_name(user_id)
     end
 end

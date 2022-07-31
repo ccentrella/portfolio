@@ -28,7 +28,7 @@
             </div>
         <% end %>                 
         <div class="container">
-            <p class="post-author"><i class="person large"></i><%= User.get_user_name(@post.user_id) %></p>
+            <p class="post-author"><i class="person large"></i><%= @post.get_author %></p>
             <p class="post-description"><%= @post.description %></p>
         </div>
     </section>
