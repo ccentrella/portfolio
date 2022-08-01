@@ -19,7 +19,7 @@
         <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>
         <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>              
     </div>
-        <div class="button-fixed-container">
+        <div class="button-fixed-container top bottom thin">
         <%= f.submit "Publish".html_safe, class: 'button-fixed' %>
         <%= link_to 'Delete', post_path(@post), data: { turbo_method: :delete,
          turbo_confirm: "Are you sure you would like to delete this post? This cannot be undone." },

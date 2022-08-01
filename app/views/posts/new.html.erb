@@ -24,7 +24,7 @@
             <%= recaptcha_v3(action: 'create_post', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
         <% end %>                  
     </div>
-    <div class="button-fixed-container">
+    <div class="button-fixed-container top bottom thin">
         <%= f.submit "Publish".html_safe, class: 'button-fixed' %>
     </div>
 <% end %>
