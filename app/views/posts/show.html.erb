@@ -10,7 +10,7 @@
         </div>
         <div class="post-header-bottom">
             <div class="post-details">
-                <p><i class="calendar large"></i> <%= @post.created_at.strftime('%B %d, %Y') %> </p>
+                <p><i class="calendar large"></i> <%= @post.get_date %> </p>
                 <p><i class="clock large"></i> <%= @post.get_time %> </p>
             </div>
         </div>

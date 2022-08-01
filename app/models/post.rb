@@ -7,6 +7,10 @@ class Post < ApplicationRecord
     validates :nickname, presence: false
     has_rich_text :content
 
+    def get_date()
+        Time.zone.utc_to_local(created_at).strftime('%B %d, %Y')
+    end
+
     def get_time()
         words = content.to_plain_text().split()
         minutes = round([1, words.length / 200].max)
