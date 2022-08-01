@@ -5,9 +5,19 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+   def new
+      success = verify_recaptcha(action: 'sign_up', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY'])
+      checkbox_success = verify_recaptcha unless success
+
+      if success || checkbox_success
+         super
+      else
+         if !success
+            @show_checkbox_recaptcha = true
+         end
+         render :new, status: :unprocessable_entity
+      end
+   end
 
   # POST /resource
   # def create

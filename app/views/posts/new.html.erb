@@ -17,7 +17,12 @@
         <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
         <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
         <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>
-        <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>              
+        <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>
+        <% if @show_checkbox_recaptcha %>
+            <%= recaptcha_tags %>
+        <% else %>
+            <%= recaptcha_v3(action: 'create_post', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
+        <% end %>                  
     </div>
     <div class="button-fixed-container">
         <%= f.submit "Publish".html_safe, class: 'button-fixed' %>

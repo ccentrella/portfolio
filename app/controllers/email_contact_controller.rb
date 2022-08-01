@@ -5,16 +5,25 @@ class EmailContactController < ApplicationController
     
     def create
         @email_contact = EmailContact.new(email_contact_params)
-        if @email_contact.valid?
-           if @email_contact.deliver
-                flash[:success] = 'Message sent!'
-                redirect_to contact_path
-            else
-                flash.now[:error] = 'Message could not be sent. Please try again'
-                render :new, status: :unprocessable_entity
+        success = verify_recaptcha(action: 'contact', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY'])
+        checkbox_success = verify_recaptcha unless success
+
+        if success || checkbox_success
+            if @email_contact.valid?
+                if @email_contact.deliver
+                     flash[:success] = 'Message sent!'
+                     redirect_to contact_path
+                 else
+                     flash.now[:error] = 'Message could not be sent. Please try again'
+                     render :new, status: :unprocessable_entity
+                 end
+             else
+                 render :new, status: :unprocessable_entity
+             end
+          else
+            if !success
+              @show_checkbox_recaptcha = true
             end
-        else
-            # flash[:error] = 'Error. Message could not be sent.'
             render :new, status: :unprocessable_entity
         end
     end

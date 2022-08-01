@@ -10,7 +10,11 @@
       <p><em>(<%= @minimum_password_length %> characters minimum)</em></p>
   <% end %>
   <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm Password', class: 'field' %><br/>
-
+  <% if @show_checkbox_recaptcha %>
+      <%= recaptcha_tags %>
+  <% else %>
+      <%= recaptcha_v3(action: 'sign_up', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
+  <% end %>      
   <div class="actions">
     <%= f.submit "Sign Up", class: 'button-fixed submit-button'%>
   </div>

@@ -23,11 +23,21 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-        if @post.save
-            flash[:notice] = "Post successfully created!"
-            redirect_to post_path(@post)
-            helpers.notify_subscribers(@post)
+        success = verify_recaptcha(action: 'create_post', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY'])
+        checkbox_success = verify_recaptcha unless success
+
+        if success || checkbox_success
+            if @post.save
+                flash[:notice] = "Post successfully created!"
+                redirect_to post_path(@post)
+                helpers.notify_subscribers(@post)
+            else
+                render :new, status: :unprocessable_entity
+            end
         else
+            if !success
+              @show_checkbox_recaptcha = true
+            end
             render :new, status: :unprocessable_entity
         end
     end

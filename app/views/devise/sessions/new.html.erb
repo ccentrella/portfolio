@@ -10,6 +10,11 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
+  <% if @show_checkbox_recaptcha %>
+      <%= recaptcha_tags %>
+  <% else %>
+      <%= recaptcha_v3(action: 'sign_in', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
+  <% end %>    
   <div class="actions">
     <%= f.submit "Sign In", class: 'button-fixed submit-button'%>
   </div>

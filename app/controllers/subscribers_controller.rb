@@ -2,11 +2,21 @@ class SubscribersController < ApplicationController
     
     def create
         @subscriber = Subscriber.new(subscriber_params)
-        if @subscriber.save
-            flash[:success] = "Thank you for subscribing!"
-            redirect_to subscribers_url
+        success = verify_recaptcha(action: 'subscribe', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY'])
+        checkbox_success = verify_recaptcha unless success
+        
+        if success || checkbox_success
+            if @subscriber.save
+                flash[:success] = "Thank you for subscribing!"
+                redirect_to subscribers_url
+            else
+                render :new, status: :unprocessable_entity
+            end
         else
-            render :new, status: :unprocessable_entity
+          if !success
+            @show_checkbox_recaptcha = true
+          end
+          render :new, status: :unprocessable_entity
         end
     end
 
