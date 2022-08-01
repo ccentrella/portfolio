@@ -4,6 +4,10 @@
 
 header {
     margin: 0;
+
+    .logo {
+        max-width: min-content;
+    }
 }
 
 .navbar-outer {
@@ -100,6 +104,10 @@ header {
 
 @media screen and (min-width:750px)
 {
+    header .logo {
+        max-width: fit-content;
+    }
+
     .banner-image {
         background-size: cover;
     }
