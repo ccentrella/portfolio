@@ -34,11 +34,15 @@
         outline-style: none;
     }
 
-    p, div  {
+    p, div, br  {
         margin-bottom: 1em;
         font-size: 1.05em;
         text-align: justify;
         overflow-wrap: break-word;
+    }
+
+    blockquote {
+        margin-bottom: 1em;
     }
 
     h1 {
