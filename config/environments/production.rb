@@ -64,18 +64,20 @@ Rails.application.configure do
 
   # Configure mailing settings
   config.action_mailer.perform_caching = false
-  host = 'ccentrella.herokuapp.com'
+  host = 'chriscentrella.com'
   config.action_mailer.default_url_options = {host: "#{host}"}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    :user_name => ENV['MAILGUN_SMTP_LOGIN'],
-    :password => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain => host,
-    :address => 'smtp.mailgun.org',
-    :port => 587,
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    user_name: ENV['SMTP_LOGIN'],
+    password: ENV['SMTP_PASSWORD'],
+    domain: host,
+    address: 'smtp.gmail.com',
+    port: 587,
+    authentication: :plain,
+    enable_starttls_auto: true,
+    open_timeout:         5,
+    read_timeout:         5
     }
 
   # Ignore bad email addresses and do not raise email delivery errors.
