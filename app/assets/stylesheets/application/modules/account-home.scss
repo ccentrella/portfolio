@@ -5,6 +5,8 @@
 .account-overview {
     margin: 4em 0 3em;
     padding-top: 2.5em;
+    background-color: $container-dark-background;
+    display: block;
 
     h2 {
         color: $light-text;

@@ -1,18 +1,28 @@
 <main>
-    <h1 class="container account-title">Welcome!</h1>
-    <div class="button-fixed-container-dark account-overview">
-       <h2 class="container">Overview</h2>
-        <%= link_to "Edit Profile<i class='icon fa fa-chevron-right'></i>".html_safe, edit_user_registration_path, class: 'button-fixed' %>
-        <%= link_to "New Blog Post<i class='icon fa fa-chevron-right'></i>".html_safe, new_post_path, class: 'button-fixed' %>
-        <!--<%= link_to "Upload Photo<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
-        <%= link_to "View Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>-->
+    <div class="container">
+        <h1 class="account-title">Welcome!</h1>
     </div>
-    <h2 class="container">Blog</h2>
+    <div class="button-fixed-container-dark account-overview">
+        <div class="container">
+            <h2>Overview</h2>
+        </div>
+        <div class="button-fixed-container top bottom">
+            <%= link_to "Edit Profile<i class='icon fa fa-chevron-right'></i>".html_safe, edit_user_registration_path, class: 'button-fixed' %>
+            <%= link_to "New Blog Post<i class='icon fa fa-chevron-right'></i>".html_safe, new_post_path, class: 'button-fixed' %>
+            <!--<%= link_to "Upload Photo<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
+            <%= link_to "View Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>-->
+        </div>
+    </div>
+    <div class="container">
+        <h2>Blog</h2>
+    </div>
     <div class="button-fixed-container-dark red thin">
         <%= link_to "Create New Post<i class='icon fa fa-chevron-right'></i>".html_safe, new_post_path, class: 'button-fixed' %>
         <%= link_to "View All Posts<i class='icon fa fa-chevron-right'></i>".html_safe, admin_index_posts_path, class: 'button-fixed' %>
     </div>
-    <h2 class="container">Photos</h2>
+    <div class="container">
+        <h2>Photos</h2>
+    </div>
     <div class="button-fixed-container-dark red thin">
         <%= link_to "Upload Photo<i class='icon fa fa-chevron-right'></i>".html_safe, "", class: 'button-fixed' %>
         <%= link_to "View All Photos<i class='icon fa fa-chevron-right'></i>".html_safe, "", class: 'button-fixed' %>
