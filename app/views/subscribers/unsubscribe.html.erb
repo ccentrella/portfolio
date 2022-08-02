@@ -1,0 +1,10 @@
+<%= render partial: "shared/error_messages", object: @subscriber %>
+<%= form_with(model: @subscriber, local: true, class: 'contact-form') do |f| %>
+    <div class="container form-container">
+        <h2>Unsubscribe</h2>
+    </div>
+    <p><strong>By unsubscribing, you will no longer receive emails from this website.</strong> Are you sure you would like to unsubscribe?</p>
+    <%= f.submit 'Submit', class: 'button-fixed submit-button' %><br/>
+    <%= link_to 'Yes, unsubscribe me', subscriber_path(@subscriber), data: { turbo_method: :delete}, class: 'button-fixed submit-button wide' %><br/>
+    <%= link_to 'No, please don&apos;t!', root_path, class: 'button-fixed submit-button wide' %>
+<% end %>

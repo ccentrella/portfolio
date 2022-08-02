@@ -6,11 +6,16 @@ class Subscriber < ApplicationRecord
     format: { with: VALID_EMAIL_REGEX }
     validates :nickname, presence: false
 
-    def deliver(title)
-        SubscriberMailer.send_message(self, title).deliver
+    def deliver(post, unsubscribe_link)
+        SubscriberMailer.send_message(self, post, unsubscribe_link).deliver
     end
 
     def get_author
        return name.nil? ? "User" : name
     end
+
+    def generate_unsubscribe_link
+        Rails.application.message_verifier(:unsubscribe).generate(id)
+    end
+
 end

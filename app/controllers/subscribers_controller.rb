@@ -35,6 +35,16 @@ class SubscribersController < ApplicationController
     #     end
     # end
 
+    def unsubscribe
+        render layout: false
+        subscriber = Rails.application.message_verifier(:unsubscribe).verify(params[:id])
+        @subscriber = Subscriber.find(subscriber)
+
+        if !@subscriber.nil?
+            render layout: "unsubscribe"
+        end
+    end
+
     def destroy
         @subscriber = Subscriber.find(params[:id])
         if @subscriber.destroy
@@ -42,7 +52,7 @@ class SubscribersController < ApplicationController
             redirect_to posts_path, status: :see_other
         else
             flash[:warning] = "Unsubscribe failed. Please try again or reach out to me."
-            redirect_to subscribers_url, status: :see_other
+            render :unsubscribe, status: unprocessable_entity
         end
     end
 
