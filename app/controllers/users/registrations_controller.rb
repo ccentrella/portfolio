@@ -15,7 +15,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
          if !success
             @show_checkbox_recaptcha = true
          end
-         render :new, status: :unprocessable_entity
+         render :new
       end
    end
 

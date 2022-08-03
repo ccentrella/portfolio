@@ -8,15 +8,15 @@ class SubscribersController < ApplicationController
         if success || checkbox_success
             if @subscriber.save
                 flash[:success] = "Thank you for subscribing!"
-                redirect_to subscribers_url
+                render :new
             else
-                render :new, status: :unprocessable_entity
+                render :new
             end
         else
           if !success
             @show_checkbox_recaptcha = true
           end
-          render :new, status: :unprocessable_entity
+          render :new
         end
     end
 

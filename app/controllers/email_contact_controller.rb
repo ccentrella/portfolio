@@ -15,16 +15,16 @@ class EmailContactController < ApplicationController
                      redirect_to contact_path
                  else
                      flash.now[:error] = 'Message could not be sent. Please try again'
-                     render :new, status: :unprocessable_entity
+                     render :new
                  end
-             else
-                 render :new, status: :unprocessable_entity
-             end
-          else
+            else
+                render :new
+            end
+        else
             if !success
               @show_checkbox_recaptcha = true
             end
-            render :new, status: :unprocessable_entity
+            render :new
         end
     end
 

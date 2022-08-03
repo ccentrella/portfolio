@@ -32,7 +32,7 @@ class PostsController < ApplicationController
                 redirect_to post_path(@post)
                 helpers.notify_subscribers(@post)
             else
-                render :new, status: :unprocessable_entity
+                render :new
             end
         # else
         #     if !success

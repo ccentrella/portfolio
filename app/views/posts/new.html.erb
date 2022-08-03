@@ -1,6 +1,6 @@
 <% provide(:title, "New Post") %>
 <%= render partial: "shared/error_messages", object: @post %>
-<%= form_with(model: @post, local: true, class: 'create-post-form') do |f| %>
+<%= form_with(model: @post, local: true, class: 'create-post-form', data {turbo: false}) do |f| %>
     <div class='container'>
         <div class="button-fixed-container create-post-button-container">
             <%= f.submit 'Publish', class: 'button-fixed' %>
@@ -19,7 +19,7 @@
         <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>
         <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>
         <% if @show_checkbox_recaptcha %>
-            <%= recaptcha_tags %>
+            <%= recaptcha_tags noscript: false %>
         <% else %>
             <%= recaptcha_v3(action: 'create_post', site_key: ENV['RECAPTCHA_SITE_KEY_V3']) %>
         <% end %>                  

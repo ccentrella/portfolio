@@ -1,5 +1,5 @@
 <%= render partial: "shared/error_messages", object: @subscriber %>
-<%= form_with(model: @subscriber, local: true, class: 'contact-form') do |f| %>
+<%= form_with(model: @subscriber, local: true, class: 'contact-form', data: {turbo: false}) do |f| %>
     <div class="container form-container">
         <h2>Subscribe</h2>
     </div>
@@ -7,7 +7,7 @@
     <%= f.text_field :email_address, placeholder: 'Email Address', class: 'field' %><br/>
     <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>
     <% if @show_checkbox_recaptcha %>
-        <%= recaptcha_tags %>
+        <%= recaptcha_tags noscript: false %>
     <% else %>
         <%= recaptcha_v3(action: 'subscribe', site_key: ENV['RECAPTCHA_SITE_KEY_V3']) %>
     <% end %>     

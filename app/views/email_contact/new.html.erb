@@ -6,7 +6,7 @@
   <p class="large">“The Lord, He is my strength and my song, and He has become my salvation. He is my God.”
     (Exodus 15:2)</p>
 </div>
-<%= form_with(model: @email_contact, local: true, class: 'contact-form') do |f| %>
+<%= form_with(model: @email_contact, local: true, class: 'contact-form', data: {turbo: false}) do |f| %>
     <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
     <br/>
     <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
@@ -14,7 +14,7 @@
     <%= f.text_area :message, placeholder: 'Message', class: 'field field-message' %>
     <br/>
     <% if @show_checkbox_recaptcha %>
-        <%= recaptcha_tags %>
+        <%= recaptcha_tags noscript: false %>
     <% else %>
         <%= recaptcha_v3(action: 'contact', site_key: ENV['RECAPTCHA_SITE_KEY_V3']) %>
     <% end %>    
