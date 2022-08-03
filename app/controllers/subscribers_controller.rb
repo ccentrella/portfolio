@@ -8,7 +8,7 @@ class SubscribersController < ApplicationController
         if success || checkbox_success
             if @subscriber.save
                 flash[:success] = "Thank you for subscribing!"
-                render :new
+                redirect_to posts_path
             else
                 render :new
             end
