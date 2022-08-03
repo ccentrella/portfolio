@@ -1,6 +1,6 @@
 <% provide(:title, "New Post") %>
 <%= render partial: "shared/error_messages", object: @post %>
-<%= form_with(model: @post, local: true, class: 'create-post-form', data {turbo: false}) do |f| %>
+<%= form_with(model: @post, local: true, class: 'create-post-form', data: {turbo: false}) do |f| %>
     <div class='container'>
         <div class="button-fixed-container create-post-button-container">
             <%= f.submit 'Publish', class: 'button-fixed' %>
