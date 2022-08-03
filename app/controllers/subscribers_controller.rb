@@ -39,10 +39,6 @@ class SubscribersController < ApplicationController
         render layout: false
         subscriber = Rails.application.message_verifier(:unsubscribe).verify(params[:id])
         @subscriber = Subscriber.find(subscriber)
-
-        if !@subscriber.nil?
-            render layout: "unsubscribe"
-        end
     end
 
     def destroy
