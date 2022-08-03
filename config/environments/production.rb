@@ -76,8 +76,8 @@ Rails.application.configure do
     port: 587,
     authentication: :plain,
     enable_starttls_auto: true,
-    open_timeout:         5,
-    read_timeout:         5
+    open_timeout:         30,
+    read_timeout:         30
     }
 
   # Ignore bad email addresses and do not raise email delivery errors.
