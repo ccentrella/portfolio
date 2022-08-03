@@ -9,7 +9,7 @@
     <% if @show_checkbox_recaptcha %>
         <%= recaptcha_tags %>
     <% else %>
-        <%= recaptcha_v3(action: 'subscribe', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
+        <%= recaptcha_v3(action: 'subscribe', site_key: ENV['RECAPTCHA_SITE_KEY_V3']) %>
     <% end %>     
     <%= f.submit 'Submit', class: 'button-fixed submit-button' %>
 <% end %>

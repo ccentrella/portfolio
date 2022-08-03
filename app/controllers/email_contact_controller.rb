@@ -5,7 +5,7 @@ class EmailContactController < ApplicationController
     
     def create
         @email_contact = EmailContact.new(email_contact_params)
-        success = verify_recaptcha(action: 'contact', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY'])
+        success = verify_recaptcha(action: 'contact', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY_V3'])
         checkbox_success = verify_recaptcha unless success
 
         if success || checkbox_success

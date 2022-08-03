@@ -6,7 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
    def new
-      success = verify_recaptcha(action: 'sign_up', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY'])
+      success = verify_recaptcha(action: 'sign_up', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY_V3'])
       checkbox_success = verify_recaptcha unless success
 
       if success || checkbox_success
