@@ -36,7 +36,9 @@ class SubscribersController < ApplicationController
     # end
 
     def unsubscribe
-        subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(params[:id]))
+        id = params[:id]
+        puts id
+        subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(id))
         @subscriber = Subscriber.find(subscriber)
         puts @subscriber
         puts "Test"
