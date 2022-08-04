@@ -12,7 +12,7 @@
         <div class="circle-icon-outer">
             <div class="flex-col circle-icon-left">
                 <div class="circle-icon">
-                    <%= image_tag 'icons/paper.svg', alt: "resumé icon" %>
+                <%= link_to (image_tag 'icons/paper.svg', alt: "resumé icon"), asset_url('resume-p.pdf'), target: '_blank' %>
                 </div>
             </div>
             <div class="flex-col circle-icon-right">
@@ -36,7 +36,7 @@
         <div class="circle-icon-outer">
             <div class="flex-col circle-icon-left">
                 <div class="circle-icon transparent">
-                    <%= image_tag 'github-icon.svg', alt: "github logo" %>
+                    <%=link_to (image_tag 'github-icon.svg', alt: "github logo"), github_url, target: '_blank' %>
                 </div>
             </div>
             <div class="flex-col circle-icon-right">
@@ -58,7 +58,7 @@
     <div class="circle-icon-outer wide">
         <div class="flex-col circle-icon-left">
             <div class="circle-icon">
-                <%= image_tag 'icons/article_green.svg', alt: "article icon" %>
+                <%= link_to (image_tag 'icons/article_green.svg', alt: "article icon"), posts_path %>
             </div>
         </div>
         <div class="flex-col container circle-icon-right">
