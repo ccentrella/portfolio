@@ -45,7 +45,6 @@ Rails.application.routes.draw do
   end
 
   # Define root path for subscribe
-  resources :subscribers do
-    get :unsubscribe
-  end
+  resources :subscribers
+  get 'subscribers/unsubscribe', to: "subscribers#unsubscribe"
 end
