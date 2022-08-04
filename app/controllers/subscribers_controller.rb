@@ -47,12 +47,13 @@ class SubscribersController < ApplicationController
 
     def destroy
         @subscriber = Subscriber.find(params[:id])
+        puts @subscriber
         if @subscriber.destroy
             flash[:warning] = "You have been unsubscribed successfully. I'm sorry to see you go!"
             redirect_to posts_path, status: :see_other
         else
             flash[:warning] = "Unsubscribe failed. Please try again or reach out to me."
-            render :unsubscribe, status: unprocessable_entity
+            render :unsubscribe, status: :unprocessable_entity
         end
     end
 
