@@ -45,9 +45,7 @@ class SubscribersController < ApplicationController
     end
 
     def destroy
-        puts @subscriber.nil?
-        puts params[:id]
-        subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(params[:subscriber]))
+        subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(params[:subscriber_id]))
         @subscriber = Subscriber.find(subscriber)
 
         if @subscriber.destroy
