@@ -37,16 +37,18 @@ class SubscribersController < ApplicationController
 
     def unsubscribe
         begin
-            subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(params[:subscriber_id]))
-            @subscriber = Subscriber.find(subscriber)
+            @subscriber = params[:subscriber_id]
+            Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(@subscriber))
         rescue ActiveSupport::MessageVerifier::InvalidSignature => e
             raise ActionController::RoutingError.new('Not Found')
         end
     end
 
     def destroy
-        @subscriber = Subscriber.find(params[:id])
-        puts @subscriber
+        puts params
+        subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(params[:subscriber]))
+        @subscriber = Subscriber.find(subscriber)
+
         if @subscriber.destroy
             flash[:warning] = "You have been unsubscribed successfully. I'm sorry to see you go!"
             redirect_to posts_path, status: :see_other
