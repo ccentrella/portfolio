@@ -1,4 +1,4 @@
-<%= form_with(model: @subscriber, local: true, class: 'contact-form') do |f| %>
+<div class='contact-form'>
     <div class="container form-container">
         <h2>Unsubscribe</h2>
         <p><strong>By unsubscribing, you will no longer receive emails from this website.</strong> Are you sure you would like to unsubscribe?</p>
@@ -6,4 +6,4 @@
     <br/>
     <%= link_to 'Yes, unsubscribe me', subscribers_unsubscribe_path, data: { turbo_method: :delete}, class: 'button-fixed submit-button wide' %><br/>
     <%= link_to "No, please don't!", posts_path, class: 'button-fixed submit-button wide' %>
-<% end %>
+</div>
