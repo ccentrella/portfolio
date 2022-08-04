@@ -38,22 +38,35 @@ class SubscribersController < ApplicationController
     def unsubscribe
         begin
             @subscriber = params[:subscriber_id]
-            Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(@subscriber))
-        rescue ActiveSupport::MessageVerifier::InvalidSignature => e
+            subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(@subscriber))
+
+            if !Subscriber.exists?(subscriber)
+                flash[:warning] = "You have already unsubscribed. You should stop receiving emails within 7-10 days, at the latest."
+                redirect_to posts_path, status: :see_other
+            end
+        rescue ActiveSupport::MessageVerifier::InvalidSignature || ActionController::BadRequest => e
             raise ActionController::RoutingError.new('Not Found')
         end
     end
 
+    # For security purposes, re-verify email token to prevent maliciously directly executing destroy
     def destroy
-        subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(params[:subscriber_id]))
-        @subscriber = Subscriber.find(subscriber)
+        begin
+            subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(params[:subscriber_id]))
+            @subscriber = Subscriber.find(subscriber)
+        rescue ActiveSupport::MessageVerifier::InvalidSignature || ActionController::BadRequest => e
+            raise ActionController::RoutingError.new('Not Found')
+        end
 
-        if @subscriber.destroy
+        if !Subscriber.exists?(subscriber)
+            flash[:warning] = "You have already unsubscribed. You should stop receiving emails within 7-10 days, at the latest."
+            redirect_to posts_path, status: :see_other
+        elsif @subscriber.destroy
             flash[:warning] = "You have been unsubscribed successfully. I'm sorry to see you go!"
             redirect_to posts_path, status: :see_other
         else
             flash[:warning] = "Unsubscribe failed. Please try again or reach out to me."
-            render :unsubscribe, status: :unprocessable_entity
+            render :unsubscribe, locals: {subscriber_id: @subscriber}, status: :unprocessable_entity
         end
     end
 
