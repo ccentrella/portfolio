@@ -36,12 +36,13 @@ class SubscribersController < ApplicationController
     # end
 
     def unsubscribe
-        begin
+        # begin
+        puts params[:subscriber_id]
             subscriber = Rails.application.message_verifier(:unsubscribe).verify(CGI::unescape(params[:subscriber_id]))
             @subscriber = Subscriber.find(subscriber)
-        rescue => exception
-            raise ActionController::RoutingError.new('Not Found')
-        end
+        # rescue => exception
+        #     raise ActionController::RoutingError.new('Not Found')
+        # end
     end
 
     def destroy
