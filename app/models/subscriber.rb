@@ -15,7 +15,7 @@ class Subscriber < ApplicationRecord
     end
 
     def generate_unsubscribe_link
-        Rails.application.message_verifier(:unsubscribe).generate(id, digest: 'SHA256')
+        CGI::escape(Rails.application.message_verifier(:unsubscribe).generate(id))
     end
 
 end
