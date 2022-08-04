@@ -4,6 +4,7 @@
         <h2>Unsubscribe</h2>
         <p><strong>By unsubscribing, you will no longer receive emails from this website.</strong> Are you sure you would like to unsubscribe?</p>
     </div>
+    <br/>
     <%= link_to 'Yes, unsubscribe me', subscriber_path(@subscriber), data: { turbo_method: :delete}, class: 'button-fixed submit-button wide' %><br/>
     <%= link_to "No, please don't!", root_path, class: 'button-fixed submit-button wide' %>
 <% end %>
