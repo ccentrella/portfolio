@@ -1,0 +1,18 @@
+Dear <%= @subscriber.get_author %>,
+
+Check out my latest blog post!
+<%= @post.title %>
+<%= post_url(@post) %>
+
+<%= @post.description %>
+
+Thank you so much for taking the time to read my articles :&rpar;. It means a lot and I hope that I may always let the Lord speak through me, to you.
+
+If you so wish, please share this article with whoever is in need of a little love, be it friends, family, or on social media. My prayer is that my articles might be a light in the midst of darkness; of hope in the midst of the despair so present in our world today. In all things, let us "love one another, as I have loved you." (John 13:34)
+
+In Christ,
+Chris
+
+
+No longer interested in receiving emails? Open this link to unsubscribe:
+<%= subscribers_unsubscribe_url(subscriber_id: @unsubscribe_link) %>
