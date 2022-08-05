@@ -18,5 +18,8 @@ module Portfolio
     #
     config.time_zone = 'Eastern Time (US & Canada)'
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Show custom error pages
+    config.exceptions_app = self.routes
   end
 end
