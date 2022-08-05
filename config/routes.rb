@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     # omniauth_callbacks: 'users/omniauth_callbacks',
   }
 
+  get '/temp', to: "static_pages#draft"
+
   devise_scope :user do
     get '/profile', to: "users/admin#home", as: :profile
     get '/users/edit', to: "users/registrations#edit", as: :edit_user_registration

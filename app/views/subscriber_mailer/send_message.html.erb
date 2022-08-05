@@ -12,8 +12,10 @@
   </head>
   <body style="margin:0">
     <header style="margin: 0 0 4em;">
-      <div style="border-bottom: 4px solid #7C9341; background-repeat: no-repeat; background-size: 100%; background-image: url(<%= asset_url 'banner.png' %>);">
+      <div style="border-bottom: 4px solid #7C9341; background-color: #425218; background-repeat: no-repeat; background-size: 100%; background-image: url(<%= asset_url 'banner.png' %>);">
         <h1 style="max-width: min-content; margin: 0; padding: 0.75em 1em 0.75em 0.75em; font-family: 'jaf-domus-titling-web', 'Verdana', sans-serif; font-weight: 600;
+                    line-height: 1.15; font-size: 3em; text-shadow: 0 6px 6px #4f832863;">
+        <h1 style="max-width: auto; margin: 0; padding: 0.75em 1em 0.75em 0.75em; font-family: 'jaf-domus-titling-web', 'Verdana', sans-serif; font-weight: 600;
                     line-height: 1.15; font-size: 3em; text-shadow: 0 6px 6px #4f832863;">
           <%= link_to 'Chris Centrella', root_url, style: "color: #fcfcfc; text-decoration: none;" %>
         </h1>
@@ -27,7 +29,7 @@
         Check out my latest blog post!
       </p>
       <h1 style="font-family: 'rooney-sans', 'Verdana', sans-serif; font-weight: 700">
-        <%= link_to @post.title, post_url(@post), style: "color: #657c3b;" %>
+        <%= link_to @post.title, post_url(@post), style: "color: #657c3b; text-decoration: none;" %>
       </h1>
       <p style="color: #5F7733; font-size: 1.05em; font-family: 'Quasimoda', 'Helvetica', 'Helvetica Neue', 'Verdana', sans-serif; font-weight: 300; font-style: italic">
         <%= @post.description %>
@@ -35,7 +37,7 @@
     </div>
     <div style="padding: 4em 2.25em; margin: 2.5em 0; background-color: #2E4000">
       <p style="color: #fcfcfc; font-size: 1.15em; font-family: 'Quasimoda', 'Helvetica', 'Helvetica Neue', 'Verdana', sans-serif; font-weight: 300">
-        Thank you so much for taking the time to read my articles :&rpar;. It means a lot and I hope that I may always let the Lord speak through me, to you.
+        Thank you so much for taking the time to read my articles :). It means a lot and I hope that I may always let the Lord speak through me, to you.
       </p>
       <p style="color: #fcfcfc; font-size: 1.15em; font-family: 'Quasimoda', 'Helvetica', 'Helvetica Neue', 'Verdana', sans-serif; font-weight: 300">
         If you so wish, please share this article with whoever is in need of a little love, be it friends, family, or on social media. My prayer is that my articles might be a light in the midst of darkness; of hope in the midst of the despair so present in our world today. In all things, let us "love one another, <em>as</em> I have loved you." (John 13:34)

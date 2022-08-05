@@ -21,5 +21,8 @@ module Portfolio
 
     # Show custom error pages
     config.exceptions_app = self.routes
+
+    # Load images in emails
+    config.action_mailer.asset_host = 'https://chriscentrella.com'
   end
 end
