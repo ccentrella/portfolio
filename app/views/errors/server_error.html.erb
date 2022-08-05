@@ -1,7 +1,9 @@
 <% provide(:title, "Site Error" ) %>
 <main>
-    <h1>Site Error</h1>
-    <p class='large'>Oops! It looks like we're having trouble on our end. If this continues, click <%= link_to "here", contact_path %> to report the issue. In the meantime, have a look at my blog or visit my homepage!</p>
+    <div class="container">
+        <h1>Site Error</h1>
+        <p class='large'>Oops! It looks like we're having trouble on our end. If this continues, click <%= link_to "here", contact_path %> to report the issue. In the meantime, have a look at my blog or visit my homepage!</p>
+    </div>
     <div class='button-fixed-container-dark'>
         <%= link_to "View Homepage", root_path, class: 'button-fixed' %>
         <%= link_to "View Blog", blog_path, class: 'button-fixed' %>
