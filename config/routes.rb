@@ -48,4 +48,8 @@ Rails.application.routes.draw do
   resources :subscribers, only: [:new, :create]
   get '/subscribers/unsubscribe', to: "subscribers#unsubscribe"
   delete '/subscribers/unsubscribe', to: "subscribers#destroy"
+
+  # Define error path
+  match '/404', via: :all, to: 'errors#not_found'
+  match '/500', via: :all, to: 'errors#server_error'
 end
