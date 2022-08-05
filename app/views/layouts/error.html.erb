@@ -9,7 +9,15 @@
     <%= favicon_link_tag asset_path('favicon.png') %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-  <body onscroll="stickyNavbar();">
+  <body>
+    <%= render 'layouts/header' %>
+    <% if !flash.empty? %>
+      <div class="flash-container">
+        <% flash.each do |message_type, message| %>
+          <div class="flash flash-<%= message_type %>"><p><%= message %></p></div>
+        <% end %>
+      </div>
+    <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
