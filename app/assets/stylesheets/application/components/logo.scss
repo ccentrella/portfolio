@@ -33,6 +33,17 @@
     text-shadow: 0 6px 6px #4f832863;
 }
 
+@media screen and (max-width: 350px)
+{
+    .logo {
+        font-size: 2.5em;
+    }
+
+    .logo-tagline {
+        font-size: 1.5em;
+    }
+}
+
 @media screen and (min-width: 750px)
 {
     .logo {
@@ -46,4 +57,5 @@
         font-size: 1.5em;
     }
 }
+
 
