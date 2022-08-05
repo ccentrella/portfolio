@@ -39,6 +39,10 @@
     display: none;
 }
 
+.circle-icon a {
+    display: inline-block;
+}
+
 @media screen and (max-width:374px) {
     .circle-icon-container h2 {
         font-size: 2em;
