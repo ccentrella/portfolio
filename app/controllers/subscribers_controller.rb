@@ -8,7 +8,7 @@ class SubscribersController < ApplicationController
         if success || checkbox_success
             if @subscriber.save
                 flash[:success] = "Thank you for subscribing!"
-                redirect_to posts_path
+                redirect_to blog_path
             else
                 render :new
             end
@@ -28,7 +28,7 @@ class SubscribersController < ApplicationController
     #     @subscriber = Subscriber.find(params[:id])
     #     if @subscriber.update(subscriber_params)
     #         flash[:notice] = "Account Updated Successfully"
-    #         redirect_to posts_path
+    #         redirect_to blog_path
     #     else
     #         flash[:warning] = "The account could not be updated. Please try again and make sure another account with this email does not exist."
     #         redirect_to subscribers_url
@@ -42,7 +42,7 @@ class SubscribersController < ApplicationController
 
             if !Subscriber.exists?(subscriber)
                 flash[:warning] = "You have already unsubscribed. You should stop receiving emails within 7-10 days, at the latest."
-                redirect_to posts_path, status: :see_other
+                redirect_to blog_path, status: :see_other
             end
         rescue ActiveSupport::MessageVerifier::InvalidSignature || ActionController::BadRequest => e
             raise ActionController::RoutingError.new('Not Found')
@@ -60,10 +60,10 @@ class SubscribersController < ApplicationController
 
         if !Subscriber.exists?(subscriber)
             flash[:warning] = "You have already unsubscribed. You should stop receiving emails within 7-10 days, at the latest."
-            redirect_to posts_path, status: :see_other
+            redirect_to blog_path, status: :see_other
         elsif @subscriber.destroy
             flash[:warning] = "You have been unsubscribed successfully. I'm sorry to see you go!"
-            redirect_to posts_path, status: :see_other
+            redirect_to blog_path, status: :see_other
         else
             flash[:warning] = "Unsubscribe failed. Please try again or reach out to me."
             render :unsubscribe, locals: {subscriber_id: @subscriber}, status: :unprocessable_entity

@@ -6,6 +6,10 @@ class User < ApplicationRecord
          :confirmable, :lockable
   validates :name, presence: true
   def User.get_user_name(id)
-    return User.find(id).name
+    if User.exists?(id)
+      return User.find(id).name
+    else
+      return "Author"
+    end
   end
 end

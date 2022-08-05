@@ -2,7 +2,7 @@
 <article class="post">
     <section class="post-header">
         <div class="post-header-top">
-            <%= link_to "<i class='icon left-arrow medium'></i>".html_safe, posts_path, class: "posts-back-icon", title: "View All Articles" %>
+            <%= link_to "<i class='icon left-arrow medium'></i>".html_safe, blog_path, class: "posts-back-icon", title: "View All Articles" %>
             <% if user_signed_in? %>
                 <%= link_to "<i class='icon pencil large'></i>".html_safe, edit_post_path(@post), class: "post-edit-icon", title: "Edit Post" %>
             <% end %>

@@ -40,8 +40,9 @@ Rails.application.routes.draw do
   resources :resources, path: '/resources'
 
   # Define root path for blog posts
+  get '/blog', to: "posts#index"
   resources :posts, path: '/blog' do
-    get :admin_index, on: :collection
+    get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
   end
 
   # Define root path for subscribe

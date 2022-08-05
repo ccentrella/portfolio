@@ -5,5 +5,5 @@
     </div>
     <br/>
     <%= link_to 'Yes, unsubscribe me', subscribers_unsubscribe_path(subscriber_id: @subscriber), data: { turbo_method: :delete}, class: 'button-fixed submit-button wide' %><br/>
-    <%= link_to "No, please don't!", posts_path, class: 'button-fixed submit-button wide' %>
+    <%= link_to "No, please don't!", blog_path, class: 'button-fixed submit-button wide' %>
 </div>

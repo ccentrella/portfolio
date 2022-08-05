@@ -13,7 +13,7 @@
             <li class="nav-item <%= 'active' if current_page?(about_path) %>"><%= link_to 'About', about_path %></li>
             <li class="nav-item"><%= link_to 'LinkedIn', linkedin_url, target: '_blank' %></li>
             <li class="nav-item"><%= link_to 'Resume', asset_url('resume-p.pdf'), target: '_blank' %></li>
-            <li class="nav-item <%= 'active' if params[:controller] == 'posts' %>"><%= link_to 'Blog', posts_path %></li>
+            <li class="nav-item <%= 'active' if params[:controller] == 'posts' %>"><%= link_to 'Blog', blog_path %></li>
             <li class="nav-item"><%= link_to 'Photos', photos_url, target: '_blank' %></li>
             <li class="nav-item <%= 'active' if current_page?(contact_path) %>"><%= link_to 'Contact Me', contact_path %></li>
             <% if user_signed_in? %>

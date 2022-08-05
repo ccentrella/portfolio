@@ -17,7 +17,7 @@ class PostsController < ApplicationController
             @post = Post.new
         else
             flash[:warning] = "You do not have permission to create an article."
-            redirect_to posts_path
+            redirect_to blog_path
         end
     end
 
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
             @post = Post.find(params[:id])
         else
             flash[:warning] = "You do not have permission to edit this article."
-            redirect_to posts_path
+            redirect_to blog_path
         end
     end
 
@@ -72,14 +72,14 @@ class PostsController < ApplicationController
             @post = Post.find(params[:id])
             if @post.destroy
                 flash[:warning] = "Post deleted successfully."
-                redirect_to posts_path, status: :see_other
+                redirect_to blog_path, status: :see_other
             else
                 flash[:warning] = "Post deletion failed. Please try again."
                 redirect_to edit_post_path(@post), status: :see_other
             end
         else
             flash[:warning] = "You do not have permission to delete this article."
-            redirect_to posts_path, status: :see_other
+            redirect_to blog_path, status: :see_other
         end
     end
 
