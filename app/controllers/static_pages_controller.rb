@@ -11,8 +11,4 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
-
-  def draft
-    render layout: false
-  end
 end
