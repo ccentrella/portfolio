@@ -46,7 +46,11 @@
     border-left: 0.25em solid $timeline;
 
     @media screen and (min-width:750px) {
-        margin-left: 5.5em;
+        margin-left: 4em;
+    }
+
+    @media screen and (min-width:1000px) {
+        margin-left: 1em;
     }
 }
 
