@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="flex-col circle-icon-right">
-            <h2>View Resumé</h2>
+            <h2><%= link_to "View Resumé", asset_url('resume-p.pdf'), target: '_blank' %></h2>
             <div class="buttons-desktop">
                 <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
             </div>
