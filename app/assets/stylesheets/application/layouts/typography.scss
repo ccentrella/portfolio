@@ -38,10 +38,10 @@ span.keyword {
 
 a {
     text-decoration: none;
-    color: dodgerblue;
+    color: $link-text;
 
     &:hover {
-        color: deepskyblue;
+        color: $link-text-hover;
     }
 }
 
