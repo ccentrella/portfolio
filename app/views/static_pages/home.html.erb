@@ -19,11 +19,12 @@
   <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
   <%= link_to "View My Blog<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'button-fixed' %>
 </div>
-<%= render partial: 'icon_blocks/resume', locals: {class: 'top green', icon_class: 'green'} %>
+<%= render partial: 'icon_blocks/blog', locals: {class: 'top green', icon_class: 'green'} %>
 <div class="button-fixed-container top thin">
     <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed ', target: '_blank' %>
     <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed ', target: '_blank' %>
-    </div>
+</div>
+<%= render partial: 'icon_blocks/resume' %>
 <div class="container">
   <h2>Projects</h2>
   <p class="large justify">
@@ -42,4 +43,3 @@
   <%= link_to "The Nonprofit Fundraising Channel<i class='icon fa fa-chevron-right'></i>".html_safe, "https://nfcfundraisingchannel.com",
   target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
 </div>
-<%= render partial: 'icon_blocks/blog' %>
