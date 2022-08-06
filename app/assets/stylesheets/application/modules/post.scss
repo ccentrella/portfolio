@@ -53,7 +53,10 @@
 
 .post-details {
     display: flex;
-    justify-content: space-evenly;
+    text-align: justify;
+    text-justify: inter-character;
+    hyphens: auto;
+    -webkit-hyphens: auto;
     max-width: 500px;
     margin: auto;
 }
