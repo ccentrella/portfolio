@@ -40,10 +40,15 @@ i.pencil::before {
     border-radius: 50%;
     background-color: $light-text;
     display: inline-block;
+    transition: opacity 1s;
 
     img {
         height: 4em;
         margin: 2em;
+    }
+
+    a {
+        display: inline-block;
     }
 
     &.transparent {
@@ -53,6 +58,10 @@ i.pencil::before {
             height: 8em;
             margin: 0em;
         }
+    }
+
+    &:hover {
+        opacity: 0.85;
     }
 
     @media screen and (max-width: 374px) {
