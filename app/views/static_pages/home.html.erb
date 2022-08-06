@@ -19,20 +19,7 @@
   <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
   <%= link_to "View My Blog<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'button-fixed' %>
 </div>
-<div class="button-fixed-container-dark circle-icon-container top green">
-    <div class="circle-icon-outer">
-        <div class="flex-col circle-icon-left">
-            <div class="circle-icon">
-                <%= link_to (image_tag 'icons/paper_green.svg', alt: "resumé icon"), asset_url('resume-p.pdf'), target: '_blank' %>
-            </div>
-        </div>
-        <div class="flex-col circle-icon-right">
-            <h2>View Resumé</h2>
-            <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
-        </div>
-    </div>
-    <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
-</div>
+<%= render partial: 'icon_blocks/resume', locals: {class: 'top green', icon_class: 'green'} %>
 <div class="button-fixed-container top thin">
     <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed ', target: '_blank' %>
     <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed ', target: '_blank' %>
@@ -40,25 +27,13 @@
 <div class="container">
   <h2>Projects</h2>
   <p class="large justify">
-    What better way to show that you know something than to actually use that knowledge to build a working product? Of all the projects I've worked on, I don't think there is an app I'm more proud of than this website, which I've built from scratch, from the ground up. From prototyping in Adobe XD, to late nights spent debugging my Ruby code, to my never-ending plethora of new ideas for continuous and iterative improvement, this has been a run for the ride.</p>
-    
-  <p class="large justify">In addition, during my role as Lead Web Developer of Catholics for Hire, I've served as the main web developer for the following Wordpress websites, which I've received permission to share here. (Note: I do not hold responsibility for or endorse the content of external websites.)
+    What better way to show that you know something than to actually use that knowledge to build a working product? Of all the projects I've worked on, I don't think there is an app I'm more proud of than this website, which I've built from scratch, from the ground up. From prototyping in Adobe XD, to late nights spent debugging my Ruby code, to my never-ending plethora of new ideas for continuous and iterative improvement, this has been a run for the ride.
+  </p> 
+  <p class="large justify">
+    In addition, during my role as Lead Web Developer of Catholics for Hire, I've served as the main web developer for the following Wordpress websites, which I've received permission to share here. (Note: I do not hold responsibility for or endorse the content of external websites.)
   </p>
 </div>
-<div class="button-fixed-container-dark circle-icon-container">
-    <div class="circle-icon-outer">
-        <div class="flex-col circle-icon-left">
-            <div class="circle-icon transparent">
-                <%=link_to (image_tag 'github-icon.svg', alt: "github logo"), github_url, target: '_blank' %>
-            </div>
-        </div>
-        <div class="flex-col circle-icon-right">
-            <h2>View Github</h2>
-            <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed circle-icon-button', target: '_blank' %>  
-        </div>
-    </div>
-    <%= link_to "View My Github<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed circle-icon-button', target: '_blank' %>  
-</div> 
+<%= render partial: 'icon_blocks/github' %>
 <div class="button-fixed-container">
   <%= link_to "Catholics for Hire<i class='icon fa fa-chevron-right'></i>".html_safe, "https://catholicsforhire.com",
             target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
@@ -67,20 +42,4 @@
   <%= link_to "The Nonprofit Fundraising Channel<i class='icon fa fa-chevron-right'></i>".html_safe, "https://nfcfundraisingchannel.com",
   target: 'blank', rel: 'noopener', class: 'button-fixed button-wide' %>
 </div>
-<div class="button-fixed-container-dark circle-icon-container">
-    <div class="circle-icon-outer wide">
-        <div class="flex-col circle-icon-left">
-            <div class="circle-icon">
-                <%= link_to (image_tag 'icons/article.svg', alt: "article icon"), blog_path %>
-            </div>
-        </div>
-        <div class="flex-col container circle-icon-right">
-            <h2>Blog</h2>
-              <p class="large justify">
-                Do you want some hope and encouragement amid the brokenness of our world? Have a look at my blog! "For I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes." (Romans 1:16).
-              </p>
-            <%= link_to "View My Blog<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'button-fixed circle-icon-button' %>  
-        </div>
-    </div>
-      <%= link_to "View My Blog<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'button-fixed circle-icon-button' %>  
-</div>
+<%= render partial: 'icon_blocks/blog' %>

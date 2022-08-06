@@ -1,0 +1,20 @@
+<div class="button-fixed-container-dark circle-icon-container <%= local_assigns[:class] %>">
+    <div class="circle-icon-outer">
+        <div class="flex-col circle-icon-left">
+            <div class="circle-icon">
+                <% if local_assigns[:icon_class] %>     
+                    <%= link_to (image_tag 'icons/paper_' + local_assigns[:icon_class] + '.svg', alt: "resumé icon"), asset_url('resume-p.pdf'), target: '_blank' %>
+                <% else %>
+                    <%= link_to (image_tag 'icons/paper.svg', alt: "resumé icon"), asset_url('resume-p.pdf'), target: '_blank' %>
+                <% end %>
+            </div>
+        </div>
+        <div class="flex-col circle-icon-right">
+            <h2>View Resumé</h2>
+            <div class="buttons-desktop">
+                <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
+            </div>
+        </div>
+    </div>
+    <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed circle-icon-button', target: '_blank' %>  
+</div>

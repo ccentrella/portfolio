@@ -1,0 +1,25 @@
+<div class="button-fixed-container-dark circle-icon-container <%= local_assigns[:class] %>">
+    <div class="circle-icon-outer wide">
+        <div class="flex-col circle-icon-left">
+            <div class="circle-icon">
+                <% if local_assigns[:icon_class] %>         
+                    <%= link_to (image_tag 'icons/article_' + local_assigns[:icon_class] + '.svg', alt: "article icon"), blog_path %>
+                <% else %>
+                    <%= link_to (image_tag 'icons/article.svg', alt: "article icon"), blog_path %>
+                <% end %>
+            </div>
+        </div>
+        <div class="flex-col container circle-icon-right">
+            <h2><%= link_to "Latest Article: " + get_latest_article.title, post_path(get_latest_article)  %></h2>
+            <p class="large justify">
+              Do you want some hope and encouragement amid the brokenness of our world? Have a look at my blog! "For I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes." (Romans 1:16).
+            </p>
+            <div class="buttons-desktop">
+              <%= link_to "Read Now <i class='icon fa fa-chevron-right'></i>".html_safe, post_path(get_latest_article), class: 'button-fixed circle-icon-button' %><br/>
+              <%= link_to "Blog Homepage<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'button-fixed circle-icon-button' %>
+            </div>
+        </div>
+    </div>
+      <%= link_to "Read Now <i class='icon fa fa-chevron-right'></i>".html_safe, post_path(get_latest_article), class: 'button-fixed circle-icon-button' %>  
+      <%= link_to "Blog Homepage<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'button-fixed circle-icon-button' %>
+</div>
