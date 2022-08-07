@@ -7,8 +7,8 @@
             <h2>Overview</h2>
         </div>
         <div class="button-fixed-container top bottom">
-            <%= link_to "Edit Profile<i class='icon fa fa-chevron-right'></i>".html_safe, edit_user_registration_path, class: 'button-fixed' %>
             <%= link_to "New Blog Post<i class='icon fa fa-chevron-right'></i>".html_safe, new_post_path, class: 'button-fixed' %>
+            <%= link_to "Edit Profile<i class='icon fa fa-chevron-right'></i>".html_safe, edit_user_registration_path, class: 'button-fixed' %>
             <!--<%= link_to "Upload Photo<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-p.pdf'), class: 'button-fixed', target: '_blank' %>
             <%= link_to "View Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>-->
         </div>
@@ -17,7 +17,7 @@
         <h2>Blog</h2>
     </div>
     <div class="button-fixed-container-dark red thin">
-        <%= link_to "Create New Post<i class='icon fa fa-chevron-right'></i>".html_safe, new_post_path, class: 'button-fixed' %>
+        <%= link_to "Create Post<i class='icon fa fa-chevron-right'></i>".html_safe, new_post_path, class: 'button-fixed' %>
         <%= link_to "View All Posts<i class='icon fa fa-chevron-right'></i>".html_safe, admin_index_posts_path, class: 'button-fixed' %>
     </div>
     <div class="container">
