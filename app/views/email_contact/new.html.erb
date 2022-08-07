@@ -18,6 +18,5 @@
     <% else %>
         <%= recaptcha_v3(action: 'contact', site_key: ENV['RECAPTCHA_SITE_KEY_V3']) %>
     <% end %>    
-    <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>
     <%= f.submit 'Send Message', class: 'field submit-button' %>
 <% end %>

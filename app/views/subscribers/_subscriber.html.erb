@@ -5,7 +5,6 @@
     </div>
     <%= f.text_field :name, placeholder: 'Name (Optional)', class: 'field' %><br/>
     <%= f.text_field :email_address, placeholder: 'Email Address', class: 'field' %><br/>
-    <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>     
     <% if @show_checkbox_recaptcha %>
         <%= recaptcha_tags noscript: false %>
     <% else %>

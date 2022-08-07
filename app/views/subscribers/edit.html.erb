@@ -5,7 +5,6 @@
     </div>
     <%= f.text_field :name, placeholder: 'Name (Optional)', class: 'field' %><br/>
     <%= f.text_field :email_address, placeholder: 'Email Address', class: 'field' %><br/>
-    <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>      
     <%= f.submit 'Submit', class: 'button-fixed submit-button' %><br/>
     <%= link_to 'Unsubscribe', subscriber_path(@subscriber), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'button-fixed submit-button' %>
 <% end %>
