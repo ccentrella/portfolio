@@ -16,8 +16,7 @@
         <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
         <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
         <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
-        <%= f.number_field :user_id, placeholder: 'User', class: 'field', min: 1 %><br/>
-        <%= f.text_field :nickname, hint: 'Leave this field blank!', class: 'hidden' %>              
+        <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :name), {}, class: 'field' %><br/>
     </div>
         <div class="button-fixed-container top bottom thin">
         <%= f.submit "Publish".html_safe, class: 'button-fixed' %>
