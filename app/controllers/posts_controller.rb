@@ -5,6 +5,11 @@ class PostsController < ApplicationController
     def index
         @posts = Post.all
         @subscriber = Subscriber.new
+
+        respond_to do |format|
+            format.html
+            format.rss {render layout: false}
+        end
     end
 
     def admin_index

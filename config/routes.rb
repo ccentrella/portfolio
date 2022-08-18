@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
   # Define the root path route ("/")
   root "static_pages#home"
+  get '/feed', to: "posts#index", format: 'rss'
 
   # Define additional paths
   get '/about', to: "static_pages#about"
@@ -43,7 +44,8 @@ Rails.application.routes.draw do
   get '/blog', to: "posts#index"
   resources :posts, path: '/blog' do
     get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
-  end
+    get '/feed', on: :collection, to: "posts#index", format: 'rss'
+  end 
 
   # Define root path for subscribe
   resources :subscribers, only: [:new, :create]

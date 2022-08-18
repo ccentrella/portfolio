@@ -14,6 +14,7 @@
     <%= javascript_importmap_tags %>
     <%= javascript_include_tag "header.js" %>
     <%= javascript_include_tag "main.js" %>
+    <%= auto_discovery_link_tag :rss, blog_url(format: :rss) %>    
 
   </head>
   <body onscroll="stickyNavbar();">
