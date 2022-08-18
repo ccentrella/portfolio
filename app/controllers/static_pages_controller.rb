@@ -6,9 +6,6 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def mission
-  end
-
   def contact
   end
 end

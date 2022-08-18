@@ -13,12 +13,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select 'title', text: "About | Chris Centrella"
   end
 
-  test "should get mission" do
-    get mission_url
-    assert_response :success
-    assert_select 'title', text: "Vision | Chris Centrella"
-  end
-
   test "should get contact" do
     get contact_url
     assert_response :success
