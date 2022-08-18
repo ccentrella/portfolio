@@ -16,6 +16,7 @@
         <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
         <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
         <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
+        <%= f.text_field :slug, placeholder: 'Slug', class: 'field' %><br/>
         <% custom_user = User.exists?(@post.user_id) ? false : 'Author'%>
         <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :name, selected: @post.user_id), {include_blank: custom_user}, class: 'field' %><br/>
     </div>

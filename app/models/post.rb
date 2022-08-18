@@ -3,6 +3,8 @@ class Post < ApplicationRecord
     default_scope -> { order(created_at: :desc) }
     validates :user_id, presence: true, on: :create
     validates :title, presence: true
+    validates :slug, uniqueness: true
+    validates :slug, presence: true, on: :update
     has_rich_text :content
 
     def get_date()
@@ -27,6 +29,14 @@ class Post < ApplicationRecord
         else
             remainder = minutes % 5
             return remainder < 3 ? minutes - remainder : minutes + 5 - remainder
+        end
+    end
+
+    def to_param
+        if !slug.nil?
+            slug
+        else
+            id.to_s
         end
     end
 end

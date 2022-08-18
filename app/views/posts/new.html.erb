@@ -16,6 +16,7 @@
         <%= f.url_field :featured_image, placeholder: 'Image', class: 'field' %><br/>
         <%= f.text_field :category, placeholder: 'Category', class: 'field' %><br/>
         <%= f.text_field :tags, placeholder: 'Tags', class: 'field' %><br/>
+        <%= f.text_field :slug, placeholder: 'Slug', class: 'field' %><br/>
         <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :name), {prompt: 'Select User'}, class: 'field' %><br/>
         <% if @show_checkbox_recaptcha %>
             <%= recaptcha_tags noscript: false %>

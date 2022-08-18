@@ -32,6 +32,7 @@ class PostsController < ApplicationController
         # checkbox_success = verify_recaptcha unless success
 
         # if success || checkbox_success
+            create_slug
             if @post.save
                 flash[:notice] = "Post successfully created!"
                 redirect_to post_path(@post)
@@ -48,14 +49,14 @@ class PostsController < ApplicationController
     end
 
     def show
-        @post = Post.find(params[:id])
+        get_post
         @subscriber = Subscriber.new
         render layout: "no-flash"
     end
 
     def edit
         if current_user.id == 1
-            @post = Post.find(params[:id])
+            get_post
         else
             flash[:warning] = "You do not have permission to edit this article."
             redirect_to blog_path
@@ -63,7 +64,7 @@ class PostsController < ApplicationController
     end
 
     def update
-        @post = Post.find(params[:id])
+        get_post
         if @post.update(post_params)
             flash[:notice] = "Post updated successfully!"
             redirect_to post_path(@post)
@@ -74,7 +75,7 @@ class PostsController < ApplicationController
 
     def destroy
         if current_user.id == 1
-            @post = Post.find(params[:id])
+            get_post
             if @post.destroy
                 flash[:warning] = "Post deleted successfully."
                 redirect_to blog_path, status: :see_other
@@ -91,6 +92,17 @@ class PostsController < ApplicationController
     private
         def post_params
             params.require(:post).permit(:title, :description, 
-                :featured_image, :category, :tags, :user_id, :content)
+                :featured_image, :category, :tags, :slug, :user_id, :content)
+        end
+
+        def get_post
+            @post = Post.find_by_slug(params[:slug])
+            @post ||= Post.find(params[:slug])
+        end
+
+        def create_slug
+            if @post.slug.empty?
+                @post.slug = @post.title.parameterize(separator: '-')
+            end
         end
 end

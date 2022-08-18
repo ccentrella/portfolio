@@ -42,7 +42,7 @@ Rails.application.routes.draw do
 
   # Define root path for blog posts
   get '/blog', to: "posts#index"
-  resources :posts, path: '/blog' do
+  resources :posts, path: '/blog', param: :slug do
     get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
     get '/feed', on: :collection, to: "posts#index", format: 'rss'
   end 
