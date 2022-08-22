@@ -1,52 +1,20 @@
 .hero {
     align-items: center;
 
-    @media screen and (min-width: 1000px) {
-        display: flex;
-        background-color: black;
-        border-bottom: 10px solid #3B4D0A;
-
-        p, a, .hero-title {
-            color: whitesmoke;
-            margin-top: 0;
-        }
-    }
-
     .hero-overlay {
-        margin: auto;
-
-        @media screen and (min-width: 1000px) {
-           margin: revert
-        }        
+        margin: auto;      
     }
 
     .logo {
         font-size: 3.2em;
         text-align: left;
         padding: 0.25rem 1rem;
-
-        @media screen and (min-width: 500px) {
-            font-size: 4em;
-        }
-        @media screen and (min-width: 750px) {
-            font-size: 5em;
-        }
-        @media screen and (min-width: 1000px) {
-            font-size: 4em;
-        }
     }
 
     .logo-tagline {
         font-size: 2em;
         text-align: left;
         padding: 0.25rem 1.25rem;
-
-        @media screen and (min-width: 500px) {
-            font-size: 2.5em;
-        }
-        @media screen and (min-width: 750px) and (max-width: 999px) {
-            font-size: 3.5em;
-        }
     }
 }
 
@@ -61,31 +29,72 @@
     background-size: cover;
     background-image: url(<%= asset_path 'background-home.jpg' %>);
     border-bottom: 10px solid #3c4006c7;
-
-    @media screen and (min-width: 1000px) {
-        padding: 0 3em;
-        border: none;
-    }
 }
 
 .hero-about {
     padding: 3em 2em 0 2.25em;
     order: 1;
     flex: 1 0 0;
-
-    @media screen and (min-width: 1000px) {
-        font-size: 1.15em;
-    }
 }
 
 .about-button {
     display: none;
-
-    @media screen and (min-width:1000px) {
-        display: block;
-    }
 }
 
 .hero-title {
     font-size: 3em;
+}
+
+@media screen and (min-width: 500px) {
+    .hero {
+        .logo {
+            font-size: 4em;
+        }
+
+        .logo-tagline {
+            font-size: 2.5em;
+        }
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 999px) {
+    .hero {
+        .logo {
+            font-size: 5em;
+        }
+
+        .logo-tagline {
+            font-size: 3.5em;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) and (min-height: 700px) {
+    .hero {
+        display: flex;
+        background-color: black;
+        border-bottom: 10px solid #3B4D0A;
+
+        p, a, .hero-title {
+            color: whitesmoke;
+            margin-top: 0;
+        }
+
+        .hero-overlay {
+            margin: revert;
+        }
+    }
+
+    .hero-image {
+        padding: 0 3em;
+        border: none;
+    }
+
+    .hero-about {
+        font-size: 1.15em;
+    }
+
+    .about-button {
+        display: block;
+    }
 }
