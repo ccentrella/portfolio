@@ -28,10 +28,10 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-        # success = verify_recaptcha(action: 'create_post', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY_V3'])
-        # checkbox_success = verify_recaptcha unless success
+        success = verify_recaptcha(action: 'create_post', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY_V3'])
+        checkbox_success = verify_recaptcha unless success
 
-        # if success || checkbox_success
+        if success || checkbox_success
             create_slug
             if @post.save
                 flash[:notice] = "Post successfully created!"
@@ -40,12 +40,10 @@ class PostsController < ApplicationController
             else
                 render :new
             end
-        # else
-        #     if !success
-        #       @show_checkbox_recaptcha = true
-        #     end
-        #     render :new, status: :unprocessable_entity
-        # end
+        else
+            @show_checkbox_recaptcha = true
+            render :new
+        end
     end
 
     def show
@@ -90,19 +88,19 @@ class PostsController < ApplicationController
     end
 
     private
-        def post_params
-            params.require(:post).permit(:title, :description, 
-                :featured_image, :category, :tags, :slug, :user_id, :content)
-        end
+    def post_params
+        params.require(:post).permit(:title, :description, 
+            :featured_image, :category, :tags, :slug, :user_id, :content)
+    end
 
-        def get_post
-            @post = Post.find_by_slug(params[:slug])
-            @post ||= Post.find(params[:slug])
-        end
+    def get_post
+        @post = Post.find_by_slug(params[:slug])
+        @post ||= Post.find(params[:slug])
+    end
 
-        def create_slug
-            if @post.slug.empty?
-                @post.slug = @post.title.parameterize(separator: '-')
-            end
+    def create_slug
+        if @post.slug.empty?
+            @post.slug = @post.title.parameterize(separator: '-')
         end
+    end
 end
