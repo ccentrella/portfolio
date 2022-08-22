@@ -13,27 +13,10 @@ class SubscribersController < ApplicationController
                 render :new
             end
         else
-          if !success
-            @show_checkbox_recaptcha = true
-          end
+          @show_checkbox_recaptcha = true
           render :new
         end
     end
-
-    # def edit
-    #     @subscriber = Subscriber.find(params[:id])
-    # end
-
-    # def update
-    #     @subscriber = Subscriber.find(params[:id])
-    #     if @subscriber.update(subscriber_params)
-    #         flash[:notice] = "Account Updated Successfully"
-    #         redirect_to blog_path
-    #     else
-    #         flash[:warning] = "The account could not be updated. Please try again and make sure another account with this email does not exist."
-    #         redirect_to subscribers_url
-    #     end
-    # end
 
     def unsubscribe
         begin

@@ -21,9 +21,7 @@ class EmailContactController < ApplicationController
                 render :new
             end
         else
-            if !success
-              @show_checkbox_recaptcha = true
-            end
+            @show_checkbox_recaptcha = true
             render :new
         end
     end

@@ -12,9 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       if success || checkbox_success
          super
       else
-         if !success
-            @show_checkbox_recaptcha = true
-         end
+         @show_checkbox_recaptcha = true
          render :new
       end
    end
