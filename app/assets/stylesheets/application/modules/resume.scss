@@ -50,7 +50,7 @@
     }
 
     @media screen and (min-width:1000px) {
-        margin-left: 1em;
+        margin-left: 0.8em;
     }
 }
 
@@ -75,6 +75,7 @@
 
             &:before {
                 content: '⸻';
+                color: $timeline;
                 font-size: 2vh;
             }
         }
@@ -91,6 +92,7 @@
 
         &:before {
             content: '⸺';
+            color: $timeline;
             text-indent: 15px;
             font-size: 1.75vh;
         }
