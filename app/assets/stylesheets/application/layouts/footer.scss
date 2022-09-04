@@ -4,15 +4,12 @@
 
 footer {
     margin-top: 2.5em;
+    background-color: $footer-main-background;
 
     .logo {
-        padding: 0 1em;
-        font-size: 2.5em;
-    }
-
-    .button-fixed-container-dark {
-        margin: 0;
-        padding: 3.5em 0 2em;
+        padding: 0 1em 0 0;
+        font-size: 2em;
+        width: min-content;
     }
 
     i.heart {
@@ -22,13 +19,55 @@ footer {
 }
 
 .footer-top {
-    padding: 3em 0.5em 2em;
+    padding: 3em 3.5em 2em;
     background-color: $footer-top-background;
+}
+
+.footer-main {
+    margin: 0;
+    padding: 3.5em 4.5em 2em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.75em;
 }
 
 .footer-bottom {
     padding: 1em 2.5em;
     background-color: $footer-bottom-background;
+}
+
+.footer-section {
+    margin-top: 0.25em;
+    flex-basis: 100%;
+}
+
+.footer-heading {
+    color: $footer-heading;
+    text-transform: uppercase;
+    font-family: 'rooney-sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.footer-heading-decorator {
+    border: 4.25px solid $footer-heading;
+    margin: 0 0 1.25em;
+    width: 32px;
+}
+
+.footer-link {
+    color: $footer-link;
+    text-transform: uppercase;
+    font-family: 'rooney-sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9em;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.25em;
+
+    &:hover {
+        color: $footer-link-hover;
+    }
 }
 
 .copyright {
@@ -38,22 +77,14 @@ footer {
     color: $light-text;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:550px) {
 
-    footer .button-fixed-container-dark {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding-left: 2.5em;
-        padding-right: 2.5em;
-        gap: 0 1em;
-
-        a {
-            flex-basis: 30%;
-        }
+    .footer-top, .footer-main {
+        padding-left: 5.5em;
     }
-
-    .footer-top {
-        padding-bottom: 2em;
+    
+    .footer-section {
+        flex-basis: 50%;
     }
 
     .copyright {
@@ -62,14 +93,9 @@ footer {
     }
 }
 
-@media screen and (min-width:925px) {
+@media screen and (min-width:1000px) {
 
-    footer .button-fixed-container-dark {
-        padding-left: calc(50vw - 425px);
-        padding-right: calc(50vw - 425px);
-
-        a {
-            flex-basis: 27%;
-        }
+    .footer-top, .footer-main {
+        padding-left: 10em;
     }
 }

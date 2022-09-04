@@ -8,20 +8,35 @@
         </div>
     </div>
     <footer>
-        <div class="footer-top">
-            <h2 class='container logo'><%= link_to 'Chris Centrella', root_path %></h2>
-        </div>
-          <div class="button-fixed-container-dark">
-            <%= link_to "View My Profile<i class='icon fa fa-chevron-right'></i>".html_safe, about_path, class: 'button-fixed' %>
-            <%= link_to "View My GitHub<i class='icon fa fa-chevron-right'></i>".html_safe, github_url, class: 'button-fixed', target: '_blank' %>
-            <%= link_to "View My Resumé<i class='icon fa fa-chevron-right'></i>".html_safe, asset_url('resume-online.pdf'), class: 'button-fixed', target: '_blank' %>
-            <%= link_to "View On LinkedIn<i class='icon fa fa-chevron-right'></i>".html_safe, linkedin_url, class: 'button-fixed', target: '_blank' %>
-            <%= link_to "View My Blog<i class='icon fa fa-chevron-right'></i>".html_safe, blog_path, class: 'button-fixed' %>
-            <%= link_to "View My Photos<i class='icon fa fa-chevron-right'></i>".html_safe, photos_url, class: 'button-fixed', target: '_blank' %>
+        <section class="footer-top">
+            <h2 class='logo'><%= link_to 'Chris Centrella', root_path %></h2>
+        </section>
+        <section class="footer-main">
+            <div class="footer-section">
+                <h4 class="footer-heading">About Me</h4>
+                <hr class="footer-heading-decorator" />
 
-          </div>
-        <div class="footer-bottom">
+                <p><%= link_to 'Home', root_path, class: 'footer-link' %></p>
+                <p><%= link_to 'Profile', about_path, class: 'footer-link' %></p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">Work Experience</h4>
+                <hr class="footer-heading-decorator" />
+                
+                <p><%= link_to 'Resume', asset_url('resume-online.pdf'), class: 'footer-link', target: '_blank' %></p>
+                <p><%= link_to 'GitHub', github_url, class: 'footer-link', target: '_blank' %></p>
+                <p><%= link_to 'LinkedIn', linkedin_url, class: 'footer-link', target: '_blank' %></p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">Content</h4>
+                <hr class="footer-heading-decorator" />
+
+                <p><%= link_to 'Blog', blog_path, class: 'footer-link' %></p>
+                <p><%= link_to 'Photos', photos_url, class: 'footer-link', target: '_blank' %></p>
+            </div>
+        </section>
+        <section class="footer-bottom">
             <p class="copyright">Proudly built with <i class="heart"></i>. &copy; 2021 – 2022 Chris Centrella.
                 All rights reserved.</p>
-        </div>
+        </section>
     </footer>
