@@ -10,6 +10,7 @@ footer {
         padding: 0 1em 0 0;
         font-size: 2em;
         width: min-content;
+        text-shadow: none;
     }
 
     i.heart {
@@ -37,7 +38,7 @@ footer {
 }
 
 .footer-section {
-    margin-top: 0.25em;
+    margin-top: 0.5em;
     flex-basis: 100%;
 }
 
@@ -82,9 +83,10 @@ footer {
     .footer-top, .footer-main {
         padding-left: 5.5em;
     }
-    
+
     .footer-section {
         flex-basis: 50%;
+        margin-top: 0;
     }
 
     .copyright {
