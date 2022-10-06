@@ -3,12 +3,11 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "trix"
 import "@rails/actiontext"
-import stickyNavbar from './stickyNavbar'
 import './header'
 import { updatePostTitleHeight } from "./post"
 
 // Prevent user from entering line breaks in textarea
-export function preventLineBreaks(elem) {
+window.preventLineBreaks = function preventLineBreaks(elem) {
     elem.onkeydown = (e) => {
         if (e.key == "Enter") {
             e.preventDefault()
