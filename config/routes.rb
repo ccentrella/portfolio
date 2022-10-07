@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'pages#home'
   devise_for :users, skip: [:registrations], controllers: {
     sessions: 'users/sessions',
     unlocks: 'users/unlocks',
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
     patch '/users/id', to: "users/registrations#update", as: :user_registration
   end
   # Define the root path route ("/")
-  root "static_pages#home"
+  # root "static_pages#home"
   get '/feed', to: "posts#index", format: 'rss'
 
   # Define additional paths
