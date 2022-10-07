@@ -5,47 +5,49 @@
 $light-text: #fcfcfc;
 $dark-text: #353535;
 $grey-text: #7E7777;
-$primary: #9A0002;
-$secondary: #3D5D21;
-$secondary-light: #5d8c33;
-$secondary-heading: #657C3B;
-$keyword: #729519;
+$primary: #2B98BF;
+$secondary: #097196;
+$secondary-light: #7EBBE0;
+$accent: #074F69;
+$accent-light: #73B4B4;
+$heading: $secondary;
+$keyword: $secondary;
 $company: #957219;
 $link-text: dodgerblue;
 $link-text-hover: deepskyblue;
 
 $overlay: transparent;
-$banner-border: #7C9341;
+$banner-border: #32ACD9;
 $logo-text: $light-text;
 $logo-text-hover: #ecf7ed;
 
-$navbar: #425218;
-$navbar-item: #4E5D27;
-$navbar-hover: #35430F;
-$navbar-active: #2A3808;
-$navbar-border: #7C9341;
+$navbar: $secondary;
+$navbar-item: $primary;
+$navbar-hover: $accent;
+$navbar-active: $accent;
+$navbar-border: $banner-border;
 
 $flash-success: #657C3B;
 $flash-warning: #D97109;
 $flash-error: #D92E2E;
 
 $container-background: transparent;
-$container-dark-background: #2E4000;
+$container-dark-background: $secondary;
 $container-dark-background-red: #520001;
 $container-background-gray: #707070;
 
-$button-border: #4C8E13;
+$button-border: $secondary;
 $button-background: transparent;
-$button-text: #4F6513;
-$button-hover: #3B4D0A;
+$button-text: $secondary;
+$button-hover: $accent;
 $button-hover-text: $light-text;
 $button-dark-border: $light-text;
 $button-dark-background: transparent;
 $button-dark-text: $light-text;
 $button-dark-hover: $light-text;
-$button-dark-hover-text: #4F6513;
-$button-highlight-background: #5C7A0D;
-$button-container-highlight-background: hsl(77, 77%, 22%);
+$button-dark-hover-text: transparent;
+$button-highlight-background: $accent-light;
+$button-container-highlight-background: $secondary;
 $button-container-highlight-background-red: hsl(350, 76%, 24%);
 
 $field-hover: aliceblue;
@@ -53,9 +55,10 @@ $field-hover: aliceblue;
 $timeline: #496600;
 $timeline-text: #627E2D;
 
-$footer-top-background: #2E3400;
-$footer-main-background: $container-dark-background;
+$footer-top-background: #042836;
+$footer-main-background: $accent;
 $footer-bottom-background: #242222;
-$footer-heading: #91B473;
-$footer-link: #CAD9BE;
-$footer-link-hover: hwb(93 58% 19%);
+$footer-logo: #BFD9D9;
+$footer-heading: $accent-light;
+$footer-link: #BFD9D9;
+$footer-link-hover: #97d7d7;

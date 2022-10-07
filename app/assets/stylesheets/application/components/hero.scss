@@ -1,0 +1,37 @@
+.profile-image {
+    width: 15em;
+    margin: auto;
+}
+
+#hero {
+    text-align: center;
+    background-color: $primary;
+    padding-top: 15vh;
+    box-sizing: border-box;
+}
+
+#hero-logo, #hero-tagline {
+    padding: 0 1em 0.25em;
+    font-family: 'Quasimoda', sans-serif;
+    font-weight: 300;
+    line-height: 1.15;
+    font-size: 3em;
+    text-align: left;
+    color: $logo-text;
+}
+
+#hero-tagline {
+    padding: 1em;
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+#hero-bottom {
+    background-color: $secondary;
+}
+
+#hero-bar {
+    height:0.25em;
+    background-color: $primary;;
+}

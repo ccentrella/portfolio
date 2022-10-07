@@ -11,6 +11,12 @@ footer {
         font-size: 2em;
         width: min-content;
         text-shadow: none;
+        font-family: jaf-domus-titling-web, 'Quasimoda', sans-serif;
+        font-weight: normal;
+
+        a {
+            color: $footer-logo;
+        }
     }
 
     i.heart {

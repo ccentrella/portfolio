@@ -40,6 +40,10 @@ span.keyword {
     }
 }
 
+span.medium {
+    font-weight: 500;
+}
+
 a {
     text-decoration: none;
     color: $link-text;
@@ -49,19 +53,21 @@ a {
     }
 }
 
-h1,
-h2,
-h3,
-h4 {
-    margin: 0.75em 0 0.5em 0;
+h1 {
+    margin: 1.5em 0 0.5em 0;
+    font-size: 2.75em;
     font-family: rooney-sans, sans-serif;
     font-weight: 700;
     color: $primary;
 }
 
-h1 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 2.75em;
+h2,
+h3,
+h4 {
+    margin: 0.75em 0 0.5em 0;
+    font-family: 'Quasimoda', sans-serif;
+    font-weight: 300;
+    color: $primary;
 }
 
 h2 {
