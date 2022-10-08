@@ -14,8 +14,7 @@ function SpecialtiesAndSkills() {
                 Early Adopter, Self-starter with a dedication to professional
                 growth
             </p>
-            <br />
-            <div className="button-fixed-container top bottom">
+            <div className="button-fixed-container">
                 <Link className="button-fixed" to="/specialties">
                     View Specialties
                 </Link>

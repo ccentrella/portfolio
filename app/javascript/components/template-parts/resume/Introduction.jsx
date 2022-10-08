@@ -10,8 +10,7 @@ function Introduction() {
             <div className="container">
                 <p className="section-title">Location: Lansing, MI</p>
             </div>
-            <br/>
-            <div className="button-fixed-container top bottom">
+            <div className="button-fixed-container">
                 <Link className="button-fixed" to="/">
                     Website Homepage
                 </Link>
