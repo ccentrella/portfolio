@@ -1,12 +1,12 @@
 .circle-icon-container {
-    background: $container-dark-background-red;
+    background: $secondary;
     padding: 3em 0;
 
      p, h1, h2 {
         color: $light-text;
     }
 
-    a {
+    a.circle-icon, .circle-icon-title a {
         color: $light-text;
         transition: opacity 1s;
 
@@ -16,8 +16,12 @@
         }
     }
 
+    .circle-icon-title {
+        font-family: rooney-sans, sans-serif;
+    }
+
     .button-fixed:hover {
-        color: $container-dark-background-red;
+        background-color: $primary;
     }
 
     &.green {

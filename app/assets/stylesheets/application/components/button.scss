@@ -42,18 +42,6 @@
         background-color: $button-container-highlight-background-red;
     }
 
-    .button-fixed {
-        border-color: $button-dark-border;
-        background-color: $button-dark-background;
-        color: $button-dark-text;
-        transition: color 1s, background-color 1s;
-
-        &:hover {
-            color: $button-dark-hover-text;
-            background-color: $button-dark-hover;
-        }
-    }
-
     .highlight-button {
         background-color: $button-highlight-background;
     }
