@@ -13,7 +13,7 @@ function Contact() {
                 If you prefer to contact me via LinkedIn, you can use this link:
             </p>
 
-            <div class="button-fixed-container">
+            <div className="button-fixed-container">
                 <a
                     className="button-fixed"
                     target="_blank"
