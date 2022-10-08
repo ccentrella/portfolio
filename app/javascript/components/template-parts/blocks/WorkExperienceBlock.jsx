@@ -23,6 +23,7 @@ function Block() {
                             to="/resume">
                             View Resume
                         </Link>
+                        <br/>
                         <a
                             className="button-fixed circle-icon-button"
                             target="_blank"
