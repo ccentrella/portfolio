@@ -4,6 +4,7 @@ import Hero from "../template-parts/Hero";
 import Highlights from "./Highlights";
 import Specialties from "./Specialties";
 import Interests from "./Interests";
+import Block from "../template-parts/Block";
 
 function Home() {
     return (
@@ -23,6 +24,7 @@ function Home() {
                         to using industry standards and best practices.
                     </p>
                 </div>
+                <Block />
             </section>
             <section>
                 <Highlights />
