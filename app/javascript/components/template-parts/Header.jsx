@@ -21,6 +21,10 @@ function Header() {
                     <li>
                         <Link to="/highlights">Highlights</Link>
                     </li>
+                    <li>
+                        <Link to="/contact">Contact Me</Link>
+                    </li>
+
                 </ul>
             </nav>
             <div className="navbar-sticky">

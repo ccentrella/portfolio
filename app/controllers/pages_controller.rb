@@ -13,5 +13,8 @@ class PagesController < ApplicationController
 
   def highlights
   end
+
+  def contact
+  end
   
 end

@@ -36,10 +36,10 @@ $container-dark-background: $secondary;
 $container-dark-background-red: #520001;
 $container-background-gray: #707070;
 
-$button-border: $secondary;
-$button-background: transparent;
-$button-text: $secondary;
-$button-hover: $accent;
+$button-border: transparent;
+$button-background: $accent;
+$button-text: $light-text;
+$button-hover: $secondary;
 $button-hover-text: $light-text;
 $button-dark-border: $light-text;
 $button-dark-background: transparent;

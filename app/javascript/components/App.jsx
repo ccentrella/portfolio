@@ -9,6 +9,7 @@ import Resume from "./pages/Resume";
 import Interests from "./pages/Interests";
 import Highlights from "./pages/Highlights";
 import Specialties from "./pages/Specialties";
+import Contact from "./pages/Contact";
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                 <Route path="/interests" element={<Interests />} />
                 <Route path="/specialties" element={<Specialties />} />
                 <Route path="/highlights" element={<Highlights />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
         </Router>
