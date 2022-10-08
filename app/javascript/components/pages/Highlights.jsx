@@ -4,7 +4,7 @@ function Highlights() {
     return (
         <div className="container">
             <p className="section-title">Highlights</p>
-            <h2>Competitive</h2>
+            <h2 className="button-label">Competitive</h2>
             <p className="large">
                 What is most important in my software engineering career?
             </p>
@@ -21,7 +21,7 @@ function Highlights() {
                 experience and huge corporate profits.
             </p>
 
-            <h2>Artistic</h2>
+            <h2 className="button-label">Artistic</h2>
             <p className="large">
                 Nothing has more impact on human beings than the power of
                 visuals. Our brains respond immediately to visuals, and visuals
@@ -40,7 +40,7 @@ function Highlights() {
                 user experience through the power of art.
             </p>
 
-            <h2>Driven</h2>
+            <h2 className="button-label">Driven</h2>
             <p className="large">
                 Since an early age, I’ve been a motivated learner that has
                 continuously taught myself to code and design well. Throughout
