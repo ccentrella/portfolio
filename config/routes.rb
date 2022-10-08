@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
+  get '/resume', to: 'pages#resume'
   get '/interests', to: 'pages#interests'
   get '/specialties', to: 'pages#specialties'
   get '/highlights', to: 'pages#highlights'
@@ -24,7 +25,6 @@ Rails.application.routes.draw do
 
   # Define additional paths
   get '/about', to: "static_pages#about"
-  get '/resume', to: "static_pages#about"
   get '/contact', to: "email_contact#new"
   post "/contact_form", to: "email_contact#create", as: "email_contacts"
 

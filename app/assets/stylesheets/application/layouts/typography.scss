@@ -3,7 +3,7 @@
 /** Text **/
 
 body,
-p {
+p, ul {
     font-family: 'Quasimoda', sans-serif;
     font-weight: 300;
     color: $dark-text;
@@ -83,4 +83,16 @@ h2::before {
     margin-left: 0.1em;
     position: absolute;
     content: '';
+}
+h3 {
+    font-weight: 400;
+    font-size: 1.25em;
+}
+
+p.section-title {
+    margin: 1.15em 0 0.5em 0;
+    font-size: 1.75em;
+    font-family: jaf-domus-titling-web, sans-serif;
+    font-weight: 700;
+    color: $primary;
 }

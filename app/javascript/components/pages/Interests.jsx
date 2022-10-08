@@ -2,9 +2,9 @@ import React from "react";
 
 function Interests() {
     return (
-        <main>
+        <>
             <div className="container">
-                <h1>Interests</h1>
+                <p className="section-title">Interests</p>
                 <p className="large">
                     Outside of writing code or designing user experiences, some
                     of my favorite activities are blogging, photography, and
@@ -39,7 +39,7 @@ function Interests() {
                     getting there with a lot of practice.
                 </p>
             </div>
-        </main>
+        </>
     );
 }
 

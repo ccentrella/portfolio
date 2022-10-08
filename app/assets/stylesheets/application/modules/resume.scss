@@ -1,5 +1,29 @@
 /* SCSS Document */
 
+.resume ul {
+    padding-left: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.resume p {
+    margin-bottom: 0.75em;
+}
+
+.resume-item-heading {
+    color: $primary;
+    font-weight: 500;
+    margin-top: 1.25em;
+    margin-bottom: 0.35em;
+}
+
+.resume-item-subheading {
+    color: $primary;
+    font-weight: 300;
+    font-size: 0.9em;
+    margin-bottom: 0.9em;
+    line-height: 1.75;
+}
+
 /** Timeline **/
 
 .dot,
