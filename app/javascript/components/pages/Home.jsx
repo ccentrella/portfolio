@@ -4,7 +4,8 @@ import Hero from "../template-parts/Hero";
 import Highlights from "./Highlights";
 import Specialties from "./Specialties";
 import Interests from "./Interests";
-import Block from "../template-parts/Block";
+import WorkExperienceBlock from "../template-parts/blocks/WorkExperienceBlock";
+import ThesisBlock from "../template-parts/blocks/ThesisBlock";
 
 function Home() {
     return (
@@ -24,13 +25,14 @@ function Home() {
                         to using industry standards and best practices.
                     </p>
                 </div>
-                <Block />
+                <WorkExperienceBlock />
             </section>
             <section>
                 <Highlights />
             </section>
             <section>
                 <Specialties />
+                <ThesisBlock />
             </section>
             <section>
                 <Interests />

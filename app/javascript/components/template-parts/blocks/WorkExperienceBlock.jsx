@@ -1,5 +1,5 @@
 import React from "react";
-import ArticleIcon from "../../../assets/images/icons/article.svg";
+import PaperIcon from "../../../../assets/images/icons/paper.svg";
 import { Link } from "react-router-dom";
 
 function Block() {
@@ -9,7 +9,7 @@ function Block() {
                 <div className="flex-col circle-icon-left">
                     <div className="circle-icon">
                         <Link to="/resume">
-                            <img src={ArticleIcon} alt="resume icon" />
+                            <img src={PaperIcon} alt="resume icon" />
                         </Link>
                     </div>
                 </div>
