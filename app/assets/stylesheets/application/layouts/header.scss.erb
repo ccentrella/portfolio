@@ -4,10 +4,9 @@
 
 header {
     margin: 0;
+    margin-bottom: 1.5em;
 
     .logo {
-        max-width: min-content;
-        padding-bottom: 0;
     }
 }
 
@@ -17,7 +16,6 @@ header {
 }
 
 .menu-toggle {
-    margin: 0 1.5em 1em 0.5em;
     height: 1em;
     cursor: pointer;
     transition: opacity 1s;
@@ -79,6 +77,7 @@ header {
     z-index: 1;
 
     .logo {
+        font-family: jaf-domus-titling-web, 'Quasimoda', sans-serif;
         font-size: 1.75em;
         padding: 0.5em 0 0.7em;
     }
@@ -94,9 +93,7 @@ header {
 
 .banner-image {
     border-bottom: 4px solid $banner-border;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-image: url(<%= asset_path 'banner.jpg' %>);
+    background-color: $secondary
 }
 
 .banner-overlay {
@@ -120,6 +117,10 @@ header {
 
     .navbar-outer {
         display: flex;
+    }
+
+    .banner-overlay {
+        display: block;
     }
 
     .navbar {
