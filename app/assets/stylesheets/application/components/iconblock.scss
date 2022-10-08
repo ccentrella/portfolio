@@ -18,6 +18,11 @@
 
     .circle-icon-title {
         font-family: rooney-sans, sans-serif;
+
+        @media screen and (min-width: 750px) {
+            font-size: 2.25em;
+            margin-bottom: 1.25em;
+        }
     }
 
     .button-fixed:hover {
