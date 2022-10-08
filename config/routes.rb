@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get '/resume', to: 'pages#resume'
-  get '/interests', to: 'pages#interests'
-  get '/specialties', to: 'pages#specialties'
-  get '/highlights', to: 'pages#highlights'
-  get '/contact', to: 'pages#contact'
+  get '/resume', to: 'pages#home'
+  get '/interests', to: 'pages#home'
+  get '/specialties', to: 'pages#home'
+  get '/highlights', to: 'pages#home'
+  get '/contact', to: 'pages#homes'
 
   devise_for :users, skip: [:registrations], controllers: {
     sessions: 'users/sessions',
