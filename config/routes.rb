@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   root 'pages#home'
+
+  get '/interests', to: 'pages#interests'
+  get '/specialties', to: 'pages#specialties'
+  get '/highlights', to: 'pages#highlights'
+
   devise_for :users, skip: [:registrations], controllers: {
     sessions: 'users/sessions',
     unlocks: 'users/unlocks',

@@ -3,12 +3,13 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
+import App from "../components/App";
 
 // Connects to data-controller="react"
 export default class extends Controller {
     connect() {
-        // const app = document.getElementById("app");
-        // createRoot(app).render(<App />);
+        const app = document.getElementById("app");
+        createRoot(app).render(<App />);
 
         const hero = document.getElementById("hero");
         if (hero != null) {
