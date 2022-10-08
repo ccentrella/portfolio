@@ -1,5 +1,7 @@
 import React from "react";
 
+import PhotosBlock from "../template-parts/blocks/PhotosBlock";
+
 function Interests() {
     return (
         <>
@@ -30,6 +32,7 @@ function Interests() {
                     19:1).
                 </p>
             </div>
+            <PhotosBlock />
             <div className="container">
                 <h2>Guitar</h2>
                 <p className="large">
