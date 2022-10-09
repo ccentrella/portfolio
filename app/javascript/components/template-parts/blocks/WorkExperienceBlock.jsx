@@ -1,49 +1,26 @@
 import React from "react";
-import PaperIcon from "../../../../assets/images/icons/paper.svg";
-import { Link } from "react-router-dom";
+import Block from "./Block";
+import ResumeIcon from "../../../../assets/images/icons/paper.svg";
 
-function Block() {
+function WorkExperienceBlock() {
     return (
-        <div className="button-fixed-container-dark circle-icon-container">
-            <div className="circle-icon-outer">
-                <div className="flex-col circle-icon-left">
-                    <div className="circle-icon">
-                        <Link to="/resume">
-                            <img src={PaperIcon} alt="resume icon" />
-                        </Link>
-                    </div>
-                </div>
-                <div className="flex-col circle-icon-right">
-                    <p className="section-title circle-icon-title">
-                        <Link to="/resume">Work Experience</Link>
-                    </p>
-                    <div className="buttons-desktop">
-                        <Link
-                            className="button-fixed circle-icon-button"
-                            to="/resume">
-                            View Resume
-                        </Link>
-                        <br/>
-                        <a
-                            className="button-fixed circle-icon-button"
-                            target="_blank"
-                            href="https://github.com/ccentrella">
-                            My GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <Link className="button-fixed circle-icon-button" to="/resume">
-                View Resume
-            </Link>
-            <a
-                className="button-fixed circle-icon-button"
-                target="_blank"
-                href="https://github.com/ccentrella">
-                My GitHub
-            </a>
-        </div>
+        <Block
+            title="Work Experience"
+            icon={ResumeIcon}
+            links={[
+                [
+                    (linkDescription = "View Resume"),
+                    (linkPath = "/resume"),
+                    (isExternal = false),
+                ],
+                [
+                    (linkDescription = "My GitHub"),
+                    (linkPath = "https://github.com/ccentrella"),
+                    (isExternal = true),
+                ],
+            ]}
+        />
     );
 }
 
-export default Block;
+export default WorkExperienceBlock;

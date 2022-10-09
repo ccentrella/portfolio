@@ -1,5 +1,5 @@
 import React from "react";
-import Block from "./ExternalBlock";
+import Block from "./Block";
 import PhotoIcon from "../../../../assets/images/icons/photo.svg";
 
 function PhotosBlock() {
@@ -7,8 +7,13 @@ function PhotosBlock() {
         <Block
             title="Photo Gallery"
             icon={PhotoIcon}
-            link_description="View Gallery"
-            link_path="https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15"
+            links={[
+                [
+                    (linkDescription = "View Gallery"),
+                    (linkPath = "https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15"),
+                    (isExternal = true),
+                ],
+            ]}
         />
     );
 }
