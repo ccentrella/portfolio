@@ -1,7 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Block({ title, icon, link_description, link_path }) {
+function Block({ title, icon, link_description, link_path, link_description_second, link_path_second }) {
+
+    let link = (
+        <Link className="button-fixed circle-icon-button" to={link_path}>
+            {link_description}
+        </Link>
+    );
+
+    let hasSecondLink =
+        link_path_second != null && link_description_second != null;
+    let secondLink = (
+        <>
+            <br/>
+            <Link className="button-fixed circle-icon-button" to={link_path_second}>
+                {link_description_second}
+            </Link>
+        </>
+    );
+
     return (
         <div className="button-fixed-container-dark circle-icon-container">
             <div className="circle-icon-outer">
@@ -17,17 +35,13 @@ function Block({ title, icon, link_description, link_path }) {
                         <Link to={link_path}>{title}</Link>
                     </p>
                     <div className="buttons-desktop">
-                        <Link
-                            className="button-fixed circle-icon-button"
-                            to={link_path}>
-                            {link_description}
-                        </Link>
+                        {link}
+                        {hasSecondLink && secondLink}
                     </div>
                 </div>
             </div>
-            <Link className="button-fixed circle-icon-button" to={link_path}>
-                {link_description}
-            </Link>
+            {link}
+            {hasSecondLink && secondLink}
         </div>
     );
 }

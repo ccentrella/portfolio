@@ -1,5 +1,6 @@
 import React from "react";
 
+import BlogBlock from "../template-parts/blocks/BlogBlock"
 import PhotosBlock from "../template-parts/blocks/PhotosBlock";
 
 function Interests() {
@@ -19,6 +20,7 @@ function Interests() {
                     others might know more about Him.
                 </p>
             </div>
+            <BlogBlock />
             <div className="container">
                 <h2>Photography</h2>
                 <p className="large">
