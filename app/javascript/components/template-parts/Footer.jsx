@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -8,17 +9,18 @@ function Footer() {
         </section>
         <section className="footer-main">
             <div className="footer-section">
-                <h4 className="footer-heading">About Me</h4>
+                <h4 className="footer-heading"><Link to="/">About Me</Link></h4>
                 <hr className="footer-heading-decorator" />
-
-                <p><a href="/" className="footer-link">Home</a></p>
-                <p><a href="/about" className="footer-link">Profile</a></p>
+                <p><Link to="/" className="footer-link">Home</Link></p>
+                <p><Link to="/highlights" className="footer-link">Highlights</Link></p>
+                <p><Link to="/specialties" className="footer-link">Specialties</Link></p>
+                <p><Link to="/interests" className="footer-link">Interests</Link></p>
             </div>
             <div className="footer-section">
-                <h4 className="footer-heading">Work Experience</h4>
+                <h4 className="footer-heading"><Link to="/resume">Work Experience</Link></h4>
                 <hr className="footer-heading-decorator" />
                 
-                <p><a href="/assets/resume-online.pdf" target="_blank" className="footer-link">Resume</a></p>
+                <p><Link to="/resume" className="footer-link">Resume</Link></p>
                 <p><a href="https://github.com/ccentrella" target="_blank" className="footer-link">GitHub</a></p>
                 <p><a href="https://linkedin.com/in/ccentrella" target="_blank" className="footer-link">LinkedIn</a></p>
             </div>
@@ -26,7 +28,7 @@ function Footer() {
                 <h4 className="footer-heading">Content</h4>
                 <hr className="footer-heading-decorator" />
 
-                <p><a href="/blog" className="footer-link">Blog</a></p>
+                <p><Link to="/blog" className="footer-link">Blog</Link></p>
                 <p><a href="https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15" target="_blank" className="footer-link">Photos</a></p>
             </div>
         </section>

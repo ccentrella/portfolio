@@ -54,6 +54,15 @@ footer {
     font-family: 'rooney-sans', sans-serif;
     font-weight: 300;
     font-size: 1.2em;
+
+    a, Link {
+        color: inherit;
+
+        &:hover {
+            color: $footer-link-hover
+        }
+    }
+
 }
 
 .footer-heading-decorator {
