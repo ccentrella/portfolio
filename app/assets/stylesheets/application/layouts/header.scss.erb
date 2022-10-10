@@ -3,27 +3,41 @@
 /** Header **/
 
 header {
-    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5em 0 1em;
     margin-bottom: 1.5em;
+    gap: 1em;
+    border-bottom: 4px solid $banner-border;
+    background-color: $secondary;
 
     .logo {
+        padding: 0;
+        font-size: 1.25em;
+    }
+
+    .logo-image {
+        margin-left: 2em;
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-toggle {
+        margin-right: 0.5em;
+        flex-grow: 2;
+        text-align: right;
+        height: 1em;
+        cursor: pointer;
+        transition: opacity 1s;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }
 
-.navbar-outer {
-    text-align: right;
-    flex-wrap: wrap;
-}
 
-.menu-toggle {
-    height: 1em;
-    cursor: pointer;
-    transition: opacity 1s;
-
-    &:hover {
-        opacity: 0.7;
-    }
-}
 
 .navbar {
     background-color: $navbar;
@@ -92,36 +106,14 @@ header {
     }
 }
 
-.banner-image {
-    border-bottom: 4px solid $banner-border;
-    background-color: $secondary
-}
-
-.banner-overlay {
-    background-color: $overlay;
-}
-
 @media screen and (min-width:750px)
 {
-    header .logo {
-        max-width: fit-content;
-        padding-bottom: 0.75em;
-    }
-
-    .banner-image {
-        background-size: cover;
+    header {
+        padding-bottom: 0;
     }
 
     .menu-toggle {
         display: none;
-    }
-
-    .navbar-outer {
-        display: flex;
-    }
-
-    .banner-overlay {
-        display: block;
     }
 
     .navbar {
@@ -138,12 +130,10 @@ header {
             }
 
             &:hover {
-                background-color: $navbar;
                 border-top: 4px solid #c0c0c0;
                 margin-top: -4px;
             }
              &.active {
-                background-color: $navbar;
                 border-top: 4px solid $light-text;
                 margin-top: -4px;
             }
