@@ -12,7 +12,7 @@ $secondary: #00739B;
 $secondary-light: #7EBBE0;
 // $accent: color(display-p3 0.0275 0.3059 0.4078);
 $accent: #00506B;
-$accent-light: #73B4B4;
+$accent-light: #8bdefc;
 // $heading: color(display-p3 0.0353 0.4431 0.5882);
 $heading: #00739B;
 $keyword: $secondary;
@@ -25,10 +25,10 @@ $banner-border: #32ACD9;
 $logo-text: $light-text;
 $logo-text-hover: #ecf7ed;
 
-$navbar: $secondary;
-$navbar-item: $primary;
-$navbar-hover: $accent;
-$navbar-active: $accent;
+$navbar: $accent;
+$navbar-item: $accent-light;
+$navbar-hover: #19B2EA;
+$navbar-active: $light-text;
 $navbar-border: $banner-border;
 
 $flash-success: #657C3B;
