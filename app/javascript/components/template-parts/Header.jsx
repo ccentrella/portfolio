@@ -1,8 +1,20 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import MenuIcon from "../../../assets/images/icons/menu.svg";
 
 function Header() {
+
+    const stickyNavbar = (<div className="navbar-sticky">
+                            <h1 className="logo">
+                                <Link to="/">CC</Link>
+                            </h1>
+                        </div>);
+
+    const location = useLocation();
+    if (location.pathname == "/") {
+        return stickyNavbar;
+    }
+
     return (
         <>
             <header>
@@ -25,7 +37,7 @@ function Header() {
                 <nav className="navbar">
                     <ul>
                         <li className="nav-item">
-                            <NavLink to="/">Home</NavLink>
+                            <Link to="/">Home</Link>
                         </li>
                         <li className="nav-item">
                             <NavLink to="/resume">Resume</NavLink>
@@ -55,11 +67,7 @@ function Header() {
                     </ul>
                 </nav>
             </header>
-            <div className="navbar-sticky">
-                <h1 className="logo">
-                    <Link to="/">CC</Link>
-                </h1>
-            </div>
+            {stickyNavbar}
         </>
     );
 }
