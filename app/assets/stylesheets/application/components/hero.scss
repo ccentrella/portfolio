@@ -1,19 +1,22 @@
-.profile-image {
-    width: 15em;
-    max-width: 60%;
-    margin: auto;
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: $primary;
+    box-sizing: border-box;
+    margin: 0 0 5em;
+    height: 100vh;
 }
 
-#hero {
-    text-align: center;
-    background-color: $primary;
-    padding-top: 15vh;
-    box-sizing: border-box;
-    margin-bottom: 4em;
+#hero-profile {
+    width: 15em;
+    max-width: 50%;
+    margin: 6em auto 0;
 }
 
 #hero-logo, #hero-tagline {
-    padding: 0 1em 0.25em;
+    margin: 0.4em 1em 0.25em;
     font-family: 'Quasimoda', sans-serif;
     font-weight: 300;
     line-height: 1.15;
@@ -23,10 +26,10 @@
 }
 
 #hero-tagline {
+    margin: 0;
     padding: 1em;
     font-size: 2em;
     text-align: right;
-    margin-bottom: 0;
 }
 
 #hero-tagline::before {
