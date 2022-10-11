@@ -8,25 +8,27 @@ header {
     flex-wrap: wrap;
     padding: 1.5em 0 1em;
     margin-bottom: 1.5em;
-    gap: 1em;
     border-bottom: 4px solid $banner-border;
     background-color: $secondary;
 
     .logo {
-        padding: 0;
+        padding: 0 0 0 0.8em;
         font-size: 1.25em;
     }
 
     .logo-image {
         margin-left: 2em;
         width: 50px;
-        height: 50px;
     }
 
     .menu-toggle {
-        margin-right: 0.5em;
+        margin-right: 1em;
         flex-grow: 2;
         text-align: right;
+        height: 1em;
+    }
+
+    .menu-toggle-image {
         height: 1em;
         cursor: pointer;
         transition: opacity 1s;
@@ -37,44 +39,42 @@ header {
     }
 }
 
-
-
 .navbar {
     background-color: $navbar;
     border-top: 1px solid $navbar-border;
-    text-align: center;
+    padding: 1.5em 2em 2.5em 4em;
     display: none;
     flex-basis: 100%;
 
     ul {
-        margin: 0;
-        padding: 0;
-        float: none;
         list-style-type: none;
     }
 
-    /* Create a separator aligned perfectly, by using an outer item for height,
-    but an inner item for width */
     .nav-item {
-        padding: 0.6em 0;
+        padding: 1em 0;
 
-        &:nth-child(odd) {
-            background-color: $navbar-item;
+       &:after {
+            height: 0.15em;
+            background-color: $accent-light;
+            opacity: 20%;
+            width: calc(100vw - 8em);
+            margin-top: 0.5em;
+            position: absolute;
+            content: '';
         }
 
         a {
-            font-size: 1.1em;
             display: block;
-            color: $light-text;
-            padding: 0 0.6em;
+            color: $navbar-item;
         }
 
-        &:hover {
-            background-color: $navbar-hover;
+        &:hover { 
+            a {
+                color: $navbar-hover;
+            }
         }
-
-        &.active {
-            background-color: $navbar-active;
+        a.active { 
+            color: $navbar-active;
         }
     }
 }
@@ -103,6 +103,14 @@ header {
 
     &:checked ~ .navbar {
         display: block;
+        margin: 1em 0 -1em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    header .logo-image {
+        margin-left: 1.5em;
     }
 }
 
@@ -118,24 +126,29 @@ header {
 
     .navbar {
         display: block;
-        padding-top: 4px;
+        margin-top: 0.75em;
+        padding: 0.75em 0;
+        text-align: center;
 
-        .nav-item, .nav-item:nth-child(odd) {
+        .nav-item {
+            padding: 0;
             float: left;
             width: 8em;
-            background-color: $navbar;
+            border-right: 1px solid $light-text;
 
-            a {
-                border-right: 1px solid $light-text;
+            &:after {
+                content: unset;
             }
 
-            &:hover {
-                border-top: 4px solid #c0c0c0;
-                margin-top: -4px;
+            &:hover a, a.active { 
+                color: $navbar-item;
+                border-top: 4px solid $navbar-hover;
+                margin-top: -0.75em;
+                padding-top: calc(0.75em - 4px);
             }
-             &.active {
-                border-top: 4px solid $light-text;
-                margin-top: -4px;
+
+            a.active {
+                border-color: $navbar-active;
             }
         }
     }

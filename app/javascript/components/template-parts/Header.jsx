@@ -17,7 +17,7 @@ function Header() {
                 <label className="menu-toggle" for="toggle">
                     <img
                         src={MenuIcon}
-                        className="menu-toggle"
+                        className="menu-toggle-image"
                         alt="menu icon"
                     />
                 </label>
