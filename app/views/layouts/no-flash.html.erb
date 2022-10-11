@@ -16,8 +16,6 @@
     <%= auto_discovery_link_tag :rss, blog_url(format: :rss) %>
   </head>
   <body>
-    <%= render 'layouts/header' %>
     <%= yield %>
-    <%= render 'layouts/footer' %>
   </body>
 </html>
