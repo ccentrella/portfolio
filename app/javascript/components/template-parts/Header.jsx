@@ -23,10 +23,10 @@ function Header() {
                     alt="profile image"
                     className="logo-image"
                 />
-                <h1 class="logo">
+                <h1 className="logo">
                     <NavLink to="/">Chris Centrella</NavLink>
                 </h1>
-                <label className="menu-toggle" for="toggle">
+                <label className="menu-toggle" htmlFor="toggle">
                     <img
                         src={MenuIcon}
                         className="menu-toggle-image"
