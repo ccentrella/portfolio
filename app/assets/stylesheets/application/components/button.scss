@@ -68,7 +68,8 @@
 
 .button,
 .button-fixed {
-    padding: 1.4em 2em;
+    margin: 1em;
+    padding: 1.4em 2.5em;
     border: 2px solid $button-border;
     border-radius: 50px;
     background-color: $button-background;
@@ -114,4 +115,8 @@
     &.button-wide {
         width: 18em;
     }
+
+    &.button-thin {
+        width: 13.5em;
+     }
 }
