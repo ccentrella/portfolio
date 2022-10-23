@@ -24,6 +24,7 @@ hr {
 
 .flex-col {
     flex-basis: 50%;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width:750px) {
