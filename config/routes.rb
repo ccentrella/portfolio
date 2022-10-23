@@ -25,7 +25,6 @@ Rails.application.routes.draw do
   get '/feed', to: "posts#index", format: 'rss'
 
   # Define additional paths
-  get '/about', to: "static_pages#about"
   get '/contact', to: "email_contact#new"
   post "/contact_form", to: "email_contact#create", as: "email_contacts"
 
@@ -48,7 +47,10 @@ Rails.application.routes.draw do
   resources :resources, path: '/resources'
 
   # Define root path for blog posts
-  get '/blog', to: "posts#index"
+  direct :blog do
+     "/blog"
+  end
+  
   resources :posts, path: '/blog', param: :slug do
     get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
     get '/feed', on: :collection, to: "posts#index", format: 'rss'
