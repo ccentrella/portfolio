@@ -9,6 +9,7 @@ import Resume from "./pages/Resume";
 import Interests from "./pages/Interests";
 import Highlights from "./pages/Highlights";
 import Specialties from "./pages/Specialties";
+import BlogHome from "./pages/BlogHome";
 import Contact from "./pages/Contact";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
                 <Route path="/interests" element={<Interests />} />
                 <Route path="/specialties" element={<Specialties />} />
                 <Route path="/highlights" element={<Highlights />} />
+                <Route path="/blog" element={<BlogHome />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
