@@ -31,6 +31,18 @@
     color: $primary;
 }
 
+.resume-buttons  {
+    text-align: center;
+
+    @media screen and (min-width: 650px) {
+        text-align: left;
+
+        .button-fixed {
+            width: 13.5em;
+        }
+    }
+}
+
 /** Timeline **/
 
 .dot,
