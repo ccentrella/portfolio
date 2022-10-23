@@ -63,3 +63,9 @@
     border-radius: 75px;
     background-color: $secondary-light3;
 }
+
+.section-block-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
