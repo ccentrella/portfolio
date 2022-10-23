@@ -5,16 +5,18 @@
 $light-text: #E5E5E5;
 $dark-text: #707070;
 $grey-text: #7E7777;
-$primary: #009AC3;
-// $primary: color(display-p3 0.1686 0.5922 0.7451);
-// $secondary: color(display-p3 0.0353 0.4431 0.5882);
-$secondary: #00739B;
+// $primary: #009AC3;
+$primary: color(display-p3 0.1686 0.5922 0.7451);
+$secondary: color(display-p3 0.0353 0.4431 0.5882);
+// $secondary: #00739B;
 $secondary-light: #7EBBE0;
-// $accent: color(display-p3 0.0275 0.3059 0.4078);
-$accent: #00506B;
+$secondary-light2: #CDEBF3;
+$secondary-light3: #EAF6F9;
+$accent: color(display-p3 0.0275 0.3059 0.4078);
+// $accent: #00506B;
 $accent-light: #8bdefc;
-// $heading: color(display-p3 0.0353 0.4431 0.5882);
-$heading: #00739B;
+$heading: color(display-p3 0.0353 0.4431 0.5882);
+// $heading: #00739B;
 $keyword: $secondary;
 $company: #957219;
 $link-text: dodgerblue;
@@ -22,6 +24,7 @@ $link-text-hover: deepskyblue;
 
 $overlay: transparent;
 $banner-border: #32ACD9;
+$hero: #042836;
 $logo-text: $light-text;
 $logo-text-hover: #ecf7ed;
 
