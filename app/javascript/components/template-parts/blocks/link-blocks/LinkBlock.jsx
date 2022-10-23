@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Block({ title, icon, links }) {
+function LinkBlock({ title, icon, links }) {
     if (links == null) {
         return null;
     }
@@ -12,13 +12,13 @@ function Block({ title, icon, links }) {
     links = getLinks(links);
 
     return (
-        <div className="button-fixed-container-dark circle-icon-container">
+        <div className="circle-icon-container">
             <div className="circle-icon-outer">
                 <div className="flex-col circle-icon-left">
                     <div className="circle-icon">{icon}</div>
                 </div>
                 <div className="flex-col circle-icon-right">
-                    <p className="section-title circle-icon-title">{title}</p>
+                    <p className="circle-icon-title">{title}</p>
                     <div className="buttons-desktop">
                         {links.map((link) => (
                             <React.Fragment key={link.key}>
@@ -89,4 +89,4 @@ function getLinks(links) {
     });
 }
 
-export default Block;
+export default LinkBlock;

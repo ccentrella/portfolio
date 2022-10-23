@@ -1,10 +1,10 @@
 import React from "react";
-import Block from "./Block";
-import ResumeIcon from "../../../../assets/images/icons/paper.svg";
+import LinkBlock from "./LinkBlock";
+import ResumeIcon from "../../../../../assets/images/icons/paper.svg";
 
-function WorkExperienceBlock() {
+function WorkExperienceLinkBlock() {
     return (
-        <Block
+        <LinkBlock
             title="Work Experience"
             icon={ResumeIcon}
             links={[
@@ -23,4 +23,4 @@ function WorkExperienceBlock() {
     );
 }
 
-export default WorkExperienceBlock;
+export default WorkExperienceLinkBlock;

@@ -1,10 +1,10 @@
 import React from "react";
-import Block from "./Block";
-import ThesisIcon from "../../../../assets/images/icons/article.svg";
+import LinkBlock from "./LinkBlock";
+import ThesisIcon from "../../../../../assets/images/icons/article.svg";
 
-function ThesisBlock() {
+function ThesisLinkBlock() {
     return (
-        <Block
+        <LinkBlock
             title="Senior Thesis"
             icon={ThesisIcon}
             links={[
@@ -18,4 +18,4 @@ function ThesisBlock() {
     );
 }
 
-export default ThesisBlock;
+export default ThesisLinkBlock;

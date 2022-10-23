@@ -1,10 +1,10 @@
 import React from "react";
-import Block from "./Block";
-import PhotoIcon from "../../../../assets/images/icons/photo.svg";
+import LinkBlock from "./LinkBlock";
+import PhotoIcon from "../../../../../assets/images/icons/photo.svg";
 
-function PhotosBlock() {
+function PhotosLinkBlock() {
     return (
-        <Block
+        <LinkBlock
             title="Photo Gallery"
             icon={PhotoIcon}
             links={[
@@ -18,4 +18,4 @@ function PhotosBlock() {
     );
 }
 
-export default PhotosBlock;
+export default PhotosLinkBlock;

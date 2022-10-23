@@ -1,10 +1,10 @@
 import React from "react";
-import Block from "./Block";
-import BlogIcon from "../../../../assets/images/icons/article.svg";
+import LinkBlock from "./LinkBlock";
+import BlogIcon from "../../../../../assets/images/icons/article.svg";
 
-function BlogBlock() {
+function BlogLinkBlock() {
     return (
-        <Block
+        <LinkBlock
             title="{Latest Blog Post}"
             icon={BlogIcon}
             links={[
@@ -23,4 +23,4 @@ function BlogBlock() {
     );
 }
 
-export default BlogBlock;
+export default BlogLinkBlock;
