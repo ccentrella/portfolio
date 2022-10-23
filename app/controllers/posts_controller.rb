@@ -6,10 +6,12 @@ class PostsController < ApplicationController
         @posts = Post.all
         @subscriber = Subscriber.new
 
-        respond_to do |format|
-            format.html
-            format.rss {render layout: false}
-        end
+        render json: @posts
+
+        # respond_to do |format|
+        #     format.html
+        #     format.rss {render layout: false}
+        # end
     end
 
     def admin_index
