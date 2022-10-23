@@ -14,7 +14,7 @@ function Resume() {
     return (
         <div>
             <Introduction />
-            <article className="resume container">
+            <article className="resume">
                 <Summary />
                 <SpecialtiesAndSkills />
                 <TechnicalKnowledge />

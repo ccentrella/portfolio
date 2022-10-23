@@ -4,7 +4,7 @@ function VolunteerExperience() {
   return (
     <section>
         <p className='section-title'>Volunteering Experience</p>
-        <div>
+        <div className="container">
             <p className='resume-item-heading'>Executive Editor</p>
             <p className='resume-item-subheading'>Clarifying Catholicism Blog (Remote)<br/>
             Mar 2021 — Mar 2022</p>
