@@ -1,0 +1,65 @@
+.section-block {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: $primary;
+    gap: 2em;
+    justify-content: center;
+
+    &.thin {
+        gap: 0;
+    }
+}
+
+.section-block .flex-col {
+    flex-basis: 40%;
+    flex-grow: 0.5;
+    padding: 8em 3em;
+
+    &.light-blue {
+        background-color: $secondary-light3;
+        color: $dark-text;
+    }
+
+     &.zero-padding {
+        padding: 0 2em;
+     }
+}
+
+.section-block.transparent {
+    background-color: transparent;
+    margin: 6em 2em;
+
+    .section-block-content {
+        color: $dark-text;
+    
+        h3 {
+            color: $primary;
+        }
+    }
+}
+
+.section-block-content {
+    color: $light-text;
+
+    p {
+        font-size: 1.25em;
+    }
+
+    h3 {
+        color: $light-text;
+        font-size: 1.75em;
+        line-height: 1.4;
+        margin: 1em 0;
+    }
+
+    .button-label {
+        margin: 0 0 2.5em;
+        width: 9em;
+        font-size: 1.15em;
+    }
+}
+
+.backdrop {
+    border-radius: 75px;
+    background-color: $secondary-light3;
+}
