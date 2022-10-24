@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/interests', to: 'pages#home'
   get '/specialties', to: 'pages#home'
   get '/highlights', to: 'pages#home'
-  get '/contact', to: 'pages#homes'
+  get '/contact', to: 'pages#home'
 
   devise_for :users, skip: [:registrations], controllers: {
     sessions: 'users/sessions',
