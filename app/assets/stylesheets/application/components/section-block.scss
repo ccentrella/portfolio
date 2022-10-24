@@ -4,6 +4,7 @@
     background-color: $primary;
     gap: 2em;
     justify-content: center;
+    padding: 4em 0;
 
     &.thin {
         gap: 0;
@@ -12,26 +13,21 @@
 
 .section-block .flex-col {
     flex-basis: 40%;
-    flex-grow: 0.5;
-    padding: 8em 3em;
+    flex-grow: 1;
+    max-width: 90%;
+    padding: 2em;
 
-    &.light-blue {
-        background-color: $secondary-light3;
-        color: $dark-text;
-    }
-
-     &.zero-padding {
+    &.zero-padding {
         padding: 0 2em;
-     }
+    }
 }
 
 .section-block.transparent {
     background-color: transparent;
-    margin: 6em 2em;
 
     .section-block-content {
         color: $dark-text;
-    
+
         h3 {
             color: $primary;
         }
@@ -40,14 +36,15 @@
 
 .section-block-content {
     color: $light-text;
+    order: 2;
 
     p {
-        font-size: 1.25em;
+        font-size: 1.15em;
     }
 
     h3 {
         color: $light-text;
-        font-size: 1.75em;
+        font-size: 1.5em;
         line-height: 1.4;
         margin: 1em 0;
     }
@@ -59,13 +56,65 @@
     }
 }
 
-.backdrop {
-    border-radius: 75px;
+.section-block .flex-col.backdrop {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    border-radius: 25px;
     background-color: $secondary-light3;
+    margin-bottom: 1.5em;
 }
 
 .section-block-image {
+    order: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .section-block {
+        padding: 0;
+    }
+
+    .section-block.transparent {
+        margin: 2em;
+    }
+
+    .section-block .flex-col {
+        padding: 6em 3em;
+        flex-grow: 0.5;
+
+        &.light-blue {
+            background-color: $secondary-light3;
+            color: $dark-text;
+        }
+
+        &.zero-padding {
+            padding: 4em 2em;
+        }
+    }
+
+    .section-block-content {
+        order: unset;
+
+        p {
+            font-size: 1.25em;
+        }
+
+        h3 {
+            font-size: 1.75em;
+        }
+    }
+
+    .section-block-image {
+        order: unset;
+    }
+
+    .section-block .flex-col.backdrop {
+        border-radius: 75px;
+        background-color: $secondary-light3;
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
 }
