@@ -1,6 +1,7 @@
 .circle-icon-container {
     background: $secondary;
     padding: 3em 0 4em;
+    text-align: center;
 
      p, h1, h2 {
         color: $light-text;
@@ -21,6 +22,7 @@
         font-family: rooney-sans, sans-serif;
         font-weight: 700;
         line-height: 1.25;
+        text-align: left;
         color: $primary;
 
         @media screen and (min-width: 750px) {
@@ -83,6 +85,7 @@
     .circle-icon-container {
         display: block;
         padding: 6em 0;
+        text-align: left;
 
         > .circle-icon-button {
             display: none;
