@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/specialties', to: 'pages#home'
   get '/highlights', to: 'pages#home'
   get '/contact', to: 'pages#home'
+  get '/blog', to: 'pages#home'
 
   devise_for :users, skip: [:registrations], controllers: {
     sessions: 'users/sessions',
@@ -45,16 +46,21 @@ Rails.application.routes.draw do
   resources :email_contact, only: [:new, :create]
 
   resources :resources, path: '/resources'
-
-  # Define root path for blog posts
-  direct :blog do
-     "/blog"
-  end
   
-  resources :posts, path: '/blog', param: :slug do
-    get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
-    get '/feed', on: :collection, to: "posts#index", format: 'rss'
-  end 
+  # resources :posts, path: '/blog', param: :slug do
+  #   get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
+  #   get '/feed', on: :collection, to: "posts#index", format: 'rss'
+  # end 
+
+  namespace :api do
+    namespace :v1 do
+      resources :posts, path: '/blog', param: :slug do
+        # get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
+        # get '/feed', on: :collection, to: "posts#index", format: 'rss'
+        get '/latest_article', on: :collection, to: "posts#latest_article"
+      end 
+    end
+  end
 
   # Define root path for subscribe
   resources :subscribers, only: [:new, :create]

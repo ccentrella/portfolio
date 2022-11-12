@@ -10,7 +10,6 @@ function BlogLinkBlock() {
             .then((response) => response.json())
             .then(
                 (post) => {
-                    console.log(post);
                     setLatestPost({ ...latestPost, title: post.title, link: "/blog/" + post.slug });
                 },
             );
