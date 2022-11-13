@@ -11,6 +11,7 @@ import Highlights from "./pages/Highlights";
 import Specialties from "./pages/Specialties";
 import BlogHome from "./pages/BlogHome";
 import Contact from "./pages/Contact";
+import BlogReader from "./template-parts/blog/BlogReader";
 
 export default function App() {
     return (
@@ -23,6 +24,7 @@ export default function App() {
                 <Route path="/specialties" element={<Specialties />} />
                 <Route path="/highlights" element={<Highlights />} />
                 <Route path="/blog" element={<BlogHome />} />
+                <Route path="/blog/:slug" element={<BlogReader />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
