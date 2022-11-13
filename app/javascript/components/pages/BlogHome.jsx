@@ -23,7 +23,7 @@ function BlogHome() {
             <main className="container">
                 <h1>Articles</h1>
                 {Array.isArray(posts) && posts.map((post) => (
-                    <BlogEntry post={post} />
+                    <BlogEntry post={post} key={post.slug} />
                     ))}
             </main>
             {/* <Subscribe /> */}
