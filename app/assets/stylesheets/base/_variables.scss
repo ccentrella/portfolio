@@ -14,6 +14,7 @@ $secondary-light2: #CDEBF3;
 $secondary-light3: #EAF6F9;
 $accent: color(display-p3 0.0275 0.3059 0.4078);
 // $accent: #00506B;
+$accent-dark: #042836;
 $accent-light: #8bdefc;
 $heading: color(display-p3 0.0353 0.4431 0.5882);
 // $heading: #00739B;
@@ -24,7 +25,7 @@ $link-text-hover: deepskyblue;
 
 $overlay: transparent;
 $banner-border: #32ACD9;
-$hero: #042836;
+$hero: $accent-dark;
 $logo-text: $light-text;
 $logo-text-hover: #ecf7ed;
 
@@ -62,7 +63,7 @@ $field-hover: aliceblue;
 $timeline: #496600;
 $timeline-text: #627E2D;
 
-$footer-top-background: #042836;
+$footer-top-background: $accent-dark;
 $footer-main-background: $accent;
 $footer-bottom-background: #242222;
 $footer-logo: #BFD9D9;
