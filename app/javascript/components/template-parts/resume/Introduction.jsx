@@ -7,7 +7,7 @@ function Introduction() {
     return (
         <div>
             <Hero />
-            <p className="section-title zero-margin">Full Stack Software Engineer</p>
+            <p className="section-title zero-margin">Software Engineer</p>
             <div className="container">
                 <p className="resume-location">Location: Lansing, MI</p>
                 <div className="resume-buttons">
