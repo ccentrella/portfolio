@@ -1,11 +1,19 @@
 class Post < ApplicationRecord
 
     default_scope -> { order(created_at: :desc) }
+    after_create :load_nonpersistent_attributes
+    after_update :load_nonpersistent_attributes
+    after_find :load_nonpersistent_attributes
+
     validates :user_id, presence: true, on: :create
     validates :title, presence: true
     validates :slug, uniqueness: true
     validates :slug, presence: true, on: :update
     has_rich_text :content
+
+    attribute :date
+    attribute :time
+    attribute :author
 
     def get_date()
         Time.zone.utc_to_local(created_at).strftime('%B %d, %Y')
@@ -39,4 +47,11 @@ class Post < ApplicationRecord
             id.to_s
         end
     end
+
+    private
+        def load_nonpersistent_attributes
+            self.date = get_date()
+            self.time = get_time()
+            self.author = get_author()
+        end
 end
