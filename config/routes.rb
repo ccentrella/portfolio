@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/highlights', to: 'pages#home'
   get '/contact', to: 'pages#home'
   get '/blog', to: 'pages#home'
+  get '/blog/:slug', to: 'pages#home'
 
   devise_for :users, skip: [:registrations], controllers: {
     sessions: 'users/sessions',
