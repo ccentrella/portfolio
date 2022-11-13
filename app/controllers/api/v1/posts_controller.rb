@@ -1,7 +1,7 @@
 class Api::V1::PostsController < ApplicationController
     before_action :authenticate_user!
     skip_before_action :authenticate_user!, only: [:index, :show, :latest_article]
-    before_action :get_post, only: [:show, :edit, :update, :destroy]
+    before_action :get_post, only: [:edit, :update, :destroy]
 
     def index
         @posts = Post.all
@@ -14,6 +14,9 @@ class Api::V1::PostsController < ApplicationController
     end
 
     def show
+        @post = Post.find_by_slug(params[:slug])
+        @post ||= Post.find(params[:slug])
+        
         if @post
             render json: @post
         else
