@@ -7,8 +7,8 @@ function BlogEntry({post}) {
             <h2 className="post-item-title">
                 <Link to={"/blog/" + post.slug}>{post.title}</Link>
             </h2>
-            <p className="post-item-date">{post.created_at}</p>
-            {post.description && <p class="post-item-description">{post.description}</p>}
+            <p className="post-item-date">{post.date}</p>
+            {post.description && <p className="post-item-description">{post.description}</p>}
         </article>
     );
 }
