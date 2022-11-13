@@ -49,7 +49,7 @@ a {
 
 h1 {
     margin: 1.5em 0 0.65em 0;
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: rooney-sans, sans-serif;
     font-weight: 700;
     color: $heading;
@@ -115,4 +115,21 @@ p.section-title {
 
 .button-label::before {
     content: unset;
+}
+
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.justify {
+    text-align: justify;
 }
