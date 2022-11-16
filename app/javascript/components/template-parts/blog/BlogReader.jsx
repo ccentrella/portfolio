@@ -13,8 +13,8 @@ function BlogReader() {
             .then((post) => {
                 console.log(post);
                 setPost(post);
-                setLoaded(true);
             });
+            setLoaded(true);
     }, [loaded]);
 
     if (!loaded) {
@@ -24,7 +24,7 @@ function BlogReader() {
         return (
             <div className="container">
                 <h1>This post doesn't exist or has been removed.</h1>
-                <div className="button-container thin">
+                <div className="button-fixed-container thin">
                     <Link className="button-fixed" to="/">
                         View Homepage
                     </Link>
