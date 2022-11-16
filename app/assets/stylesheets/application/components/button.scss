@@ -54,6 +54,18 @@
         }
     }
 
+    &.accent {
+        background-color: $accent;
+
+        .button-fixed {
+            background-color: $secondary;
+
+            &:hover {
+                background-color: $accent-dark;
+            }
+        }
+    }
+
     &.thin {
         margin: 3em 0;
     }
