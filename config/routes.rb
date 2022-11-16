@@ -49,12 +49,12 @@ Rails.application.routes.draw do
   
   resources :posts, path: '/blog', only: [:new, :create, :edit, :update, :destroy], param: :slug do
     get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
+    get '/feed', on: :collection, to: "posts#index", format: 'rss'
   end 
 
   namespace :api do
     namespace :v1 do
       resources :posts, path: '/blog', only: [:index, :show], param: :slug do
-        get '/feed', on: :collection, to: "posts#index", format: 'rss'
         get '/latest_article', on: :collection, to: "posts#latest_article"
       end 
     end
