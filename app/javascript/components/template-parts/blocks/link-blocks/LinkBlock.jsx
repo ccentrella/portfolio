@@ -23,13 +23,18 @@ function LinkBlock({ title, icon, links }) {
                         {links.map((link) => (
                             <React.Fragment key={link.key}>
                                 {link}
-                                <br/>
+                                <br />
                             </React.Fragment>
                         ))}
                     </div>
                 </div>
             </div>
-            {links}
+            {links.map((link) => (
+                <React.Fragment key={link.key}>
+                    {link}
+                    <br />
+                </React.Fragment>
+            ))}
         </div>
     );
 }
@@ -67,20 +72,13 @@ function getLinks(links) {
         let [linkDescription, linkPath, isExternal] = link;
         if (isExternal) {
             link = (
-                <a
-                    key={linkDescription}
-                    className="button-fixed circle-icon-button"
-                    target="_blank"
-                    href={linkPath}>
+                <a key={linkDescription} className="button-fixed circle-icon-button" target="_blank" href={linkPath}>
                     {linkDescription}
                 </a>
             );
         } else {
             link = (
-                <Link
-                    key={linkDescription}
-                    className="button-fixed circle-icon-button"
-                    to={linkPath}>
+                <Link key={linkDescription} className="button-fixed circle-icon-button" to={linkPath}>
                     {linkDescription}
                 </Link>
             );
