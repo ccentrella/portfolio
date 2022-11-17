@@ -8,19 +8,26 @@ function BlogReader() {
     const parse = require("html-react-parser");
 
     useEffect(() => {
+        document.title = "View Blog Post | Chris Centrella";
+    }, []);
+
+    useEffect(() => {
         fetch("/api/v1/blog/" + params.slug)
             .then((response) => response.json())
             .then((post) => {
                 console.log(post);
                 setPost(post);
+                document.title = post.title + " | Chris Centrella";
             });
             setLoaded(true);
+            
     }, [loaded]);
 
     if (!loaded) {
         return <></>
     }
     else if (!post) {
+        document.title = "Page Doesn't Exist | Chris Centrella";
         return (
             <div className="container">
                 <h1>This post doesn't exist or has been removed.</h1>

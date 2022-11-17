@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Introduction from "../template-parts/resume/Introduction";
 import Summary from "../template-parts/resume/Summary";
@@ -11,6 +11,11 @@ import ProjectExperience from "../template-parts/resume/ProjectExperience";
 import VolunteerExperience from "../template-parts/resume/VolunteerExperience";
 
 function Resume() {
+
+    useEffect(() => {
+        document.title = "Resume | Chris Centrella";
+    }, []);
+
     return (
         <div>
             <Introduction />

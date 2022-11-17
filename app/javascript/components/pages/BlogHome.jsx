@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useState, useEffect } from "react";
 
 import BlogEntry from "../template-parts/blog/BlogEntry";
@@ -6,6 +7,10 @@ import BlogEntry from "../template-parts/blog/BlogEntry";
 function BlogHome() {
     const [loaded, setLoaded] = useState(false);
     const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        document.title = "Welcome | Chris's Blog";
+    }, []);
 
     useEffect(() => {
         fetch("/api/v1/blog/")

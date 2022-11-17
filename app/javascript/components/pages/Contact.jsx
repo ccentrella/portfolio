@@ -1,7 +1,13 @@
 import React, { useEffect } from "react";
+
 import { Link } from "react-router-dom";
 
 function Contact() {
+
+    useEffect(() => {
+        document.title = "Get In Touch | Chris Centrella";
+    }, []);
+
     useEffect(() => {
         <script src="https://www.google.com/recaptcha/api.js"></script>;
 
