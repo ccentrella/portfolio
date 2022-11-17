@@ -60,3 +60,11 @@ input:hover {
     width: 15em;
     transition: color 1s, background-color 1s;
 }
+
+@media (pointer: fine)
+{
+    .submit-button:hover {
+        background-color: $light-text;
+        color: $secondary;
+    }
+}
