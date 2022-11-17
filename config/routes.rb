@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/interests', to: 'pages#home'
   get '/specialties', to: 'pages#home'
   get '/highlights', to: 'pages#home'
-  get '/contact', to: 'pages#home'
+  # get '/contact', to: 'pages#home'
   get '/blog', to: 'pages#home'
 
   devise_for :users, skip: [:registrations], controllers: {
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   # Define additional paths
   get '/contact', to: "email_contact#new"
-  post "/contact_form", to: "email_contact#create", as: "email_contacts"
+  post '/contact', to: "email_contact#create", as: "email_contacts"
 
   # Define external URLs
   direct :github do
