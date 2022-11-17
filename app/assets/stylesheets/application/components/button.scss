@@ -107,12 +107,10 @@
     }
 
     &.red {
-        border-color: $primary;
-        color: $container-dark-background-red;
+        background-color: $container-dark-background-red;
 
         &:hover {
-            color: $light-text;
-            background-color: $container-dark-background-red;
+            background-color: darkred;
         }
     }
 }
@@ -127,4 +125,8 @@
     &.button-wide {
         width: 18em;
     }
+}
+
+input.button-fixed {
+    font-size: 1em;
 }
