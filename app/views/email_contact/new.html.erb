@@ -1,22 +1,29 @@
 <% provide(:title, "Get in Touch") %>
 <%= render partial: "shared/error_messages", object: @email_contact %>
 <div class="container">
-  <h1>Get in Touch</h1>
-  <p class="large">Thank you so much for reaching out to me! I will do my best to respond as soon as possible, and I look forward to getting back to you!</p>
-  <p class="large">“The Lord, He is my strength and my song, and He has become my salvation. He is my God.”
-    (Exodus 15:2)</p>
+  <h1>Contact</h1>
+  <p>Thank you for visiting my website. You can reach out to me via the form below.</p>
+  <p>If you prefer to contact me via LinkedIn, you can use this link:</p>
+  <div class="button-fixed-container">
+    <a class="button-fixed" target="_blank" href="https://linkedin.com/in/ccentrella">
+      LinkedIn Profile
+    </a>
+    <a class="button-fixed" href="/">
+      View Homepage
+    </a>
+  </div>
 </div>
 <%= form_with(model: @email_contact, local: true, class: 'contact-form', data: {turbo: false}) do |f| %>
-    <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
-    <br/>
-    <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
-    <br/>
-    <%= f.text_area :message, placeholder: 'Message', class: 'field field-message' %>
-    <br/>
-    <% if @show_checkbox_recaptcha %>
-        <%= recaptcha_tags noscript: false %>
-    <% else %>
-        <%= recaptcha_v3(action: 'contact', site_key: ENV['RECAPTCHA_SITE_KEY_V3']) %>
-    <% end %>    
-    <%= f.submit 'Send Message', class: 'field submit-button' %>
+  <%= f.text_field :name, placeholder: 'Name', class: 'field' %>
+  <br/>
+  <%= f.email_field :email, placeholder: 'Email', class: 'field' %>
+  <br/>
+  <%= f.text_area :message, placeholder: 'Message', class: 'field field-message' %>
+  <br/>
+  <% if @show_checkbox_recaptcha %>
+    <%= recaptcha_tags noscript: false %>
+  <% else %>
+    <%= recaptcha_v3(action: 'contact', site_key: ENV['RECAPTCHA_SITE_KEY_V3']) %>
+  <% end %>
+  <%= f.submit 'Send Message', class: 'field submit-button' %>
 <% end %>
