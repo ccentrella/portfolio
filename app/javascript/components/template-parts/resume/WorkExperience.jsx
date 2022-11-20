@@ -13,9 +13,10 @@ function WorkExperience() {
                     </p>
                     <p className="resume-item-subheading">Jun 2022 — Present</p>
                     <p>Completed 350+ hours of training for several technologies - Java, Spring, Spring Boot, UML, Git, Agile, DevOps, Design Thinking</p>
-                    <p>Earned 5 badges, covering software engineering practices like Agile and Design Thinking</p>
+                    <p>Earned 7 badges, covering software engineering practices like Agile and Design Thinking</p>
+                    <p>Earned AWS Practitioner Certificate</p>
                     <p>Completed the HR case study - web project for the HRMS with 10+ features, applying all the tech and skills learned and exceeded expectations by making a very refined user experience</p>
-                    <p>Currently assigned to work for a large international client in a virtual team and report directly to the Project Manager</p>
+                    <p>Currently assigned to work for a large international client in a virtual team and report directly to the Project Manager, primarily working with Oracle PL/SQL</p>
                 </div>
                 <div>
                     <p className="resume-item-heading">Junior Software Engineer</p>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function ProjectExperience() {
     return (
@@ -15,15 +15,26 @@ function ProjectExperience() {
                     <p>Achievements:</p>
                     <ul>
                         <li>Developed responsive personal portfolio website</li>
-                        <li>Created blog functionality with a modern interface and interactive, dynamic admin panel</li>
+                        <li>
+                            Created blog functionality with a modern interface and interactive,
+                            dynamic admin panel
+                        </li>
+                        <li>Converted entire public-facing website to SPA app using React</li>
                     </ul>
                     <p>Activities:</p>
                     <ul>
-                        <li>Prototype in Adobe XD and implement mobile-first using HTML/CSS, Ruby on Rails</li>
-                        <li>Continuous improvement and incremental lifecycle model</li>
+                        <li>
+                            Prototype in Adobe XD and implement mobile-first using HTML/CSS, React,
+                            Ruby on Rails
+                        </li>
+                        <li>Continuously refactor and improve, using incremental lifecycle model</li>
                         <li>Implemented using RESTful Web services and PostgreSQL database</li>
+                        <li>Create website icons using Adobe Illustrator</li>
                     </ul>
-                    <p>Technologies used: HTML/CSS/SCSS, Ruby on Rails, JavaScript, PostgreSQL, Adobe Illustrator, Git</p>
+                    <p>
+                        Technologies used: HTML/CSS/SCSS, React, React Router, Ruby on Rails,
+                        JavaScript, PostgreSQL, Adobe Illustrator, Adobe XD, Git
+                    </p>
                 </div>
 
                 <div>
@@ -31,22 +42,51 @@ function ProjectExperience() {
                     <p className="resume-item-subheading">
                         2015 — 2021
                         <br />
-                        https://chriscentrella.com
+                        https://github.com/ccentrella
                     </p>
                     <p>Achievements:</p>
                     <ul>
-                        <li>Wrote 10+ educational and other apps as academic and personal projects, including the file organizer, fake dictionary “Fictionary” app, and various learning management system apps</li>
-                        <li>Applied object oriented programming by creating several small apps, completely from scratch</li>
+                        <li>
+                            Wrote 10+ educational and other apps as academic and personal projects,
+                            including a file organizer and various learning management system apps
+                        </li>
+                        <li>
+                            Class project: Collaborated with Agile team to create managed Xamarin
+                            “Fictionary” fake dictionary app
+                            <ul>
+                                <li>Implemented using MVVM architecture and MySQL database</li>
+                                <li>
+                                    Served as lead programmer and designer; explained C# and XAML
+                                    fundamentals to classmates
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Applied object oriented programming by creating several small apps,
+                            completely from scratch
+                        </li>
                     </ul>
                     <p>Activities:</p>
                     <ul>
-                        <li>Created rich UIs and fully customized WPF themes; used wrappers for native Windows APIs</li>
+                        <li>
+                            Created managed Android and iOS app using Xamarin and implemented with
+                            Model-View-ViewModel (MVVC) framework
+                        </li>
+                        <li>
+                            Created rich UIs and fully customized WPF themes; used wrappers for
+                            native Windows APIs
+                        </li>
                         <li>Used LINQ and data binding to manage data</li>
                         <li>Interacted with system registry</li>
-                        <li>Read and wrote to file system for logging and retrieving/saving data</li>
+                        <li>
+                            Read and wrote to file system for logging and retrieving/saving data
+                        </li>
                         <li>Made careful use of exception handling and best practices</li>
                     </ul>
-                    <p>Technologies used: C#, .NET Framework, WPF, Xamarin, XAML, XML, LINQ, Windows Forms</p>
+                    <p>
+                        Technologies used: C#, Xamarin, .NET, WPF, XAML, XML, LINQ, Windows Forms,
+                        MySQL
+                    </p>
                 </div>
             </div>
         </section>
