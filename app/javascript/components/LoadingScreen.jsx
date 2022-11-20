@@ -1,11 +1,17 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function LoadingScreen() {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        document.onreadystatechange = () =>
+        document.onreadystatechange = () => {
             setIsLoaded(document.readyState === 'complete');
+        };
+
+        // Set loaded to true if readyState is already complete
+        if (document.readyState === 'complete') {
+            setIsLoaded(true);
+        }
 
         return () => (document.onreadystatechange = null);
     });
