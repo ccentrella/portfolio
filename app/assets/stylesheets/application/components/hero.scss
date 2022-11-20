@@ -27,7 +27,7 @@
 }
 
 #hero-bottom {
-    background-color: $primary;
+    @include primary-color-background;
     display: flex;
     flex-direction: column;
 }
@@ -86,7 +86,7 @@
     #hero {
         display: flex;
         flex-wrap: wrap;
-        background-color: $primary;
+        @include primary-color-background;
     }
 
     #hero-bottom {

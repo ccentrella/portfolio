@@ -1,23 +1,77 @@
 /* SCSS Document */
 
+/* Use mixins instead of variables to display p3 colors */
+
+/* primary */
+@mixin primary-color-background {
+    background-color: $primary;
+    background-color: color(display-p3 0.1686 0.5922 0.7451);;
+}
+@mixin primary-color-foreground {
+    color: $primary;
+    color: color(display-p3 0.1686 0.5922 0.7451);;
+}
+@mixin primary-color-border {
+    border-color: $primary;
+    border-color: color(display-p3 0.1686 0.5922 0.7451);;
+}
+
+/* secondary */
+@mixin secondary-color-background {
+    background-color: $secondary;
+    background-color: color(display-p3 0.0353 0.4431 0.5882);
+}
+@mixin secondary-color-foreground {
+    color: $secondary;
+    color: color(display-p3 0.0353 0.4431 0.5882);
+}
+@mixin secondary-color-border {
+    border-color: $secondary;
+    border-color: color(display-p3 0.0353 0.4431 0.5882);
+}
+
+/* accent */
+@mixin accent-color-background {
+    background-color: $accent;
+    background-color: color(display-p3 0.0275 0.3059 0.4078);
+}
+@mixin accent-color-foreground {
+    color: $accent;
+    color: color(display-p3 0.0275 0.3059 0.4078);
+}
+@mixin accent-color-border {
+    border-color: $accent;
+    border-color: color(display-p3 0.0275 0.3059 0.4078);
+}
+
+/* heading */
+@mixin heading-color-background {
+    background-color: $heading;
+    background-color: color(display-p3 0.0353 0.4431 0.5882);
+}
+@mixin heading-color-foreground {
+    color: $heading;
+    color: color(display-p3 0.0353 0.4431 0.5882);
+}
+@mixin heading-color-border {
+    border-color: $heading;
+    border-color: color(display-p3 0.0353 0.4431 0.5882);
+}
+
 /** Variables **/
 
 $light-text: #E5E5E5;
 $dark-text: #707070;
 $grey-text: #7E7777;
-// $primary: #009AC3;
-$primary: color(display-p3 0.1686 0.5922 0.7451);
-$secondary: color(display-p3 0.0353 0.4431 0.5882);
-// $secondary: #00739B;
+$primary: #009AC3;
+$secondary: #00739B;
 $secondary-light: #7EBBE0;
 $secondary-light2: #CDEBF3;
 $secondary-light3: #EAF6F9;
-$accent: color(display-p3 0.0275 0.3059 0.4078);
-// $accent: #00506B;
+$accent: #00506B;
 $accent-dark: #042836;
 $accent-light: #8bdefc;
-$heading: color(display-p3 0.0353 0.4431 0.5882);
-// $heading: #00739B;
+$heading: #00739B;
 $keyword: $secondary;
 $company: #957219;
 $link-text: dodgerblue;

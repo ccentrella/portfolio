@@ -8,7 +8,7 @@ header {
     flex-wrap: wrap;
     padding: 1.5em 0 1em;
     border-bottom: 4px solid $banner-border;
-    background-color: $secondary;
+    @include secondary-color-background;
 
     .logo {
         padding: 0 0 0 0.8em;

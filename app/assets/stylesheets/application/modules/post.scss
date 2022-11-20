@@ -22,7 +22,7 @@
 .post-header-bottom {
     padding-top: 1.5em;
     padding-bottom: 1em;
-    background: $secondary;
+    @include secondary-color-background;
 
     p {
         color: $light-text;

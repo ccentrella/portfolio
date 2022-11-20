@@ -1,5 +1,5 @@
 .circle-icon-container {
-    background: $secondary;
+    @include secondary-color-background;
     padding: 3em 0 4em;
     text-align: center;
 
@@ -23,7 +23,7 @@
         font-weight: 700;
         line-height: 1.25;
         text-align: left;
-        color: $primary;
+        @include primary-color-foreground;
 
         @media screen and (min-width: 750px) {
             font-size: 2.25em;
@@ -32,7 +32,7 @@
     }
 
     .button-fixed:hover {
-        background-color: $primary;
+        @include primary-color-background;
     }
 
     &.green {

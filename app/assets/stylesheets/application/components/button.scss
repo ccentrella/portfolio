@@ -55,11 +55,10 @@
     }
 
     &.accent {
-        background-color: $accent;
+        @include accent-color-background;
 
         .button-fixed {
-            background-color: $secondary;
-
+            @include secondary-color-background;
             &:hover {
                 background-color: $accent-dark;
             }

@@ -1,7 +1,7 @@
 .section-block {
     display: flex;
     flex-flow: row wrap;
-    background-color: $primary;
+    @include primary-color-background;
     gap: 1em;
     justify-content: center;
     padding: 4em 0;
@@ -29,7 +29,7 @@
         color: $dark-text;
 
         h3 {
-            color: $primary;
+            @include primary-color-foreground;
         }
     }
 }

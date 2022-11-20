@@ -52,7 +52,7 @@ h1 {
     font-size: 2em;
     font-family: rooney-sans, sans-serif;
     font-weight: 700;
-    color: $heading;
+    @include heading-color-foreground;
 }
 
 h2,
@@ -61,7 +61,7 @@ h4 {
     margin: 1.15em 0 0.5em 0;
     font-family: 'Quasimoda', sans-serif;
     font-weight: 300;
-    color: $primary;
+    @include primary-color-foreground;
 }
 
 h2 {
@@ -72,7 +72,7 @@ h2 {
 
 h2::before {
     height: 0.15em;
-    background-color: $primary;
+    @include primary-color-background;
     width: 1.5em;
     margin-top: -0.3em;
     margin-left: 0.1em;
@@ -92,7 +92,7 @@ p.section-title {
     font-family: jaf-domus-titling-web, sans-serif;
     font-weight: 700;
     line-height: 1.25;
-    color: $primary;
+    @include primary-color-foreground;
     text-align: center;
 
     &.zero-margin {
