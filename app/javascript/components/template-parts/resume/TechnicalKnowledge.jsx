@@ -6,7 +6,7 @@ function TechnicalKnowledge() {
             <p className="section-title">Technical Knowledge</p>
             <div className="container">
                 <p>Operating Systems: Windows, Linux, macOS</p>
-                <p>Software: Docker, Kubernetes, Virtual Box, Hyper-V, WSL2, Cucumber, MS Office, iWork, Adobe CC, WordPress, D2L</p>
+                <p>Software: Docker, Kubernetes, Virtual Box, Hyper-V, WSL2, Cucumber, Adobe CC, MS Office, iWork, WordPress, D2L</p>
                 <p>Programming Languages: Python, C#, Ruby, HTML/CSS/SCSS, XAML, Java, JavaScript</p>
                 <p>Database Technologies: MySQL, PostgreSQL, Oracle</p>
                 <p>Project Management: Slack, Microsoft Teams, WebEx, Pivotal Tracker, Jira, Git</p>
