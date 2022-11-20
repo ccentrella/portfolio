@@ -13,12 +13,14 @@ import BlogHome from './pages/BlogHome';
 import Contact from './pages/Contact';
 import BlogReader from './template-parts/blog/BlogReader';
 import ScrollToTop from './ScrollToTop';
+import LoadingScreen from './LoadingScreen';
 
 export default function App() {
     return (
         <Router>
             <ScrollToTop />
             <Header />
+            <LoadingScreen />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/resume" element={<Resume />} />
