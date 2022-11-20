@@ -1,21 +1,23 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from "./template-parts/Header";
-import Footer from "./template-parts/Footer";
+import Header from './template-parts/Header';
+import Footer from './template-parts/Footer';
 
-import Home from "./pages/Home";
-import Resume from "./pages/Resume";
-import Interests from "./pages/Interests";
-import Highlights from "./pages/Highlights";
-import Specialties from "./pages/Specialties";
-import BlogHome from "./pages/BlogHome";
-import Contact from "./pages/Contact";
-import BlogReader from "./template-parts/blog/BlogReader";
+import Home from './pages/Home';
+import Resume from './pages/Resume';
+import Interests from './pages/Interests';
+import Highlights from './pages/Highlights';
+import Specialties from './pages/Specialties';
+import BlogHome from './pages/BlogHome';
+import Contact from './pages/Contact';
+import BlogReader from './template-parts/blog/BlogReader';
+import ScrollToTop from './ScrollToTop';
 
 export default function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
