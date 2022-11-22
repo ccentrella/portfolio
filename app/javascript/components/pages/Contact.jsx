@@ -145,13 +145,6 @@ function Contact() {
                     Send Message
                 </button>
             </form>
-            {/* 
-            <% if @show_checkbox_recaptcha %>
-                <%= recaptcha_tags noscript: false %>
-            <% else %>
-                <%= recaptcha_v3(action: 'contact', site_key: ENV['RECAPTCHA_SITE_KEY_V3']) %>
-            <% end %>    
-            */}
         </>
     );
 }
