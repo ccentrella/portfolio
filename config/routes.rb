@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/interests', to: 'pages#home'
   get '/specialties', to: 'pages#home'
   get '/highlights', to: 'pages#home'
-  # get '/contact', to: 'pages#home'
+  get '/contact', to: 'pages#home'
   get '/blog', to: 'pages#home'
 
   devise_for :users, skip: [:registrations], controllers: {
@@ -25,10 +25,6 @@ Rails.application.routes.draw do
   # root "static_pages#home"
   get '/feed', to: "posts#index", format: 'rss'
 
-  # Define additional paths
-  get '/contact', to: "email_contact#new"
-  post '/contact', to: "email_contact#create", as: "email_contacts"
-
   # Define external URLs
   direct :github do
     "https://github.com/ccentrella"
@@ -42,9 +38,6 @@ Rails.application.routes.draw do
     "https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15"
   end
 
-  # Required for contact form
-  resources :email_contact, only: [:new, :create]
-
   resources :resources, path: '/resources'
   
   resources :posts, path: '/blog', only: [:new, :create, :edit, :update, :destroy], param: :slug do
@@ -57,6 +50,7 @@ Rails.application.routes.draw do
       resources :posts, path: '/blog', only: [:index, :show], param: :slug do
         get '/latest_article', on: :collection, to: "posts#latest_article"
       end 
+      resources :contact, path: '/contact', only: [:create]
     end
   end
   get '/blog/:slug', to: 'pages#home'
