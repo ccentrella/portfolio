@@ -16,7 +16,7 @@ function Contact() {
     useEffect(() => {
         const recaptchaScript = document.createElement('script');
         recaptchaScript.src =
-            'https://www.google.com/recaptcha/api.js?render=6LeIoUMhAAAAAOG1PAaCD17aybc4JcxZEbhcWB8-';
+            'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_SITE_KEY_V3;
         recaptchaScript.async = true;
         document.body.appendChild(recaptchaScript);
 
@@ -65,7 +65,7 @@ function Contact() {
         e.preventDefault();
         grecaptcha.ready(function () {
             grecaptcha
-                .execute('6LeIoUMhAAAAAOG1PAaCD17aybc4JcxZEbhcWB8-', { action: 'submit' })
+                .execute(RECAPTCHA_SITE_KEY_V3, { action: 'submit' })
                 .then(function (token) {
                     submit(token);
                 });
