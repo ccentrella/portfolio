@@ -15,7 +15,7 @@
     <%= auto_discovery_link_tag :rss, blog_url(format: :rss) %>
   </head>
   <body>
-    <%# Header %>
+    <%= render "layouts/header" %>
     <% if !flash.empty? %>
       <div class="flash-container">
         <% flash.each do |message_type, message| %>
@@ -27,6 +27,6 @@
       <br/>
     <% end %>
     <%= yield %>
-    <%# Footer %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
