@@ -14,7 +14,7 @@
 
 .flash, .flash-success {
     margin: 0 0.5em 0.5em;
-    padding: 1.25em;
+    padding: 2em 1.5em;
     text-align: center;
     background-color: $flash-success;
     border-radius: 4em;
@@ -26,6 +26,10 @@
 
     ul {
         list-style-position: inside;
+    }
+
+    @media screen and (max-width: 500px) {
+        padding: 1em;
     }
 
 }
