@@ -51,15 +51,11 @@ Rails.application.routes.draw do
         get '/latest_article', on: :collection, to: "posts#latest_article"
       end 
       resources :contact, path: '/contact', only: [:create]
+      resources :subscribers, only: [:create, :edit, :destroy]
     end
   end
   get '/blog/:slug', to: 'pages#home'
-
-
-  # Define root path for subscribe
-  resources :subscribers, only: [:new, :create]
-  get '/subscribers/unsubscribe', to: "subscribers#unsubscribe"
-  delete '/subscribers/unsubscribe', to: "subscribers#destroy"
+  get '/subscribers/:id/edit', to: 'pages#home'
 
   # Define error path
   match '/404', via: :all, to: 'errors#not_found'
