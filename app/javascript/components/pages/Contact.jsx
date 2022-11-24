@@ -31,6 +31,11 @@ function Contact() {
         setMessage('');
     }
 
+    function isValid() {
+        document.getElementById('contact-form').reportValidity();
+        return document.getElementById('contact-form').checkValidity();
+    }
+
     function submit(token) {
         const contact = { name, email, message };
 
@@ -63,6 +68,10 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!isValid()) {
+            return;
+        }
+
         grecaptcha.ready(function () {
             grecaptcha
                 .execute(RECAPTCHA_SITE_KEY_V3, { action: 'submit' })
