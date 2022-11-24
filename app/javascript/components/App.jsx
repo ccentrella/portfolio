@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import Header from './template-parts/Header';
 import Footer from './template-parts/Footer';
@@ -17,8 +17,16 @@ import LoadingScreen from './LoadingScreen';
 import Unsubscribe from './template-parts/Unsubscribe';
 
 export default function App() {
+    let location = useLocation();
+    useEffect(() => {
+        const toggleEl = document.getElementById('toggle');
+        if (toggleEl) {
+            toggleEl.checked = false;
+        }
+    }, [location]);
+
     return (
-        <Router>
+        <>
             <ScrollToTop />
             <Header />
             <LoadingScreen />
@@ -34,6 +42,6 @@ export default function App() {
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
-        </Router>
+        </>
     );
 }
