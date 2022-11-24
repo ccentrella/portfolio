@@ -29,7 +29,7 @@ function BlogHome() {
                     I'm a Christian who believes that Jesus wants each of us to have an
                     intimate relationship with Him, and that all might read the Word of
                     God "as one having authority and not as the scribes." (Matthew
-                    7:28-9). Rather than repeating what is currenly popular in
+                    7:28-9). Rather than repeating what is currently popular in
                     Christianity or the Church, I'm absolutely convinced that Jesus gave
                     us His Word so that each of us might not only apply it to our lives
                     but comprehend amid our own limitations the mysteries of God, which He
