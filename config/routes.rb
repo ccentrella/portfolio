@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get '/highlights', to: 'pages#home'
   get '/contact', to: 'pages#home'
   get '/blog', to: 'pages#home'
-  get '/blog/:slug', to: 'pages#home'
-  get '/subscribers/:id/edit', to: 'pages#home'
+  get '/blog/:slug', as: :blog_post, to: 'pages#home'
+  get '/subscribers/:id/edit', as: :subscribers_unsubscribe, to: 'pages#home'
 
   # Authentication routes
   devise_for :users, skip: [:registrations], controllers: {
@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   
   # Define routes using old post API.
   # This is a temporary solution to administer the admin backend until we convert everything to React
-  resources :posts, path: '/blog', only: [:new, :create, :edit, :update, :destroy], param: :slug do
+  resources :posts, path: '/posts', only: [:new, :create, :edit, :update, :destroy], param: :slug do
     get '/index/admin', on: :collection, as: 'admin_index', to: "posts#admin_index"
   end 
 

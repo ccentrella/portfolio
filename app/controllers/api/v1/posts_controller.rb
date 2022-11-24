@@ -54,7 +54,7 @@ class Api::V1::PostsController < ApplicationController
     def update
         if @post && @post.update(post_params)
             flash[:notice] = "Post updated successfully!"
-            redirect_to post_path(@post)
+            redirect_to blog_path(@post)
         else
             render :new, status: :unprocessable_entity
         end
