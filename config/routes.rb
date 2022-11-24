@@ -36,9 +36,6 @@ Rails.application.routes.draw do
   direct :photos do
     "https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15"
   end
-
-  # Define routes for PDF resources
-  resources :resources, path: '/resources'
   
   # Define routes using old post API.
   # This is a temporary solution to administer the admin backend until we convert everything to React
