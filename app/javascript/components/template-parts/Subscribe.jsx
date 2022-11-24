@@ -24,8 +24,13 @@ function Subscribe() {
         setEmail('');
     }
 
+    function isValid() {
+        document.getElementById('contact-form').reportValidity();
+        return document.getElementById('contact-form').checkValidity();
+    }
+
     function submit(token) {
-        const subscriber = { name, email, message };
+        const subscriber = { name, email_address: email };
 
         fetch('/api/v1/subscribers/', {
             method: 'POST',
@@ -36,6 +41,12 @@ function Subscribe() {
                 case 200:
                     resetForm();
                     setStatusMessage('Thank you for subscribing!');
+                    setStatusType('success');
+                    break;
+                case 409:
+                    setStatusMessage(
+                        'You are already subscribed. Please check your spam folder if you are not receiving messages.'
+                    );
                     setStatusType('success');
                     break;
                 case 400:
@@ -56,6 +67,10 @@ function Subscribe() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!isValid()) {
+            return;
+        }
+
         grecaptcha.ready(function () {
             grecaptcha
                 .execute(RECAPTCHA_SITE_KEY_V3, { action: 'submit' })
