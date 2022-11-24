@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import BlogReader from './template-parts/blog/BlogReader';
 import ScrollToTop from './ScrollToTop';
 import LoadingScreen from './LoadingScreen';
+import Unsubscribe from './template-parts/Unsubscribe';
 
 export default function App() {
     return (
@@ -29,6 +30,7 @@ export default function App() {
                 <Route path="/highlights" element={<Highlights />} />
                 <Route path="/blog" element={<BlogHome />} />
                 <Route path="/blog/:slug" element={<BlogReader />} />
+                <Route path="/subscribers/:id/edit" element={<Unsubscribe />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
