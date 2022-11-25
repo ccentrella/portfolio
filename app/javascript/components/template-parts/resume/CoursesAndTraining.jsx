@@ -20,7 +20,7 @@ function CoursesAndTraining() {
                 <p className="resume-item-heading">2021</p>
                 <p>Machine Learning, LinkedIn Learning and other resources</p>
 
-                <p className="resume-item-heading">2022</p>
+                <p className="resume-item-heading">2021</p>
                 <p>Graphic Design Courses (Adobe CC, Layout, Typography), LinkedIn Learning</p>
             </div>
         </section>
