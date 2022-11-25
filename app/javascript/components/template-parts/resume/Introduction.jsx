@@ -20,6 +20,9 @@ function Introduction() {
                     <a className="button-fixed" target="_blank" href="https://linkedin.com/in/ccentrella">
                         View LinkedIn
                     </a>
+                    <Link className="button-fixed" to="/contact">
+                        Contact Me
+                    </Link>
                 </div>
             </div>
         </div>
