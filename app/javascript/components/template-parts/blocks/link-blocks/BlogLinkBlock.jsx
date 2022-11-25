@@ -17,7 +17,7 @@ function BlogLinkBlock() {
 
     return (
         <LinkBlock
-            title={latestPost.title}
+            title={"Latest Post: " + latestPost.title}
             icon={BlogIcon}
             links={[
                 [(linkDescription = "View Article"), (linkPath = latestPost.link), (isExternal = false)],
