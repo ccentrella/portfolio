@@ -3,7 +3,8 @@
 /** Footer **/
 
 footer {
-    margin-top: 2.5em;
+    position: relative;
+    margin-top: 4em;
     background-color: $footer-main-background;
 
     .logo {
@@ -11,6 +12,12 @@ footer {
         font-size: 2em;
         width: min-content;
         text-shadow: none;
+        font-family: jaf-domus-titling-web, 'Quasimoda', sans-serif;
+        font-weight: normal;
+
+        a {
+            color: $footer-logo;
+        }
     }
 
     i.heart {
@@ -48,6 +55,15 @@ footer {
     font-family: 'rooney-sans', sans-serif;
     font-weight: 300;
     font-size: 1.2em;
+
+    a, Link {
+        color: inherit;
+
+        &:hover {
+            color: $footer-link-hover
+        }
+    }
+
 }
 
 .footer-heading-decorator {

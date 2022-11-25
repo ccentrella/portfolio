@@ -1,5 +1,48 @@
 /* SCSS Document */
 
+.resume ul {
+    padding-left: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.resume p {
+    margin-bottom: 0.75em;
+}
+
+.resume .resume-item-heading {
+    @include primary-color-foreground;
+    font-weight: 500;
+    margin-top: 1.25em;
+    margin-bottom: 0.35em;
+}
+
+.resume .resume-item-subheading {
+    @include primary-color-foreground;
+    font-weight: 300;
+    font-size: 0.9em;
+    margin-bottom: 0.9em;
+    line-height: 1.75;
+}
+
+.resume-location {
+    text-align: left;
+    margin: 1.25em 0 0.5em;
+    font-size: 1.5em;
+    @include primary-color-foreground;
+}
+
+.resume-buttons  {
+    text-align: center;
+
+    @media screen and (min-width: 650px) {
+        text-align: left;
+
+        .button-fixed {
+            width: 13.5em;
+        }
+    }
+}
+
 /** Timeline **/
 
 .dot,

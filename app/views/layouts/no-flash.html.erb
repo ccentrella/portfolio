@@ -9,17 +9,13 @@
     <meta name="keywords" content="Chris Centrella, christian, web, designer, developer, software, engineer, website">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= favicon_link_tag asset_path('favicon.png') %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <%= javascript_include_tag "header.js" %>
-    <%= javascript_include_tag "main.js" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= auto_discovery_link_tag :rss, blog_url(format: :rss) %>
-
   </head>
-  <body onscroll="stickyNavbar();">
-    <%= render 'layouts/header' %>
+  <body>
     <%= yield %>
-    <%= render 'layouts/footer' %>
   </body>
 </html>

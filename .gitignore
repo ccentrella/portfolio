@@ -36,3 +36,8 @@
 
 # Ignore macOS DS_Store files
 **/.DS_Store
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
+/node_modules

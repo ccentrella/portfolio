@@ -1,43 +1,43 @@
 <header>
-  <div class="banner-image">
-    <div class="banner-overlay">
-      <h1 class='logo'><%= link_to 'Chris Centrella', root_path %></h1>
-      <div class="navbar-outer">
-        <input type="checkbox" id="toggle">
-        <label for="toggle">
-          <%= image_tag "icons/menu.svg", class: 'menu-toggle' %>
-        </label>
-        <div class="navbar">
-          <ul>
-            <li class="nav-item <%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', root_path %></li>
-            <li class="nav-item <%= 'active' if current_page?(about_path) %>"><%= link_to 'About', about_path %></li>
-            <li class="nav-item"><%= link_to 'LinkedIn', linkedin_url, target: '_blank' %></li>
-            <li class="nav-item"><%= link_to 'Resume', asset_url('resume-online.pdf'), target: '_blank' %></li>
-            <li class="nav-item <%= 'active' if params[:controller] == 'posts' %>"><%= link_to 'Blog', blog_path %></li>
-            <li class="nav-item"><%= link_to 'Photos', photos_url, target: '_blank' %></li>
-            <li class="nav-item <%= 'active' if current_page?(contact_path) %>"><%= link_to 'Contact Me', contact_path %></li>
-            <% if user_signed_in? %>
-              <li class="nav-item <%= 'active' if params[:controller] == 'users' %>"><%= link_to 'Admin', profile_path %></li>
-              <li class="nav-item">
-                <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <img src="/assets/favicon.png" alt="profile image" class="logo-image" />
+  <h1 class="logo">
+    <a href="/">Chris Centrella</a>
+  </h1>
+  <label class="menu-toggle" for="toggle">
+    <%= image_tag "icons/menu.svg", class: 'menu-toggle' %>
+  </label>
+  <input type="checkbox" id="toggle" />
+  <nav class="navbar">
+    <ul>
+      <li class="nav-item">
+        <a href="/" class="<%= 'active' if current_page?(root_path) %>">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/resume" class="<%= 'active' if current_page?('/resume') %>">Resume</a>
+      </li>
+      <li class="nav-item">
+        <a href="/highlights" class="<%= 'active' if current_page?('/highlights') %>">Highlights</a>
+      </li>
+      <li class="nav-item">
+        <a href="/specialties" class="<%= 'active' if current_page?('/specialties') %>">Specialties</a>
+      </li>
+      <li class="nav-item">
+        <a href="/interests" class="<%= 'active' if current_page?('/interests') %>">Interests</a>
+      </li>
+      <li class="nav-item">
+        <a href="/blog" class="<%= 'active' if current_page?('/blog') %>">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" href="https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15">
+          Photo Gallery
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/contact" class="<%= 'active' if current_page?('/contact') %>">Contact Me</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="navbar-sticky">
+    <h1 class='logo'><%= link_to 'CC', root_path %></h1>
   </div>
 </header>
-<div class="navbar-sticky">
-  <h1 class='logo'><%= link_to 'CC', root_path %></h1>
-</div>
-
-<!--<% if params[:controller] != 'posts' %>
-<div class="flash-container">
-  <div class="flash flash-warning">
-    <p><strong>Website under construction.</strong></p>
-      <p><%= "Check back soon for new content!" %>
-      </p>
-  </div>
-</div>
-<% end %>-->

@@ -6,10 +6,12 @@ class PostsController < ApplicationController
         @posts = Post.all
         @subscriber = Subscriber.new
 
-        respond_to do |format|
-            format.html
-            format.rss {render layout: false}
-        end
+        render json: @posts
+
+        # respond_to do |format|
+        #     format.html
+        #     format.rss {render layout: false}
+        # end
     end
 
     def admin_index
@@ -35,7 +37,7 @@ class PostsController < ApplicationController
             create_slug
             if @post.save
                 flash[:notice] = "Post successfully created!"
-                redirect_to post_path(@post)
+                redirect_to blog_post_path(@post)
                 helpers.notify_subscribers(@post)
             else
                 render :new

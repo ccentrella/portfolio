@@ -8,7 +8,7 @@
 }
 
 .button-fixed-container, .button-fixed-container-dark {
-    margin: 6.5em 0 5em;
+    margin: 3.5em 0 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,18 +42,6 @@
         background-color: $button-container-highlight-background-red;
     }
 
-    .button-fixed {
-        border-color: $button-dark-border;
-        background-color: $button-dark-background;
-        color: $button-dark-text;
-        transition: color 1s, background-color 1s;
-
-        &:hover {
-            color: $button-dark-hover-text;
-            background-color: $button-dark-hover;
-        }
-    }
-
     .highlight-button {
         background-color: $button-highlight-background;
     }
@@ -63,6 +51,17 @@
 
         .button-fixed:hover {
             color: $container-dark-background-red;
+        }
+    }
+
+    &.accent {
+        @include accent-color-background;
+
+        .button-fixed {
+            @include secondary-color-background;
+            &:hover {
+                background-color: $accent-dark;
+            }
         }
     }
 
@@ -80,16 +79,15 @@
 
 .button,
 .button-fixed {
-    padding: 1.4em 2em;
+    margin: 1em;
+    padding: 1.4em 2.5em;
     border: 2px solid $button-border;
     border-radius: 50px;
     background-color: $button-background;
-    font-family: 'rooney-sans', sans-serif;
-    font-weight: 500;
-    font-size: 0.9em;
+    font-family: 'Quasimoda', sans-serif;
+    font-weight: 400;
     text-decoration: none;
     color: $button-text;
-    text-transform: uppercase;
     text-align: center;
     transition: color 1s, background-color 1s;
 
@@ -108,12 +106,10 @@
     }
 
     &.red {
-        border-color: $primary;
-        color: $container-dark-background-red;
+        background-color: $container-dark-background-red;
 
         &:hover {
-            color: $light-text;
-            background-color: $container-dark-background-red;
+            background-color: darkred;
         }
     }
 }
@@ -128,4 +124,8 @@
     &.button-wide {
         width: 18em;
     }
+}
+
+input.button-fixed {
+    font-size: 1em;
 }

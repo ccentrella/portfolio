@@ -1,12 +1,13 @@
 .circle-icon-container {
-    background: $container-dark-background-red;
-    padding: 3em 0;
+    @include secondary-color-background;
+    padding: 3em 0 4em;
+    text-align: center;
 
      p, h1, h2 {
         color: $light-text;
     }
 
-    a {
+    a.circle-icon, .circle-icon-title a {
         color: $light-text;
         transition: opacity 1s;
 
@@ -16,8 +17,22 @@
         }
     }
 
+    .circle-icon-title {
+        font-size: 2em;
+        font-family: rooney-sans, sans-serif;
+        font-weight: 700;
+        line-height: 1.25;
+        text-align: left;
+        @include primary-color-foreground;
+
+        @media screen and (min-width: 750px) {
+            font-size: 2.25em;
+            margin-bottom: 1.25em;
+        }
+    }
+
     .button-fixed:hover {
-        color: $container-dark-background-red;
+        @include primary-color-background;
     }
 
     &.green {
@@ -26,6 +41,10 @@
         .button-fixed:hover {
             color: $container-dark-background;
         }
+    }
+
+    .circle-icon-button {
+        margin-left: 0;
     }
 }
 
@@ -69,7 +88,8 @@
 
     .circle-icon-container {
         display: block;
-        padding: 4em 0;
+        padding: 6em 0;
+        text-align: left;
 
         > .circle-icon-button {
             display: none;

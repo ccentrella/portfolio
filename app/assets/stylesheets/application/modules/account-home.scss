@@ -1,5 +1,5 @@
 .account-title {
-    color: $secondary-heading;
+    @include heading-color-foreground;
 }
 
 .account-overview {

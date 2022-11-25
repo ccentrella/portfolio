@@ -4,13 +4,13 @@
 
 .post-header-top {
     padding: 1.75em 2em 1.5em;
-    background: $container-dark-background-red;
+    background: $accent-dark;
 
     h1 {
         clear: both;
         margin-top: 2.25em;
         text-align: right;
-        font-size: 2.25em;
+        font-size: 2em;
         color: $light-text
     }
 
@@ -22,7 +22,7 @@
 .post-header-bottom {
     padding-top: 1.5em;
     padding-bottom: 1em;
-    background: $container-background-gray;
+    @include secondary-color-background;
 
     p {
         color: $light-text;

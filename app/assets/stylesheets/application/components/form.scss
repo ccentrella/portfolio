@@ -1,7 +1,7 @@
 .contact-form{
-    margin: 5em 0 5em 0;
-    padding: 3em 1em 5em;
-    background-color: #520001;
+    margin: 1em 0 5em 0;
+    padding: 5em 1em;
+    @include accent-color-background;
     text-align: center;
     
     .form-container {
@@ -46,14 +46,10 @@ input:hover {
     }
 }
 
-@keyframes submit_button_hover{
-    from {background-color: transparent; color: $light-text}
-    to {background-color: $light-text; color: #700C0E;}
-}
-
-.submit-button {
+.contact-form .submit-button {
     margin: 1em 0 0 0;
     padding: 1.4em 0;
+    cursor: pointer; 
     text-transform: uppercase;
     background-color: transparent;
     border: 2px solid $light-text;
@@ -63,13 +59,22 @@ input:hover {
     font-weight: 500;
     font-size: 1em;
     width: 15em;
-    transition: color 1s, background-color 1s;
+    transition: color 1s, background-color 1s, opacity 1s;
+
+    &.highlight {
+        background-color: $light-text;
+        color: $secondary;
+    }
 }
 
 @media (pointer: fine)
 {
-    .submit-button:hover {
+    .contact-form .submit-button:hover {
         background-color: $light-text;
-        color: #700C0E;
+        @include secondary-color-foreground;
+
+        &.highlight {
+            opacity: 0.8;
+        }
     }
 }
