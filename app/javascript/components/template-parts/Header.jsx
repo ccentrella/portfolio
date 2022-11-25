@@ -21,7 +21,7 @@ function Header() {
             <header>
                 <img src="/assets/favicon.png" alt="profile image" className="logo-image" />
                 <h1 className="logo">
-                    <NavLink to="/">Chris Centrella</NavLink>
+                    <Link to="/">Chris Centrella</Link>
                 </h1>
                 <label className="menu-toggle" htmlFor="toggle">
                     <img src={MenuIcon} className="menu-toggle-image" alt="menu icon" />
