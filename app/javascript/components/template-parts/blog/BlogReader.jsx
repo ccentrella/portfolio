@@ -67,7 +67,7 @@ function BlogReader() {
                             </p>
                         </div>
                     </div>
-                    <div className="container">
+                    <div className="post-header-additional container">
                         <div className="center">
                             <p className="post-author button-label">
                                 <i className="person large"></i> {post.author}{' '}

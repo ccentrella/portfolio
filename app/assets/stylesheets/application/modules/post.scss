@@ -30,6 +30,10 @@
     }
 }
 
+.post-header-additional {
+    margin-bottom: 0;
+}
+
 .posts-back-icon, .post-edit-icon {
     color: $light-text;
     transition: 1s opacity;
@@ -59,8 +63,9 @@
 }
 
 .post-author {
-    margin: 2.5em 0 0em;
-    font-size: 1.25em;
+    margin: 2.5em 0 0.5em;
+    font-size: 1em;
+    padding: 0.75em 2em;
     text-align: center;
 }
 
