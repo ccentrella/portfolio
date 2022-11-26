@@ -7,7 +7,7 @@ function ArtisticSectionBlock({ src, alt, color }) {
             <div className="section-block-image backdrop flex-col">
                 <ImageBlock src="/assets/specialties-ux.png" alt="fibonacci program" color="#B9C4D1" />
             </div>
-            <div className="section-block-content flex-col zero-padding">
+            <div className="section-block-content flex-col">
                 <h2 className="button-label">Artistic</h2>
                 <p className="large">
                     Nothing has more impact on human beings than the power of visuals. Our brains respond immediately to visuals, and visuals have a tremendous impact on how we perceive a product or service. This leads to one principle:
