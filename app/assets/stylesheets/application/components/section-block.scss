@@ -12,10 +12,9 @@
 }
 
 .section-block .flex-col {
-    flex-basis: 40%;
+    flex-basis: 100%;
     flex-grow: 1;
     max-width: 90%;
-    min-width: 350px;
     padding: 2em;
 
     &.zero-padding {
@@ -87,6 +86,7 @@
     .section-block .flex-col {
         padding: 6em 3em;
         flex-grow: 0.5;
+        flex-basis: 40%;
 
         &.light-blue {
             background-color: $secondary-light3;
