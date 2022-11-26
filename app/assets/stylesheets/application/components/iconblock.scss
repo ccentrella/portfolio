@@ -57,6 +57,10 @@
     &.wide {
         @media screen and (max-width:749px) {
             display: block;
+
+            .circle-icon-title {
+                margin: 1em 0.5em 0;
+            }
         }
     }
 }

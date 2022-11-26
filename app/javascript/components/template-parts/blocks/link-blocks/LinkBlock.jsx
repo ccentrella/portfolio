@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function LinkBlock({ title, icon, links }) {
+function LinkBlock({ title, icon, links, expandIcon=false }) {
     if (links == null) {
         return null;
     }
@@ -13,7 +13,7 @@ function LinkBlock({ title, icon, links }) {
 
     return (
         <div className="circle-icon-container">
-            <div className="circle-icon-outer">
+            <div className={"circle-icon-outer " + (expandIcon && "wide")}>
                 <div className="flex-col circle-icon-left">
                     <div className="circle-icon">{icon}</div>
                 </div>
