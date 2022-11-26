@@ -1,25 +1,43 @@
-import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import MenuIcon from "assets/images/icons/menu.svg";
+import React, { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import MenuIcon from 'assets/images/icons/menu.svg';
 
 function Header() {
+
+    const [isFloating, setIsFloating] = useState(false);
+
+    function updateIsFloating() {
+        const header = document.getElementsByTagName('header')[0];
+        const position = header.getBoundingClientRect();
+        setIsFloating(position.bottom <= position.height / 2);
+    }
+
+    useEffect(() => {
+        window.onscroll = updateIsFloating;
+        return () => window.onscroll = null;
+    }, []);
+
     const stickyNavbar = (
         <div className="navbar-sticky">
             <h1 className="logo">
-                <Link to="/">CC</Link>
+                <Link to="/">Chris Centrella</Link>
             </h1>
         </div>
     );
 
     const location = useLocation();
-    if (location.pathname == "/") {
-        return stickyNavbar;
+    if (location.pathname == '/') {
+        return;
     }
 
     return (
         <>
             <header>
-                <img src="/assets/favicon.png" alt="profile image" className="logo-image" />
+                <img
+                    src="/assets/favicon.png"
+                    alt="profile image"
+                    className="logo-image"
+                />
                 <h1 className="logo">
                     <Link to="/">Chris Centrella</Link>
                 </h1>
@@ -48,7 +66,9 @@ function Header() {
                             <NavLink to="/blog">Blog</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a target="_blank" href="https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15">
+                            <a
+                                target="_blank"
+                                href="https://lightroom.adobe.com/gallery/35c62e7ff3ce476f9ae5b07994eb6f15">
                                 Photo Gallery
                             </a>
                         </li>
@@ -57,8 +77,9 @@ function Header() {
                         </li>
                     </ul>
                 </nav>
+                {isFloating && stickyNavbar}
+
             </header>
-            {stickyNavbar}
         </>
     );
 }

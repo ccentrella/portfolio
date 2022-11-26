@@ -83,18 +83,18 @@ header {
 .navbar-sticky {
     will-change: transform;
     text-align: center;
-    background-color: $navbar;
+    @include secondary-color-background;
+    border-bottom: 1px solid $banner-border;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    display: none;
     z-index: 1;
 
     .logo {
-        font-family: jaf-domus-titling-web, 'Quasimoda', sans-serif;
-        font-size: 1.75em;
-        padding: 0.5em 0 0.7em;
+        // font-family: jaf-domus-titling-web, 'Quasimoda', sans-serif;
+        // font-size: 1.75em;
+        padding: 1em;
         max-width: initial;
     }
 }
