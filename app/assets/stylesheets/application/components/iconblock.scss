@@ -51,6 +51,7 @@
 .circle-icon-outer {
     display: flex;
     padding: 2em 1em 3em;
+    box-sizing: border-box;
     align-items: center;
 
     &.wide {
