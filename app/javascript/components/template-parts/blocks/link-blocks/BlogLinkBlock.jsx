@@ -23,6 +23,7 @@ function BlogLinkBlock() {
                 [(linkDescription = "View Article"), (linkPath = latestPost.link), (isExternal = false)],
                 [(linkDescription = "Blog Homepage"), (linkPath = "/blog"), (isExternal = false)],
             ]}
+            expandIcon={true}
         />
     );
 }
