@@ -13,8 +13,8 @@ import BlogHome from './pages/BlogHome';
 import Contact from './pages/Contact';
 import BlogReader from './template-parts/blog/BlogReader';
 import ScrollToTop from './ScrollToTop';
-import LoadingScreen from './LoadingScreen';
 import Unsubscribe from './template-parts/Unsubscribe';
+import AppLoading from './AppLoading';
 
 export default function App() {
     let location = useLocation();
@@ -29,7 +29,7 @@ export default function App() {
         <>
             <ScrollToTop />
             <Header />
-            <LoadingScreen />
+            <AppLoading />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/resume" element={<Resume />} />
