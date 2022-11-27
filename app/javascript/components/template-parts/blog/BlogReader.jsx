@@ -21,7 +21,14 @@ function BlogReader() {
     }, [loaded]);
 
     if (!loaded) {
-        return <LoadingScreen />;
+        return (
+            <>
+                <div className="container">
+                    <h1>Loading...</h1>
+                </div>
+                <LoadingScreen />
+            </>
+        );
     } else if (!post) {
         document.title = "Page Doesn't Exist | Chris Centrella";
         return (
