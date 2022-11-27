@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import MenuIcon from 'assets/images/icons/menu.svg';
 
 function Header() {
-
+    const location = useLocation();
     const [isFloating, setIsFloating] = useState(false);
 
     function updateIsFloating() {
@@ -13,9 +13,13 @@ function Header() {
     }
 
     useEffect(() => {
-        window.onscroll = updateIsFloating;
-        return () => window.onscroll = null;
-    }, []);
+        window.onscroll = location.pathname !== '/' ? updateIsFloating : null;
+        return () => (window.onscroll = null);
+    }, [location]);
+
+    if (location.pathname === '/') {
+        return;
+    }
 
     const stickyNavbar = (
         <div className="navbar-sticky">
@@ -24,11 +28,6 @@ function Header() {
             </h1>
         </div>
     );
-
-    const location = useLocation();
-    if (location.pathname == '/') {
-        return;
-    }
 
     return (
         <>
@@ -78,7 +77,6 @@ function Header() {
                     </ul>
                 </nav>
                 {isFloating && stickyNavbar}
-
             </header>
         </>
     );
