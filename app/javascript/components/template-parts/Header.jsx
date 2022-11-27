@@ -13,8 +13,8 @@ function Header() {
     }
 
     useEffect(() => {
-        window.onscroll = location.pathname !== '/' ? updateIsFloating : null;
-        return () => (window.onscroll = null);
+        document.onscroll = location.pathname !== '/' ? updateIsFloating : null;
+        return () => (document.onscroll = null);
     }, [location]);
 
     if (location.pathname === '/') {
