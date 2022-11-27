@@ -6,19 +6,6 @@ function Subscribe() {
     const [statusMessage, setStatusMessage] = useState();
     const [statusType, setStatusType] = useState('warning');
 
-    // Load reCaptcha script functions
-    useEffect(() => {
-        const recaptchaScript = document.createElement('script');
-        recaptchaScript.src =
-            'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_SITE_KEY_V3;
-        recaptchaScript.async = true;
-        document.body.appendChild(recaptchaScript);
-
-        return () => {
-            document.body.removeChild(recaptchaScript);
-        };
-    }, []);
-
     function resetForm() {
         setName('');
         setEmail('');

@@ -17,6 +17,21 @@ import Unsubscribe from './template-parts/Unsubscribe';
 import AppLoading from './AppLoading';
 
 export default function App() {
+    
+    // Load reCaptcha script functions
+    useEffect(() => {
+        const recaptchaScript = document.createElement('script');
+        recaptchaScript.src =
+            'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_SITE_KEY_V3;
+        recaptchaScript.async = true;
+        document.body.appendChild(recaptchaScript);
+
+        return () => {
+            document.body.removeChild(recaptchaScript);
+        };
+    }, []);
+
+    // Close mobile drop-down menu whenever a new page is loaded
     let location = useLocation();
     useEffect(() => {
         const toggleEl = document.getElementById('toggle');
