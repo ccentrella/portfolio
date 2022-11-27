@@ -30,6 +30,10 @@
     @include primary-color-background;
     display: flex;
     flex-direction: column;
+    min-height: 30vh;
+    @include secondary-color-border;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
 }
 
 #hero-headline,
