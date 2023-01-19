@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import BlogBlock from "../template-parts/blocks/link-blocks/BlogLinkBlock";
+import PhotosLinkBlock from "../template-parts/blocks/link-blocks/PhotosLinkBlock";
 import GuitarBlogSectionBlocks from "../template-parts/blocks/section-blocks/GuitarBlogSectionBlocks";
 import PhotographySectionBlock from "../template-parts/blocks/section-blocks/PhotographySectionBlock";
 
@@ -16,6 +17,7 @@ function Interests() {
             <GuitarBlogSectionBlocks />
             <BlogBlock />
             <PhotographySectionBlock />
+            <PhotosLinkBlock />
         </>
     );
 }
