@@ -95,7 +95,14 @@
     }
 
     blockquote {
-        margin-bottom: 1em;
+        @include secondary-color-foreground;
+        @include secondary-color-border;
+        font-size: 1.75em;
+        line-height: 1.4;
+        border-left: 15px solid;
+
+        margin: 1em 30px;
+        padding-left: 30px;
     }
 
     h1 {
