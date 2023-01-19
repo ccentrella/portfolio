@@ -85,7 +85,7 @@ function Footer() {
             </section>
             <section className="footer-bottom">
                 <p className="copyright">
-                    Proudly built with <i className="heart"></i>. &copy; 2021 – 2022
+                    Proudly built with <i className="heart"></i>. &copy; 2021 – 2023
                     Christopher Michael Centrella. All rights reserved.
                 </p>
             </section>
