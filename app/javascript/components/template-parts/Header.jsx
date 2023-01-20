@@ -8,13 +8,8 @@ function Header() {
 
     function updateIsFloating() {
         const header = document.getElementsByTagName('header')[0];
-        console.log(header)
-        if (header === undefined) {
-            setIsFloating(false);
-        } else {
-            const position = header.getBoundingClientRect();
-            setIsFloating(position.bottom <= position.height / 2);
-        }
+        const position = header.getBoundingClientRect();
+        setIsFloating(position.bottom <= position.height / 2);
     }
 
     useEffect(() => {
