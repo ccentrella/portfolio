@@ -8,11 +8,11 @@ function Header() {
 
     function updateIsFloating() {
         const header = document.getElementsByTagName('header')[0];
-        const position = header.getBoundingClientRect();
-
-        if (position === null) {
+        console.log(header)
+        if (header === undefined) {
             setIsFloating(false);
         } else {
+            const position = header.getBoundingClientRect();
             setIsFloating(position.bottom <= position.height / 2);
         }
     }
