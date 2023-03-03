@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Header from './template-parts/Header';
 import Footer from './template-parts/Footer';
@@ -17,7 +17,6 @@ import Unsubscribe from './template-parts/Unsubscribe';
 import AppLoading from './AppLoading';
 
 export default function App() {
-    
     // Load reCaptcha script functions
     useEffect(() => {
         const recaptchaScript = document.createElement('script');
