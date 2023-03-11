@@ -6,13 +6,14 @@ function TechnicalKnowledge() {
             <p className="section-title">Technical Knowledge</p>
             <div className="container">
                 <p>Operating Systems: Windows, Linux, macOS</p>
-                <p>Software: Docker, Kubernetes, SonarQube, Virtual Box, Hyper-V, WSL2, Cucumber, Adobe CC, MS Office, iWork, WordPress, D2L</p>
-                <p>Programming Languages: Python, C#, Ruby, HTML/CSS/SCSS, XAML, Java, JavaScript</p>
-                <p>Database Technologies: MySQL, PostgreSQL, Oracle</p>
+                <p>Programming languages: Swift, Ruby, Python, ReactJS, C#, Java, XAML, HTML/CSS/SCSS, JavaScript</p>
+                <p>Database technologies: MySQL, PostgreSQL, Oracle</p>
                 <p>Project Management: Slack, Microsoft Teams, WebEx, Pivotal Tracker, Jira, Git</p>
-                <p>Protocols and Networks: SSH, OpenSSH, SSL, HTTP, HTTPS, FTP, SCP, RSYNC, Brew, NPM, Yarn</p>
-                <p>Open-source Platforms/Frameworks: React, React Router, Ruby on Rails, Xamarin, .NET, WPF, Spring Boot</p>
+                <p>Open-source platforms/frameworks: SwiftUI, React, React Router, Ruby on Rails, Xamarin, .NET, WPF, Spring Boot</p>
+                <p>Virtualization: Docker, Kubernetes, Virtual Box, Hyper-V, WSL2</p>
+                <p>Protocols and networks: SSH, OpenSSH, SSL, HTTP, HTTPS, FTP, SCP, RSYNC, Brew, NPM, Yarn</p>
                 <p>Cloud platforms and IDE: AWS, Visual Studio Code, Visual Studio, Amazon Cloud9, Google CoLab, Jupyter Notebooks</p>
+                <p>Software: Postman, Sonar, Cucumber, Adobe CC, MS Office, iWork, WordPress</p>
             </div>
         </section>
     );

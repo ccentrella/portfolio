@@ -25,8 +25,8 @@ function Resume() {
                 <TechnicalKnowledge />
                 <Education />
                 <CoursesAndTraining />
-                <ProjectExperience />
                 <WorkExperience />
+                <ProjectExperience />
                 <VolunteerExperience />
             </article>
         </div>

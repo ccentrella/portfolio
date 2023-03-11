@@ -5,9 +5,9 @@ function Summary() {
         <section>
             <p className="section-title">Summary</p>
             <div className="container">
-                <p>Creative and hard-working graduate in Computer Science with software engineering and app development experience using a range of technologies and programming languages</p>
-                <p>Started programming at an early age and completed 10+ individual projects since 2015 — various educational apps and learning management system</p>
-                <p>Passionate about computer vision, AI, machine learning, and UX design, and committed to using industry standards and best practices</p>
+                <p>Capable Software Engineer II committed to creating a quality product, continuous improvement, and effective team collaboration</p>
+                <p>Created numerous solutions across domains, including iOS mobile app development using Apple's latest APIs, and full stack web development using React with Ruby on Rails</p>
+                <p>Committed to writing clean, quality code and following best software patterns and practices</p>
             </div>
         </section>
     );

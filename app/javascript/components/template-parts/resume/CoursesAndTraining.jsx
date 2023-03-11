@@ -13,7 +13,7 @@ function CoursesAndTraining() {
 
                 <p className="resume-item-heading">2022</p>
                 <p>
-                    Softare Engineering Courses (Agile, Git, Design Thinking, DevOps, UML,
+                    Software Engineering Courses (Agile, Git, Design Thinking, DevOps, UML,
                     Delivering Value), IBM Associate program
                 </p>
 

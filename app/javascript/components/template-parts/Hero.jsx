@@ -19,9 +19,9 @@ function Hero() {
                     </div>
                 </div>
                 <div id="hero-about">
-                    <p>I’m a creative and hard-working graduate in Computer Science with software engineering and app development experience using a range of technologies and programming languages.</p>
-                    <p>I’ve been programming since a young age, and completed over ten projects since 2015, including several educational apps and a learning management system.</p>
-                    <p>I’m especially passionate about computer vision, AI, machine learning, and UX design, and committed to using industry standards and best practices.</p>
+                    <p>I'm a capable Software Engineer II committed to creating a quality product, continuous improvement, and effective team collaboration</p>
+                    <p>I've created numerous solutions across domains, including iOS mobile app development using Apple's latest APIs, and full stack web development using React with Ruby on Rails</p>
+                    <p>I'm committed to writing clean, quality code and following best software patterns and practices</p>
                 </div>
             </div>
             <hr id="hero-bar" />

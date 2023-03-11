@@ -12,8 +12,12 @@ function WorkExperience() {
                         <br />
                         Jan 2023 — Present
                     </p>
-                    <p>Completed code analysis using Sonar and documented recurring issues</p>
-                    <p>Technologies Used: Ruby, React, .NET, SonarQube</p>
+                    <p>Completed code analysis using Sonar for several technologies and thoroughly documented recurring issues</p>
+                    <p>Work with both the frontend and backend, across multiple languages</p>
+                    <p>Test API endpoints using Postman</p>
+                    <p>Work in a scrum environment, with sprint reviews, retrospectives, and daily stand-ups</p>
+                    <p>Effectively collaborate with team members</p>
+                    <p>Technologies Used: Ruby on Rails, React, .NET, PostgreSQL, Sonar, Linux</p>
                 </div>
                 <div>
                     <p className="resume-item-heading">Software Developer</p>

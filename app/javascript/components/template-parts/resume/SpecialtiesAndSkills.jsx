@@ -6,10 +6,7 @@ function SpecialtiesAndSkills() {
         <section>
             <p className="section-title">Specialties And Skills</p>
             <div className="container">
-                <p>
-                    Software Engineering, Mobile Development, App Development, Web Development, Machine Learning, Computer Vision, UX/UI Design & Prototyping, Object Oriented Programming, Agile Methodology, Project Management, Graphic Design, Analysis & Problem-solving,
-                    Time Management, Teamwork & Collaboration, Effective Communication, Technology Early Adopter, Self-starter with a dedication to professional growth, AWS Certified
-                </p>
+                <p>Dedication to professional growth, Collaborative team player, Effective Communication, Analysis & Problem-solving, Agile Methodology, Full Stack Web Development, iOS Mobile App Development, Machine Learning, Computer Vision, UX Design & Prototyping, AWS Certified</p>
                 <br/>
                 <div className="button-fixed-container top bottom">
                     <Link className="button-fixed" to="/specialties">
