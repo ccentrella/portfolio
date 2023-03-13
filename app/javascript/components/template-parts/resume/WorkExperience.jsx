@@ -31,6 +31,7 @@ function WorkExperience() {
                     <p>Earned AWS Practitioner Certificate</p>
                     <p>Completed the HR case study - web project for the HRMS with 10+ features, applying all the tech and skills learned and exceeded expectations by making a very refined user experience</p>
                     <p>Worked for a large international client in a virtual team and report directly to the Project Manager, primarily working with Oracle PL/SQL</p>
+                    <p>Technologies Used: HTML/CSS/SCSS, React, React Router, JavaScript, PostgreSQL, Oracle SQL, Adobe XD, Git, Linux</p>
                 </div>
                 <div>
                     <p className="resume-item-heading">Junior Software Engineer</p>
@@ -53,7 +54,7 @@ function WorkExperience() {
                     </ul>
                     <p>Assisted colleagues and trained them to use HTML/CSS</p>
                     <p>Used Pivotal Tracker and GitHub Pull Requests to pull items from backlog and merge changes with existing code</p>
-                    <p>Used various tech: React, Ruby on Rails, PostgreSQL, Material UI, CSS, Adobe XD, ActiveAdmin</p>
+                    <p>Technologies Used: React, Ruby on Rails, PostgreSQL, Material UI, CSS, Adobe XD, ActiveAdmin, Linux</p>
                 </div>
                 <div>
                     <p className="resume-item-heading">Lead Web Developer</p>
@@ -69,7 +70,7 @@ function WorkExperience() {
                     </ul>
                     <p>Served as the go-to person for all technical problems and as the “right-hand man” for the CEO</p>
                     <p>Implemented consistent branding to meet client needs by working with the video production team</p>
-                    <p>Technologies used: WordPress, PHP, SSH, HTML/CSS, prototyping</p>
+                    <p>Technologies used: WordPress, PHP, SSH, HTML/CSS, Linux, prototyping</p>
                 </div>
             </div>
         </section>
