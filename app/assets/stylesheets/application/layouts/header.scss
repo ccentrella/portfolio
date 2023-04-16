@@ -23,7 +23,7 @@ header {
     }
 
     .menu-toggle {
-        margin-right: 1em;
+        margin-right: 2em;
         flex-grow: 2;
         text-align: right;
         height: 1em;
@@ -112,46 +112,5 @@ header {
 
     header .logo-image {
         margin-left: 1.5em;
-    }
-}
-
-@media screen and (min-width:750px)
-{
-    header {
-        padding-bottom: 0;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .navbar {
-        display: block;
-        margin-top: 1em;
-        padding: 0;
-        text-align: center;
-
-        .nav-item {
-            margin: 0.75em 0;
-            padding: 0;
-            float: left;
-            width: 8em;
-            border-right: 1px solid $light-text;
-
-            &:after {
-                content: unset;
-            }
-
-            &:hover a, a.active { 
-                color: $navbar-item;
-                border-top: 4px solid $navbar-hover;
-                margin-top: -0.75em;
-                padding-top: calc(0.75em - 4px);
-            }
-
-            a.active {
-                border-color: $navbar-active;
-            }
-        }
     }
 }
