@@ -86,7 +86,8 @@ $logo-text-hover: #ecf7ed;
 $navbar: $accent;
 $navbar-item: $accent-light;
 $navbar-hover: #19B2EA;
-$navbar-active: $light-text;
+$navbar-hover-desktop: rgba(240, 248, 255, 0.12);
+$navbar-active: rgb(184, 220, 234);
 $navbar-border: $banner-border;
 
 $flash-success: #657C3B;
