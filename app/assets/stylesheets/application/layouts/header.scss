@@ -118,7 +118,13 @@ header {
 {
     header {
         padding: 0.5em 0;
-
+        border-bottom-width: 2px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    
         .logo-image {
             width: 40px;
         }
@@ -138,7 +144,7 @@ header {
         flex-basis: initial;
         display: block;
         padding: 0;
-        margin-left: 1em;
+        margin-left: 1.25em;
         text-align: center;
         background-color: transparent;
         border-top: none;
