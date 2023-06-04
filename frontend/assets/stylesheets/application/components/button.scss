@@ -1,0 +1,131 @@
+/* SCSS Document */
+
+/** Buttons **/
+
+.button-container {
+    padding: 2.5em 0;
+    text-align: center;
+}
+
+.button-fixed-container, .button-fixed-container-dark {
+    margin: 3.5em 0 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $container-background;
+
+    &.top {
+        margin-bottom: 0;
+
+        &.thin {
+            margin-bottom: 3em
+        }
+    }
+    &.bottom {
+        margin-top: 0;
+
+        &.thin {
+            margin-top: 4.5em;
+        }
+    }
+}
+
+.button-fixed-container-dark {
+    margin: 5em 0;
+    padding: 6.5em 0 5em;
+    background: $container-dark-background;
+
+    &.highlight {
+        background-color: $button-container-highlight-background;
+    }
+    &.highlight.red {
+        background-color: $button-container-highlight-background-red;
+    }
+
+    .highlight-button {
+        background-color: $button-highlight-background;
+    }
+    
+    &.red {
+        background-color: $container-dark-background-red;
+
+        .button-fixed:hover {
+            color: $container-dark-background-red;
+        }
+    }
+
+    &.accent {
+        @include accent-color-background;
+
+        .button-fixed {
+            @include secondary-color-background;
+            &:hover {
+                background-color: $accent-dark;
+            }
+        }
+    }
+
+    &.thin {
+        margin: 3em 0;
+    }
+}
+
+.resume-button-container {
+    margin: 0;
+}
+.resume-button-text {
+    margin-top: 3em;
+}
+
+.button,
+.button-fixed {
+    margin: 1em;
+    padding: 1.4em 2.5em;
+    border: 2px solid $button-border;
+    border-radius: 50px;
+    background-color: $button-background;
+    font-family: 'Quasimoda', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: $button-text;
+    text-align: center;
+    transition: color 1s, background-color 1s;
+
+    .icon {
+        padding-left: 1.5em;
+        transition: padding-left 1s;
+    }
+
+    &:hover {
+        color: $button-hover-text;
+        background-color: $button-hover;
+
+        .icon {
+            padding-left: 2em;
+        }
+    }
+
+    &.red {
+        background-color: $container-dark-background-red;
+
+        &:hover {
+            background-color: darkred;
+        }
+    }
+}
+
+.button-fixed {
+    display: inline-block;
+    padding: 1.4em 0;
+    margin-bottom: 1.5em;
+    width: 15em;
+    max-width: 75%;
+
+    &.button-wide {
+        width: 18em;
+    }
+}
+
+input.button-fixed {
+    font-size: 1em;
+}

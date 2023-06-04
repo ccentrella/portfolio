@@ -1,0 +1,111 @@
+.section-block {
+    display: flex;
+    flex-flow: row wrap;
+    @include primary-color-background;
+    gap: 1em;
+    justify-content: center;
+    padding: 4em 0;
+
+    &.thin {
+        gap: 0;
+    }
+}
+
+.section-block .flex-col {
+    flex-basis: 100%;
+    flex-grow: 1;
+    max-width: 90%;
+    padding: 2em;
+
+    &.zero-padding {
+        padding: 0 2em;
+    }
+}
+
+.section-block.transparent {
+    background-color: transparent;
+
+    .section-block-content {
+        color: $dark-text;
+
+        h3 {
+            @include primary-color-foreground;
+        }
+    }
+}
+
+.section-block-content {
+    color: $light-text;
+    order: 2;
+
+    p {
+        font-size: 1.15em;
+    }
+
+    h3 {
+        color: $light-text;
+        font-size: 1.5em;
+        line-height: 1.4;
+        margin: 1em 0;
+    }
+
+    .button-label {
+        margin: 0 0 2.5em;
+    }
+}
+
+.section-block .flex-col.backdrop {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    border-radius: 25px;
+    background-color: $secondary-light3;
+    margin: 0 1.5em 1.5em;
+}
+
+.section-block-image {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+        min-width: 150px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .section-block {
+        padding: 0;
+    }
+
+    .section-block.transparent {
+        margin: 2em;
+    }
+
+    .section-block .flex-col {
+        padding: 6em 3em;
+        flex-grow: 0.5;
+        flex-basis: 40%;
+
+        &.light-blue {
+            background-color: $secondary-light3;
+            color: $dark-text;
+        }
+
+        &.zero-padding {
+            padding: 4em 2em;
+        }
+    }
+
+    .section-block-image {
+        order: unset;
+    }
+
+    .section-block .flex-col.backdrop {
+        border-radius: 75px;
+        background-color: $secondary-light3;
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+}

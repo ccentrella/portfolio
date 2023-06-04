@@ -1,0 +1,136 @@
+#hero-primary {
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-height: 100dvh;
+    justify-content: end;
+    background-color: $hero;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero-about {
+    align-self: center;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 4em 0;
+
+    p {
+        margin-left: 2em;
+        margin-right: 1.5em;
+    }
+}
+
+#hero-profile {
+    width: 15em;
+    max-width: 50%;
+    margin: 2em auto 2em;
+}
+
+#hero-bottom {
+    @include primary-color-background;
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+    @include secondary-color-border;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+}
+
+#hero-headline,
+#hero-tagline {
+    padding: 0em 1em 0.75em;
+    font-family: "Quasimoda", sans-serif;
+    font-weight: 300;
+    font-size: 2.75em;
+    line-height: 1.15;
+    text-align: left;
+    color: $logo-text;
+}
+
+#hero-headline {
+    margin: 0;
+
+    @media screen and (min-width: 575px) {
+        text-align: center;
+    }
+}
+
+#hero-tagline {
+    font-size: 2em;
+    text-align: right;
+}
+#hero-tagline::before {
+    content: unset;
+}
+
+#hero-bar {
+    display: none;
+}
+
+#resume-hero #hero-primary {
+    justify-content: start;
+    min-height: initial;
+}
+
+#resume-hero #hero-profile {
+    margin: 10% auto 5%;
+}
+
+@media screen and (max-width: 325px) {
+    #hero-headline {
+        font-size: 2.5em;
+    }
+
+    #hero-tagline {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1200px) and (min-height: 650px) {
+    #hero {
+        display: flex;
+        flex-wrap: wrap;
+        @include primary-color-background;
+    }
+
+    #hero-bottom {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    #hero-primary {
+        flex: 50%;
+        justify-content: space-evenly;
+    }
+
+    #hero-about {
+        flex: 50%;
+    }
+
+    #hero-about p {
+        color: $light-text;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+    }
+
+    #hero-profile {
+        margin-bottom: 0;
+    }
+
+    #hero-logo {
+        align-self: center;
+    }
+
+    #hero #hero-headline, #hero-tagline {
+        padding: 0;
+    }
+
+    #hero-bar {
+        display: block;
+        height: 6em;
+        background-color: #CDEBF3;
+        border: none;
+        margin: 0;
+    }
+}

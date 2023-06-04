@@ -1,0 +1,36 @@
+/* SCSS Document */
+
+
+/** Layout **/
+
+.hidden {
+    display: none;
+}
+
+.container {
+    padding: 1em 2.25em 2em;
+}
+
+hr {
+    margin: 2em 0;
+    border: 1px dashed $light-text;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-col {
+    flex-basis: 50%;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width:750px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 850px;
+    }
+}

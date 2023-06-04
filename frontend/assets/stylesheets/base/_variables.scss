@@ -1,0 +1,127 @@
+/* SCSS Document */
+
+/* Use mixins instead of variables to display p3 colors */
+
+/* primary */
+@mixin primary-color-background {
+    background-color: $primary;
+    background-color: color(display-p3 0.1686 0.5922 0.7451);;
+}
+@mixin primary-color-foreground {
+    color: $primary;
+    color: color(display-p3 0.1686 0.5922 0.7451);;
+}
+@mixin primary-color-border {
+    border-color: $primary;
+    border-color: color(display-p3 0.1686 0.5922 0.7451);;
+}
+
+/* secondary */
+@mixin secondary-color-background {
+    background-color: $secondary;
+    background-color: color(display-p3 0.0353 0.4431 0.5882);
+}
+@mixin secondary-color-foreground {
+    color: $secondary;
+    color: color(display-p3 0.0353 0.4431 0.5882);
+}
+@mixin secondary-color-border {
+    border-color: $secondary;
+    border-color: color(display-p3 0.0353 0.4431 0.5882);
+}
+
+/* accent */
+@mixin accent-color-background {
+    background-color: $accent;
+    background-color: color(display-p3 0.0275 0.3059 0.4078);
+}
+@mixin accent-color-foreground {
+    color: $accent;
+    color: color(display-p3 0.0275 0.3059 0.4078);
+}
+@mixin accent-color-border {
+    border-color: $accent;
+    border-color: color(display-p3 0.0275 0.3059 0.4078);
+}
+
+/* heading */
+@mixin heading-color-background {
+    background-color: $heading;
+    background-color: color(display-p3 0.0353 0.4431 0.5882);
+}
+@mixin heading-color-foreground {
+    color: $heading;
+    color: color(display-p3 0.0353 0.4431 0.5882);
+}
+@mixin heading-color-border {
+    border-color: $heading;
+    border-color: color(display-p3 0.0353 0.4431 0.5882);
+}
+
+/** Variables **/
+
+$light-text: #E5E5E5;
+$dark-text: #707070;
+$grey-text: #7E7777;
+$primary: #009AC3;
+$secondary: #00739B;
+$secondary-light: #7EBBE0;
+$secondary-light2: #CDEBF3;
+$secondary-light3: #EAF6F9;
+$accent: #00506B;
+$accent-dark: #042836;
+$accent-light: #8bdefc;
+$heading: #00739B;
+$keyword: $secondary;
+$company: #957219;
+$link-text: dodgerblue;
+$link-text-hover: deepskyblue;
+
+$overlay: transparent;
+$banner-border: #32ACD9;
+$hero: $accent-dark;
+$logo-text: $light-text;
+$logo-text-hover: #ecf7ed;
+
+$navbar: $accent;
+$navbar-item: $accent-light;
+$navbar-hover: #19B2EA;
+$navbar-hover-desktop: rgba(240, 248, 255, 0.12);
+$navbar-active: rgb(184, 220, 234);
+$navbar-border: $banner-border;
+
+$flash-success: #657C3B;
+$flash-warning: #D97109;
+$flash-error: #D92E2E;
+
+$container-background: transparent;
+$container-dark-background: $secondary;
+$container-dark-background-red: #520001;
+$container-background-gray: #707070;
+
+$button-border: transparent;
+$button-background: $accent;
+$button-text: $light-text;
+$button-hover: $primary;
+$button-hover-text: $light-text;
+$button-dark-border: $light-text;
+$button-dark-background: transparent;
+$button-dark-text: $light-text;
+$button-dark-hover: $light-text;
+$button-dark-hover-text: transparent;
+$button-highlight-background: $accent-light;
+$button-container-highlight-background: $secondary;
+$button-container-highlight-background-red: hsl(350, 76%, 24%);
+
+$field-hover: aliceblue;
+
+$timeline: #496600;
+$timeline-text: #627E2D;
+
+$footer-top-background: $accent-dark;
+$footer-main-background: $accent;
+$footer-bottom-background: #242222;
+$footer-logo: #BFD9D9;
+$footer-heading: $accent-light;
+$footer-link: #BFD9D9;
+$footer-link-hover: #97d7d7;
