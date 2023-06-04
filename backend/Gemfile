@@ -40,6 +40,9 @@ gem "image_processing", "~> 1.2"
 # Use devise for authentication
 gem "devise"
 
+# Enable CORS support
+gem 'rack-cors'
+
 # Enable mail processing
 gem 'mail_form'
 
