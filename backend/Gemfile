@@ -39,6 +39,7 @@ gem "image_processing", "~> 1.2"
 
 # Use devise for authentication
 gem "devise"
+gem "devise-jwt"
 
 # Enable CORS support
 gem 'rack-cors'
