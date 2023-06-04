@@ -21,9 +21,6 @@ module Portfolio
     config.time_zone = 'Eastern Time (US & Canada)'
     # config.eager_load_paths << Rails.root.join("extras")
 
-    # Show custom error pages
-    config.exceptions_app = self.routes
-
     # Load images in emails
     config.action_mailer.asset_host = 'https://chriscentrella.com'
   end
