@@ -1,7 +1,0 @@
-<article class="post-item">
-      <h2 class="post-item-title"><%= link_to post.title, post_path(post) %></h2>
-      <p class="post-item-date"><%= post.get_date %></p>
-      <% if post.description.present? %>
-        <p class="post-item-description"><%= post.description %></p>
-      <% end %>
-</article>
