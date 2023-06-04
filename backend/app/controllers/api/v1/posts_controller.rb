@@ -40,7 +40,7 @@ class Api::V1::PostsController < ApplicationController
             create_slug
             if @post.save
                 render json: @post
-                helpers.notify_subscribers(@post)
+                notify_subscribers(@post)
             else
                 render json: @post.errors
             end
@@ -94,6 +94,13 @@ class Api::V1::PostsController < ApplicationController
     def create_slug
         if @post.slug.empty?
             @post.slug = @post.title.parameterize(separator: '-')
+        end
+    end
+
+    def notify_subscribers(post)
+        for subscriber in Subscriber.all
+            unsubscribe_link = subscriber.generate_unsubscribe_link
+            subscriber.deliver(post, unsubscribe_link)
         end
     end
 end
