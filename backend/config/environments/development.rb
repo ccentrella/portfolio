@@ -62,7 +62,7 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
   # Suppress logger output for asset requests.
-  config.assets.quiet = true
+  # config.assets.quiet = true
 
   # Suppress error messages
   #config.assets.unknown_asset_fallback = true
