@@ -8,16 +8,15 @@ class Api::V1::ContactController < ApplicationController
         recaptcha_verify = helpers.verify_recaptcha(response_token)
 
         # Ensure data is valid and passes recaptcha filter
-        if !@email_contact.valid? || recaptcha_verify != :ok
-            return head :bad_request
+        if !@email_contact.valid?
+            return render json: "Bad Request. Please try again using valid data.", status: 400
+        elsif recaptcha_verify != :ok
+            return render json: "ReCaptcha Failed. We just need to make sure you're human :)", status: 424
         end
-        
-        # Attempt to send message
-        if @email_contact.deliver
-            head :ok
-        else
-            head :unprocessable_entity
-        end
+
+        if !@email_contact.deliver
+            return render json: "Server error. Failed to send email.", status: 500
+        render json: "Email sent successfully."
     end
 
     private
