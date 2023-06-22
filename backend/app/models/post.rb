@@ -48,6 +48,12 @@ class Post < ApplicationRecord
         end
     end
 
+    def create_slug
+        if slug.empty?
+            slug = title.parameterize(separator: '-')
+        end
+    end
+
     private
         def load_nonpersistent_attributes
             self.date = get_date()
