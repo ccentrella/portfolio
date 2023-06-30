@@ -7,6 +7,7 @@
   "repository": "git@github.com:ccentrella/portfolio.git",
   "author": "Christopher Centrella <ccentrella.j@gmail.com>",
   "license": "MIT",
+  
   "dependencies": {
     "@hotwired/stimulus": "^3.1.0",
     "@hotwired/turbo-rails": "^7.2.0",
