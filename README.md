@@ -6,7 +6,7 @@ The upcoming refactor is a redesign from the ground up, and will include numerou
 
 Numerous dependencies have been removed from the backend, and authentication will be handled directly in Ruby on Rails using a short-lived JWT. The backend follows RESTful principles and allows for a possible mobile application further down the road.
 
-See [refactor/2023-architecture](https://github.com/ccentrella/portfolio/edit/refactor/2023-rearchitecture) branch for the latest updates.
+See [refactor/2023-architecture](https://github.com/ccentrella/portfolio/tree/refactor/2023-rearchitecture) branch for the latest updates.
 
 ## Achievements:
 * Built completely responsive, mobile-friendly portfolio website
