@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Introduction() {
     return (
         <section>
-            <p className="section-title zero-margin">Resume</p>
+            <p className="section-title">Resume</p>
             <div className="container">
                 <p className="resume-name">Christopher Centrella: Software Engineer</p>
                 <p className="resume-location">Lives In: Nashville, TN</p>
