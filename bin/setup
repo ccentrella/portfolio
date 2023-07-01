@@ -17,6 +17,10 @@ FileUtils.chdir APP_ROOT do
   system! "gem install bundler --conservative"
   system("bundle check") || system!("bundle install")
 
+  puts "\n== Adding platforms =="
+  system! "bundle lock --add-platform arm64-darwin-22"
+  system("bundle lock --add-platform x86_64-linux")
+
   # puts "\n== Copying sample files =="
   # unless File.exist?("config/database.yml")
   #   FileUtils.cp "config/database.yml.sample", "config/database.yml"
