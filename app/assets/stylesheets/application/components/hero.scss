@@ -68,15 +68,6 @@
     display: none;
 }
 
-#resume-hero #hero-primary {
-    justify-content: start;
-    min-height: initial;
-}
-
-#resume-hero #hero-profile {
-    margin: 10% auto 5%;
-}
-
 @media screen and (max-width: 325px) {
     #hero-headline {
         font-size: 2.5em;

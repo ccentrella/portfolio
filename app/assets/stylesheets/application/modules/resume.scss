@@ -1,5 +1,10 @@
 /* SCSS Document */
 
+.resume-emphasis {
+    @include primary-color-foreground;
+    font-weight: 500;
+}
+
 .resume ul {
     padding-left: 1.25em;
     margin-bottom: 1.25em;
@@ -7,12 +12,22 @@
 
 .resume p {
     margin-bottom: 0.75em;
+    margin-top: 0.75em;
+}
+
+.resume .resume-list {
+    p, ul, li {
+        margin-bottom: 0.25em;
+        margin-top: 0;
+    }
 }
 
 .resume .resume-item-heading {
     @include primary-color-foreground;
-    font-weight: 500;
-    margin-top: 1.25em;
+    font-weight: bold;
+    font-size: 1.05em;
+    text-transform: uppercase;
+    margin-top: 1.5em;
     margin-bottom: 0.35em;
 }
 
@@ -20,125 +35,43 @@
     @include primary-color-foreground;
     font-weight: 300;
     font-size: 0.9em;
+    margin-top: 0;
     margin-bottom: 0.9em;
     line-height: 1.75;
 }
 
-.resume-location {
+.resume .resume-name {
     text-align: left;
-    margin: 1.25em 0 0.5em;
-    font-size: 1.5em;
+    margin: 1.5em 0 0;
+    font-weight: bold;
+    font-size: 1.15em;
+    @include primary-color-foreground;
+}
+
+.resume .resume-location {
+    text-align: left;
+    margin: 0.25em 0 0.5em;
+    font-weight: bold;
+    font-size: 1.15em;
     @include primary-color-foreground;
 }
 
 .resume-buttons  {
-    text-align: center;
+    margin-left: -0.75em;
+    margin-bottom: 1.25em;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    @media screen and (min-width: 650px) {
-        text-align: left;
+.resume-link {
+    font-weight: 600;
+    padding: 0.5em 0.75em;
+    @include primary-color-foreground;
 
-        .button-fixed {
-            width: 13.5em;
-        }
+    &:hover {
+        color: #8bdefc;
+        @include secondary-color-background;
+        border-radius: 10px;
+        opacity: 0.9;
     }
 }
-
-/** Timeline **/
-
-.dot,
-.dot-small,
-.dot-beginning,
-.dot-end {
-    margin-left: 0.05em;
-    margin-right: -0.25em;
-    margin-bottom: -0.35em;
-    display: inline-block;
-    height: 1.15em;
-    width: 1.15em;
-    background-color: $timeline;
-    border-radius: 50%;
-}
-
-.dot-small {
-    margin-left: 0.2em;
-    margin-right: 0;
-    margin-bottom: -0.2em;
-    height: 0.85em;
-    width: 0.85em;
-}
-
-.dot-beginning {
-    margin-left: -1.1em;
-    margin-bottom: 2em;
-    display: block;
-    height: 2em;
-    width: 2em;
-}
-
-.dot-end {
-    margin-left: -1.1em;
-    margin-top: 2em;
-    display: block;
-    height: 2em;
-    width: 2em;
-}
-
-.timeline {
-    margin-top: 3em;
-    margin-left: 3em;
-    border-left: 0.25em solid $timeline;
-
-    @media screen and (min-width:750px) {
-        margin-left: 4em;
-    }
-
-    @media screen and (min-width:1000px) {
-        margin-left: 0.8em;
-    }
-}
-
-.timeline-item {
-
-    > h2, h3 {
-        margin-left: 2em;
-        text-indent: -5.5em;
-        padding-right: 0.5em;
-        color: $timeline-text;
-        font-family: 'Quasimoda', sans-serif;
-        font-size: 2.75vh;
-        font-weight: 300;
-
-        .timeline-year {
-            padding-right: 0.4em;
-            font-family: droid-sans-mono, monospace;
-            font-weight: 400;
-        }
-
-        .timeline-heading {
-
-            &:before {
-                content: '⸻';
-                color: $timeline;
-                font-size: 2vh;
-            }
-        }
-
-    }
-
-    > p {
-        margin: 0.5em 0 0.5em 4em;
-        text-indent: -1.4em;
-        color: $timeline-text;
-        font-family: 'Quasimoda', sans-serif;
-        font-size: 2.25vh;
-        font-weight: 300;
-
-        &:before {
-            content: '⸺';
-            color: $timeline;
-            text-indent: 15px;
-            font-size: 1.75vh;
-        }
-    }
-}
-
