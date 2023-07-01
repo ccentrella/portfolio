@@ -22,7 +22,7 @@ function Footer() {
                     </p>
                     <p>
                         <Link to="/highlights" className="footer-link">
-                            Highlights
+                            highlights
                         </Link>
                     </p>
                     <p>
@@ -33,6 +33,11 @@ function Footer() {
                     <p>
                         <Link to="/interests" className="footer-link">
                             Interests
+                        </Link>
+                    </p>
+                    <p>
+                        <Link to="/contact" className="footer-link">
+                            Contact Me
                         </Link>
                     </p>
                 </div>
@@ -65,7 +70,9 @@ function Footer() {
                     </p>
                 </div>
                 <div className="footer-section">
-                    <h4 className="footer-heading">Content</h4>
+                    <h4 className="footer-heading">
+                        <Link to="/blog">Content</Link>
+                    </h4>
                     <hr className="footer-heading-decorator" />
 
                     <p>
