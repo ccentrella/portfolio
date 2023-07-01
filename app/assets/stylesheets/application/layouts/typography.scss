@@ -42,13 +42,16 @@ span.medium {
 
 a {
     text-decoration: none;
-    color: $link-text;
+    @include primary-color-foreground;
 
     &:hover {
         color: $link-text-hover;
     }
-}
 
+    &.emphasis {
+        font-weight: 500;
+    }
+}
 h1 {
     margin: 1.5em 0 0.65em 0;
     font-size: 2em;
@@ -99,6 +102,10 @@ p.section-title {
 
     &.zero-margin {
         margin: 0;
+    }
+
+    &.thin {
+        margin-bottom: 1.25em;
     }
 }
 
