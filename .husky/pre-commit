@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+bundle lock --add-platform arm64-darwin-22
+bundle lock --add-platform x86_64-linux
+git add Gemfile.lock
