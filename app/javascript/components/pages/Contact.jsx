@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 function Contact() {
     const [name, setName] = useState('');
@@ -82,25 +81,13 @@ function Contact() {
 
     return (
         <>
+            <p className="section-title thin">Contact Me</p>
             <div className="container">
-                <h1>Contact</h1>
                 <p>
                     Thank you for visiting my website. You can reach out to me via the
                     form below.
                 </p>
-                <p>If you prefer to contact me via LinkedIn, you can use this link:</p>
-
-                <div className="button-fixed-container top">
-                    <a
-                        className="button-fixed"
-                        target="_blank"
-                        href="https://linkedin.com/in/ccentrella">
-                        LinkedIn Profile
-                    </a>
-                    <Link className="button-fixed" to="/">
-                        View Homepage
-                    </Link>
-                </div>
+                <p>If you prefer, you can message me on <a className='emphasis' target='_blank' href="https://linkedin.com/in/ccentrella">LinkedIn</a>.</p>
             </div>
 
             {statusMessage != null && statusMessageEl}
