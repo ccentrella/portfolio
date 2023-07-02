@@ -10,7 +10,7 @@ function Hero() {
                         <h1 id="hero-headline">Christopher Centrella</h1>
                         <div id="hero-bottom">
                             <h2 id="hero-tagline">
-                                Full Stack
+                                Full-Stack
                                 <br />
                                 <span className="medium">Software Engineer</span>
                             </h2>
@@ -19,9 +19,8 @@ function Hero() {
                     </div>
                 </div>
                 <div id="hero-about">
-                    <p>I'm a capable Full-Stack Software Engineer II committed to creating a quality product, continuously improving my skills, and effectively collaborating on a team.</p>
-                    <p>Writing my first line of code when I was fourteen, I've created numerous solutions across domains, including iOS mobile app development using Apple's latest APIs, and full-stack web development using React with Ruby on Rails.</p>
-                    <p>Most importantly, I'm committed to writing clean, quality code and following best software patterns and practices.</p>
+                    <p>I’m a capable full stack engineer, committed to continuously improve my skills, collaborate effectively on a team, and create user-centered designs which solve real-world problems. I have an outstanding ability for debugging, problem solving, and discovering edge cases. Well-versed in design patterns, software architecture, and cross-team collaboration.</p>
+                    <p>Programming since I was fourteen, I have an extensive knowledge of frontend and backend across several programming languages including React, Ruby, Swift, and .NET. Most importantly, I’m obsessed with the user: Creating software which solves user’s pain points and provides a seamless, intuitive, and beautiful user experience.</p>
                 </div>
             </div>
             <hr id="hero-bar" />
