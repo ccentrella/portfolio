@@ -10,7 +10,7 @@ function Hero() {
                         <h1 id="hero-headline">Christopher Centrella</h1>
                         <div id="hero-bottom">
                             <h2 id="hero-tagline">
-                                Full-Stack
+                                Full Stack
                                 <br />
                                 <span className="medium">Software Engineer</span>
                             </h2>
