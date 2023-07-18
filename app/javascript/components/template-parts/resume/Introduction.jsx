@@ -12,6 +12,9 @@ function Introduction() {
                     <Link className="resume-link" to="/">
                         Homepage
                     </Link>
+                    <a className="resume-link" target="_blank" href="https://testflight.apple.com/join/dvjRr2ya">
+                        iOS App
+                    </a>
                     <a className="resume-link" target="_blank" href="https://github.com/ccentrella">
                         Find Me on GitHub
                     </a>
