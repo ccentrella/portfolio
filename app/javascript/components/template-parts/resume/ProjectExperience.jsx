@@ -7,7 +7,9 @@ function ProjectExperience() {
             <div className="container">
                 <div>
                     <p className="resume-item-heading">Coding Goals iOS App</p>
-                    <p className="resume-item-subheading">2023 — Present</p>
+                    <p className="resume-item-subheading">2023 — Present<br/>
+                    https://testflight.apple.com/join/dvjRr2ya
+                    </p>
 
                     <div className='resume-list'>
                         <p><span className='resume-emphasis'>&gt;</span> Create coding goals iOS app to encourage the software engineers of tomorrow</p>
