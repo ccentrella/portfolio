@@ -8,7 +8,7 @@ function ProjectExperience() {
                 <div>
                     <p className="resume-item-heading">Coding Goals iOS App</p>
                     <p className="resume-item-subheading">2023 — Present<br/>
-                    https://testflight.apple.com/join/dvjRr2ya
+                    <a href="https://testflight.apple.com/join/dvjRr2ya" target="_blank">https://testflight.apple.com/join/dvjRr2ya</a>
                     </p>
 
                     <div className='resume-list'>
@@ -29,7 +29,7 @@ function ProjectExperience() {
                     <p className="resume-item-subheading">
                         2021 — Present
                         <br />
-                        https://chriscentrella.com
+                        <a href="https://chriscentrella.com" target="_blank">https://chriscentrella.com</a>
                     </p>
 
                     <div className="resume-list">
