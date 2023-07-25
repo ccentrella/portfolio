@@ -14,9 +14,9 @@ function WorkExperience() {
                     </p>
                     
                     <div className="resume-list">
-                        <p><span className='resume-emphasis'>&gt;</span> Debug, discover and document edge cases which break existing solution</p>
+                        <p><span className='resume-emphasis'>&gt;</span> Sustain client relationships by debugging, discovering and documenting edge cases which prevent users from signing in</p>
                         <p><span className='resume-emphasis'>&gt;</span> Accurately describe problem using clear, thorough documentation</p>
-                        <p><span className='resume-emphasis'>&gt;</span> Create, document and present solution to overcome said edge cases in existing architecture</p>
+                        <p><span className='resume-emphasis'>&gt;</span> Create, document and present solution to achieve multitenancy using subdomains, retaining client trust</p>
                         <p><span className='resume-emphasis'>&gt;</span> Collaborate across teams, overcome blockers and extensively comment through Jira</p>
                         <p><span className='resume-emphasis'>&gt;</span> Introduce and present workflows to improve team processes</p>
                         <p><span className='resume-emphasis'>&gt;</span> Work across frontend and backend, resolving blockers, assisting colleagues and debugging code</p>
@@ -25,7 +25,7 @@ function WorkExperience() {
                         <p><span className='resume-emphasis'>&gt;</span> Constant dedication to further growth</p>
                     </div>
 
-                    <p><span className='resume-emphasis'>Technologies Used:</span> React, .NET, Ruby on Rails, PostgreSQL, Git, Linux, Sonar</p>
+                    <p><span className='resume-emphasis'>Technologies Used:</span> .NET (C#), React, Ruby on Rails, PostgreSQL, Git, Linux, Sonar</p>
                 </div>
                 <div>
                     <p className="resume-item-heading">Software Developer</p>
