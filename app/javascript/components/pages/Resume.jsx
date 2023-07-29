@@ -16,11 +16,11 @@ function Resume() {
     return (
         <article className="resume">
             <Introduction />
-            <SpecialtiesAndSkills />
-            <WorkExperience />
-            <ProjectExperience />
             <TechnicalKnowledge />
             <Education />
+            <WorkExperience />
+            <ProjectExperience />
+            <SpecialtiesAndSkills />
         </article>
     );
 }

@@ -88,11 +88,13 @@
     #hero-bottom {
         background-color: transparent;
         border-color: transparent;
+        min-height: fit-content;
     }
 
     #hero-primary {
         flex: 50%;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 1.5em;
     }
 
     #hero-about {
@@ -115,6 +117,7 @@
 
     #hero #hero-headline, #hero-tagline {
         padding: 0;
+        margin-top: 0.75em;
     }
 
     #hero-bar {
