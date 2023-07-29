@@ -25,7 +25,7 @@ function Introduction() {
                         Contact Me
                     </Link>
                 </div>
-                <p>Committed to <span className='resume-emphasis'>continuous improvement</span>, effective <span className='resume-emphasis'>team collaboration</span>, and <span className='resume-emphasis'>user-centered</span> design. Outstanding ability for <span className='resume-emphasis'>debugging</span>, <span className='resume-emphasis'>problem solving</span>, and discovering <span className='resume-emphasis'>edge cases</span>. Well-versed in <span className='resume-emphasis'>design patterns</span>, software <span className='resume-emphasis'>architecture</span>, and <span className='resume-emphasis'>cross-team</span> collaboration.</p>
+                <p>Committed to <span className='resume-emphasis'>continuous improvement</span>, effective <span className='resume-emphasis'>team collaboration</span>, and <span className='resume-emphasis'>user-centered</span> design. Outstanding ability for <span className='resume-emphasis'>debugging</span>, <span className='resume-emphasis'>problem solving</span>, and discovering <span className='resume-emphasis'>edge cases</span>. Well-versed in <span className='resume-emphasis'>design patterns</span>, software <span className='resume-emphasis'>architecture</span>, and <span className='resume-emphasis'>cross-functional</span> collaboration.</p>
             </div>
         </section>
     );
