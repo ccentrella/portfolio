@@ -9,11 +9,7 @@ function Hero() {
                     <div id="hero-logo">
                         <h1 id="hero-headline">Christopher Centrella</h1>
                         <div id="hero-bottom">
-                            <h2 id="hero-tagline">
-                                Full Stack
-                                <br />
-                                <span className="medium">Software Engineer</span>
-                            </h2>
+                            <h2 id="hero-tagline medium">Software Engineer</h2>
                             <a id="hero-pointer"></a>
                         </div>
                     </div>
