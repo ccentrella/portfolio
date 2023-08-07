@@ -16,7 +16,7 @@ function Hero() {
                 </div>
                 <div id="hero-about">
                     <p>I’m a capable full stack engineer, committed to continuously improve my skills, collaborate effectively on a team, and create user-centered designs which solve real-world problems. I have an outstanding ability for debugging, problem solving, and discovering edge cases. Well-versed in design patterns, software architecture, and cross-team collaboration.</p>
-                    <p>Programming since I was fourteen, I have an extensive knowledge of frontend and backend across several languages including C#, JavaScript, Ruby, Swift, and Python. Most importantly, I’m obsessed with the user: Creating software which solves user’s pain points and provides a seamless, intuitive, and beautiful user experience.</p>
+                    <p>Writing code for ten years, I have an extensive knowledge of frontend and backend across several languages including C#, JavaScript, Ruby, Swift, and Python. Most importantly, I’m obsessed with the user: Creating software which solves user’s pain points and provides a seamless, intuitive, and beautiful user experience.</p>
                 </div>
             </div>
             <hr id="hero-bar" />
