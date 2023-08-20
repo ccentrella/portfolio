@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function FormattedTextGenerator() {
   
@@ -10,7 +10,9 @@ function FormattedTextGenerator() {
     const [output, setOutput] = useState('');
     const [isBold, setIsBold] = useState(false);
     const [isItalic, setIsItalic] = useState(false);
+    const [isSerif, setIsSerif] = useState(false);
 
+    // Sans-serif fonts
     const outputBold = function () {
 
         const transformedUpperCase = input
@@ -221,16 +223,236 @@ function FormattedTextGenerator() {
         return transformedDigits;
     }
 
+    // Serif fonts
+    const outputBoldSerif = function () {
+
+        const transformedUpperCase = input
+                                      .replaceAll('A', String.fromCodePoint(0x1D400 + 0x00))
+                                      .replaceAll('B', String.fromCodePoint(0x1D400 + 0x01))
+                                      .replaceAll('C', String.fromCodePoint(0x1D400 + 0x02))
+                                      .replaceAll('D', String.fromCodePoint(0x1D400 + 0x03))
+                                      .replaceAll('E', String.fromCodePoint(0x1D400 + 0x04))
+                                      .replaceAll('F', String.fromCodePoint(0x1D400 + 0x05))
+                                      .replaceAll('G', String.fromCodePoint(0x1D400 + 0x06))
+                                      .replaceAll('H', String.fromCodePoint(0x1D400 + 0x07))
+                                      .replaceAll('I', String.fromCodePoint(0x1D400 + 0x08))
+                                      .replaceAll('J', String.fromCodePoint(0x1D400 + 0x09))
+                                      .replaceAll('K', String.fromCodePoint(0x1D400 + 0x0A))
+                                      .replaceAll('L', String.fromCodePoint(0x1D400 + 0x0B))
+                                      .replaceAll('M', String.fromCodePoint(0x1D400 + 0x0C))
+                                      .replaceAll('N', String.fromCodePoint(0x1D400 + 0x0D))
+                                      .replaceAll('O', String.fromCodePoint(0x1D400 + 0x0E))
+                                      .replaceAll('P', String.fromCodePoint(0x1D400 + 0x0F))
+                                      .replaceAll('Q', String.fromCodePoint(0x1D400 + 0x10))
+                                      .replaceAll('R', String.fromCodePoint(0x1D400 + 0x11))
+                                      .replaceAll('S', String.fromCodePoint(0x1D400 + 0x12))
+                                      .replaceAll('T', String.fromCodePoint(0x1D400 + 0x13))
+                                      .replaceAll('U', String.fromCodePoint(0x1D400 + 0x14))
+                                      .replaceAll('V', String.fromCodePoint(0x1D400 + 0x15))
+                                      .replaceAll('W', String.fromCodePoint(0x1D400 + 0x16))
+                                      .replaceAll('X', String.fromCodePoint(0x1D400 + 0x17))
+                                      .replaceAll('Y', String.fromCodePoint(0x1D400 + 0x18))
+                                      .replaceAll('Z', String.fromCodePoint(0x1D400 + 0x19));
+
+        const transformedLowerCase = transformedUpperCase
+                                      .replaceAll('a', String.fromCodePoint(0x1D41A + 0x00))
+                                      .replaceAll('b', String.fromCodePoint(0x1D41A + 0x01))
+                                      .replaceAll('c', String.fromCodePoint(0x1D41A + 0x02))
+                                      .replaceAll('d', String.fromCodePoint(0x1D41A + 0x03))
+                                      .replaceAll('e', String.fromCodePoint(0x1D41A + 0x04))
+                                      .replaceAll('f', String.fromCodePoint(0x1D41A + 0x05))
+                                      .replaceAll('g', String.fromCodePoint(0x1D41A + 0x06))
+                                      .replaceAll('h', String.fromCodePoint(0x1D41A + 0x07))
+                                      .replaceAll('i', String.fromCodePoint(0x1D41A + 0x08))
+                                      .replaceAll('j', String.fromCodePoint(0x1D41A + 0x09))
+                                      .replaceAll('k', String.fromCodePoint(0x1D41A + 0x0A))
+                                      .replaceAll('l', String.fromCodePoint(0x1D41A + 0x0B))
+                                      .replaceAll('m', String.fromCodePoint(0x1D41A + 0x0C))
+                                      .replaceAll('n', String.fromCodePoint(0x1D41A + 0x0D))
+                                      .replaceAll('o', String.fromCodePoint(0x1D41A + 0x0E))
+                                      .replaceAll('p', String.fromCodePoint(0x1D41A + 0x0F))
+                                      .replaceAll('q', String.fromCodePoint(0x1D41A + 0x10))
+                                      .replaceAll('r', String.fromCodePoint(0x1D41A + 0x11))
+                                      .replaceAll('s', String.fromCodePoint(0x1D41A + 0x12))
+                                      .replaceAll('t', String.fromCodePoint(0x1D41A + 0x13))
+                                      .replaceAll('u', String.fromCodePoint(0x1D41A + 0x14))
+                                      .replaceAll('v', String.fromCodePoint(0x1D41A + 0x15))
+                                      .replaceAll('w', String.fromCodePoint(0x1D41A + 0x16))
+                                      .replaceAll('x', String.fromCodePoint(0x1D41A + 0x17))
+                                      .replaceAll('y', String.fromCodePoint(0x1D41A + 0x18))
+                                      .replaceAll('z', String.fromCodePoint(0x1D41A + 0x19));
+
+        const transformedDigits = transformedLowerCase
+                                   .replaceAll('0', String.fromCodePoint(0x1D7CE + 0x00))
+                                   .replaceAll('1', String.fromCodePoint(0x1D7CE + 0x01))
+                                   .replaceAll('2', String.fromCodePoint(0x1D7CE + 0x02))
+                                   .replaceAll('3', String.fromCodePoint(0x1D7CE + 0x03))
+                                   .replaceAll('4', String.fromCodePoint(0x1D7CE + 0x04))
+                                   .replaceAll('5', String.fromCodePoint(0x1D7CE + 0x05))
+                                   .replaceAll('6', String.fromCodePoint(0x1D7CE + 0x06))
+                                   .replaceAll('7', String.fromCodePoint(0x1D7CE + 0x07))
+                                   .replaceAll('8', String.fromCodePoint(0x1D7CE + 0x08))
+                                   .replaceAll('9', String.fromCodePoint(0x1D7CE + 0x09));
+
+        return transformedDigits;
+    }
+
+    const outputItalicSerif = function () {
+
+        const transformedUpperCase = input
+                                      .replaceAll('A', String.fromCodePoint(0x1D434 + 0x00))
+                                      .replaceAll('B', String.fromCodePoint(0x1D434 + 0x01))
+                                      .replaceAll('C', String.fromCodePoint(0x1D434 + 0x02))
+                                      .replaceAll('D', String.fromCodePoint(0x1D434 + 0x03))
+                                      .replaceAll('E', String.fromCodePoint(0x1D434 + 0x04))
+                                      .replaceAll('F', String.fromCodePoint(0x1D434 + 0x05))
+                                      .replaceAll('G', String.fromCodePoint(0x1D434 + 0x06))
+                                      .replaceAll('H', String.fromCodePoint(0x1D434 + 0x07))
+                                      .replaceAll('I', String.fromCodePoint(0x1D434 + 0x08))
+                                      .replaceAll('J', String.fromCodePoint(0x1D434 + 0x09))
+                                      .replaceAll('K', String.fromCodePoint(0x1D434 + 0x0A))
+                                      .replaceAll('L', String.fromCodePoint(0x1D434 + 0x0B))
+                                      .replaceAll('M', String.fromCodePoint(0x1D434 + 0x0C))
+                                      .replaceAll('N', String.fromCodePoint(0x1D434 + 0x0D))
+                                      .replaceAll('O', String.fromCodePoint(0x1D434 + 0x0E))
+                                      .replaceAll('P', String.fromCodePoint(0x1D434 + 0x0F))
+                                      .replaceAll('Q', String.fromCodePoint(0x1D434 + 0x10))
+                                      .replaceAll('R', String.fromCodePoint(0x1D434 + 0x11))
+                                      .replaceAll('S', String.fromCodePoint(0x1D434 + 0x12))
+                                      .replaceAll('T', String.fromCodePoint(0x1D434 + 0x13))
+                                      .replaceAll('U', String.fromCodePoint(0x1D434 + 0x14))
+                                      .replaceAll('V', String.fromCodePoint(0x1D434 + 0x15))
+                                      .replaceAll('W', String.fromCodePoint(0x1D434 + 0x16))
+                                      .replaceAll('X', String.fromCodePoint(0x1D434 + 0x17))
+                                      .replaceAll('Y', String.fromCodePoint(0x1D434 + 0x18))
+                                      .replaceAll('Z', String.fromCodePoint(0x1D434 + 0x19));
+        
+        const transformedLowerCase = transformedUpperCase
+                                      .replaceAll('a', String.fromCodePoint(0x1D44E + 0x00))
+                                      .replaceAll('b', String.fromCodePoint(0x1D44E + 0x01))
+                                      .replaceAll('c', String.fromCodePoint(0x1D44E + 0x02))
+                                      .replaceAll('d', String.fromCodePoint(0x1D44E + 0x03))
+                                      .replaceAll('e', String.fromCodePoint(0x1D44E + 0x04))
+                                      .replaceAll('f', String.fromCodePoint(0x1D44E + 0x05))
+                                      .replaceAll('g', String.fromCodePoint(0x1D44E + 0x06))
+                                      .replaceAll('h', String.fromCodePoint(0x1D44E + 0x07))
+                                      .replaceAll('i', String.fromCodePoint(0x1D44E + 0x08))
+                                      .replaceAll('j', String.fromCodePoint(0x1D44E + 0x09))
+                                      .replaceAll('k', String.fromCodePoint(0x1D44E + 0x0A))
+                                      .replaceAll('l', String.fromCodePoint(0x1D44E + 0x0B))
+                                      .replaceAll('m', String.fromCodePoint(0x1D44E + 0x0C))
+                                      .replaceAll('n', String.fromCodePoint(0x1D44E + 0x0D))
+                                      .replaceAll('o', String.fromCodePoint(0x1D44E + 0x0E))
+                                      .replaceAll('p', String.fromCodePoint(0x1D44E + 0x0F))
+                                      .replaceAll('q', String.fromCodePoint(0x1D44E + 0x10))
+                                      .replaceAll('r', String.fromCodePoint(0x1D44E + 0x11))
+                                      .replaceAll('s', String.fromCodePoint(0x1D44E + 0x12))
+                                      .replaceAll('t', String.fromCodePoint(0x1D44E + 0x13))
+                                      .replaceAll('u', String.fromCodePoint(0x1D44E + 0x14))
+                                      .replaceAll('v', String.fromCodePoint(0x1D44E + 0x15))
+                                      .replaceAll('w', String.fromCodePoint(0x1D44E + 0x16))
+                                      .replaceAll('x', String.fromCodePoint(0x1D44E + 0x17))
+                                      .replaceAll('y', String.fromCodePoint(0x1D44E + 0x18))
+                                      .replaceAll('z', String.fromCodePoint(0x1D44E + 0x19));
+        
+        // Ignore digits because italicized digits do not exist
+
+        return transformedLowerCase;
+    }
+
+    const outputBoldAndItalicSerif = function () {
+
+        const transformedUpperCase = input
+                                      .replaceAll('A', String.fromCodePoint(0x1D468 + 0x00))
+                                      .replaceAll('B', String.fromCodePoint(0x1D468 + 0x01))
+                                      .replaceAll('C', String.fromCodePoint(0x1D468 + 0x02))
+                                      .replaceAll('D', String.fromCodePoint(0x1D468 + 0x03))
+                                      .replaceAll('E', String.fromCodePoint(0x1D468 + 0x04))
+                                      .replaceAll('F', String.fromCodePoint(0x1D468 + 0x05))
+                                      .replaceAll('G', String.fromCodePoint(0x1D468 + 0x06))
+                                      .replaceAll('H', String.fromCodePoint(0x1D468 + 0x07))
+                                      .replaceAll('I', String.fromCodePoint(0x1D468 + 0x08))
+                                      .replaceAll('J', String.fromCodePoint(0x1D468 + 0x09))
+                                      .replaceAll('K', String.fromCodePoint(0x1D468 + 0x0A))
+                                      .replaceAll('L', String.fromCodePoint(0x1D468 + 0x0B))
+                                      .replaceAll('M', String.fromCodePoint(0x1D468 + 0x0C))
+                                      .replaceAll('N', String.fromCodePoint(0x1D468 + 0x0D))
+                                      .replaceAll('O', String.fromCodePoint(0x1D468 + 0x0E))
+                                      .replaceAll('P', String.fromCodePoint(0x1D468 + 0x0F))
+                                      .replaceAll('Q', String.fromCodePoint(0x1D468 + 0x10))
+                                      .replaceAll('R', String.fromCodePoint(0x1D468 + 0x11))
+                                      .replaceAll('S', String.fromCodePoint(0x1D468 + 0x12))
+                                      .replaceAll('T', String.fromCodePoint(0x1D468 + 0x13))
+                                      .replaceAll('U', String.fromCodePoint(0x1D468 + 0x14))
+                                      .replaceAll('V', String.fromCodePoint(0x1D468 + 0x15))
+                                      .replaceAll('W', String.fromCodePoint(0x1D468 + 0x16))
+                                      .replaceAll('X', String.fromCodePoint(0x1D468 + 0x17))
+                                      .replaceAll('Y', String.fromCodePoint(0x1D468 + 0x18))
+                                      .replaceAll('Z', String.fromCodePoint(0x1D468 + 0x19));
+        
+        const transformedLowerCase = transformedUpperCase
+                                      .replaceAll('a', String.fromCodePoint(0x1D482 + 0x00))
+                                      .replaceAll('b', String.fromCodePoint(0x1D482 + 0x01))
+                                      .replaceAll('c', String.fromCodePoint(0x1D482 + 0x02))
+                                      .replaceAll('d', String.fromCodePoint(0x1D482 + 0x03))
+                                      .replaceAll('e', String.fromCodePoint(0x1D482 + 0x04))
+                                      .replaceAll('f', String.fromCodePoint(0x1D482 + 0x05))
+                                      .replaceAll('g', String.fromCodePoint(0x1D482 + 0x06))
+                                      .replaceAll('h', String.fromCodePoint(0x1D482 + 0x07))
+                                      .replaceAll('i', String.fromCodePoint(0x1D482 + 0x08))
+                                      .replaceAll('j', String.fromCodePoint(0x1D482 + 0x09))
+                                      .replaceAll('k', String.fromCodePoint(0x1D482 + 0x0A))
+                                      .replaceAll('l', String.fromCodePoint(0x1D482 + 0x0B))
+                                      .replaceAll('m', String.fromCodePoint(0x1D482 + 0x0C))
+                                      .replaceAll('n', String.fromCodePoint(0x1D482 + 0x0D))
+                                      .replaceAll('o', String.fromCodePoint(0x1D482 + 0x0E))
+                                      .replaceAll('p', String.fromCodePoint(0x1D482 + 0x0F))
+                                      .replaceAll('q', String.fromCodePoint(0x1D482 + 0x10))
+                                      .replaceAll('r', String.fromCodePoint(0x1D482 + 0x11))
+                                      .replaceAll('s', String.fromCodePoint(0x1D482 + 0x12))
+                                      .replaceAll('t', String.fromCodePoint(0x1D482 + 0x13))
+                                      .replaceAll('u', String.fromCodePoint(0x1D482 + 0x14))
+                                      .replaceAll('v', String.fromCodePoint(0x1D482 + 0x15))
+                                      .replaceAll('w', String.fromCodePoint(0x1D482 + 0x16))
+                                      .replaceAll('x', String.fromCodePoint(0x1D482 + 0x17))
+                                      .replaceAll('y', String.fromCodePoint(0x1D482 + 0x18))
+                                      .replaceAll('z', String.fromCodePoint(0x1D482 + 0x19));
+
+        // Use bold digits because bold italicized digits do not exist                              
+        const transformedDigits = transformedLowerCase
+                                   .replaceAll('0', String.fromCodePoint(0x1D7CE + 0x00))
+                                   .replaceAll('1', String.fromCodePoint(0x1D7CE + 0x01))
+                                   .replaceAll('2', String.fromCodePoint(0x1D7CE + 0x02))
+                                   .replaceAll('3', String.fromCodePoint(0x1D7CE + 0x03))
+                                   .replaceAll('4', String.fromCodePoint(0x1D7CE + 0x04))
+                                   .replaceAll('5', String.fromCodePoint(0x1D7CE + 0x05))
+                                   .replaceAll('6', String.fromCodePoint(0x1D7CE + 0x06))
+                                   .replaceAll('7', String.fromCodePoint(0x1D7CE + 0x07))
+                                   .replaceAll('8', String.fromCodePoint(0x1D7CE + 0x08))
+                                   .replaceAll('9', String.fromCodePoint(0x1D7CE + 0x09));
+
+        return transformedDigits;
+    }
+
     const handleSubmit = function() {
 
-        if (isBold && !isItalic) {
+        if (isBold && !isItalic && !isSerif) {
             setOutput(outputBold());
         }
-        else if (isItalic && !isBold) {
+        else if (!isBold && isItalic && !isSerif) {
             setOutput(outputItalic());
         }
-        else if (isBold && isItalic) {
+        else if (isBold && isItalic && !isSerif) {
             setOutput(outputBoldAndItalic());
+        }
+        else if (isBold && !isItalic && isSerif){
+            setOutput(outputBoldSerif());
+        }
+        else if (!isBold && isItalic && isSerif) {
+            setOutput(outputItalicSerif());
+        }
+        else if (isBold && isItalic && isSerif) {
+            setOutput(outputBoldAndItalicSerif());
         }
         else {
             setOutput(input);
@@ -264,6 +486,13 @@ function FormattedTextGenerator() {
                         <span className='slider round' />
                     </label>
                     <label for="italicSwitch" className='switch-label'><em>Italic</em></label>
+                </p>
+                <p>
+                    <label className="switch">
+                        <input id="serifSwitch" type='checkbox' onChange={(e)=>setIsSerif(e.target.checked)} />
+                        <span className='slider round' />
+                    </label>
+                    <label for="serifSwitch" className='switch-label' style={{fontFamily: 'serif'}}>Serif</label>
                 </p>
                 <button
                     className="g-recaptcha field submit-button"
