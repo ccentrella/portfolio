@@ -15,6 +15,8 @@ import BlogReader from './template-parts/blog/BlogReader';
 import ScrollToTop from './ScrollToTop';
 import Unsubscribe from './template-parts/Unsubscribe';
 import AppLoading from './AppLoading';
+import TextGenerator from './pages/FormattedTextGenerator';
+import FormattedTextGenerator from './pages/FormattedTextGenerator';
 
 export default function App() {
     // Load reCaptcha script functions
@@ -54,6 +56,7 @@ export default function App() {
                 <Route path="/blog/:slug" element={<BlogReader />} />
                 <Route path="/subscribers/:id/edit" element={<Unsubscribe />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/text-formatter" element={<FormattedTextGenerator />} />
             </Routes>
             <Footer />
         </>

@@ -46,7 +46,7 @@ input:hover {
     }
 }
 
-.contact-form .submit-button {
+.submit-button {
     margin: 1em 0 0 0;
     padding: 1.4em 0;
     cursor: pointer; 
@@ -69,12 +69,21 @@ input:hover {
 
 @media (pointer: fine)
 {
-    .contact-form .submit-button:hover {
+    .submit-button:hover {
         background-color: $light-text;
         @include secondary-color-foreground;
 
         &.highlight {
             opacity: 0.8;
         }
+    }
+}
+
+.form {
+    margin: 2em;
+
+    .submit-button {
+        @include primary-color-border;
+        @include primary-color-foreground;
     }
 }

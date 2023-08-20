@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/blog', to: 'pages#home'
   get '/blog/:slug', as: :blog_post, to: 'pages#home'
   get '/subscribers/:id/edit', as: :subscribers_unsubscribe, to: 'pages#home'
+  get '/text-formatter', to: 'pages#home'
 
   # Authentication routes
   devise_for :users, skip: [:registrations], controllers: {
