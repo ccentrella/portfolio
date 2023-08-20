@@ -65,6 +65,11 @@ input:hover {
         background-color: $light-text;
         color: $secondary;
     }
+
+    &:disabled {
+        background-color: lightgray;
+        pointer-events: none;
+    }
 }
 
 @media (pointer: fine)
@@ -85,5 +90,10 @@ input:hover {
     .submit-button {
         @include primary-color-border;
         @include primary-color-foreground;
+
+        &:disabled {
+            border-color: transparent;
+            color: $light-text;
+        }
     }
 }

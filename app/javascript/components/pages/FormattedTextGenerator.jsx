@@ -11,6 +11,7 @@ function FormattedTextGenerator() {
     const [isBold, setIsBold] = useState(false);
     const [isItalic, setIsItalic] = useState(false);
     const [isSerif, setIsSerif] = useState(false);
+    const [errorMessages, setErrorMessages] = useState([]);
 
     // Sans-serif fonts
     const outputBold = function () {
@@ -88,6 +89,12 @@ function FormattedTextGenerator() {
 
     const outputItalic = function () {
 
+        // Check for warnings
+        const digits = input.search("[0-9]")
+        digits != -1 && setErrorMessages(current=>
+            [...current, "Due to unicode limitations, digits have not been italicized."]
+        )   
+
         const transformedUpperCase = input
                                       .replaceAll('A', String.fromCodePoint(0x1D608 + 0x00))
                                       .replaceAll('B', String.fromCodePoint(0x1D608 + 0x01))
@@ -144,12 +151,30 @@ function FormattedTextGenerator() {
                                       .replaceAll('y', String.fromCodePoint(0x1D622 + 0x18))
                                       .replaceAll('z', String.fromCodePoint(0x1D622 + 0x19));
         
-        // Ignore digits because italicized digits do not exist
+        // Transform to normal digits because italicized digits do not exist
+        // Because style is slightly different, perform transform anyway
+        const transformedDigits = transformedLowerCase
+                                   .replaceAll('0', String.fromCodePoint(0x1D7E2 + 0x00))
+                                   .replaceAll('1', String.fromCodePoint(0x1D7E2 + 0x01))
+                                   .replaceAll('2', String.fromCodePoint(0x1D7E2 + 0x02))
+                                   .replaceAll('3', String.fromCodePoint(0x1D7E2 + 0x03))
+                                   .replaceAll('4', String.fromCodePoint(0x1D7E2 + 0x04))
+                                   .replaceAll('5', String.fromCodePoint(0x1D7E2 + 0x05))
+                                   .replaceAll('6', String.fromCodePoint(0x1D7E2 + 0x06))
+                                   .replaceAll('7', String.fromCodePoint(0x1D7E2 + 0x07))
+                                   .replaceAll('8', String.fromCodePoint(0x1D7E2 + 0x08))
+                                   .replaceAll('9', String.fromCodePoint(0x1D7E2 + 0x09));
 
-        return transformedLowerCase;
+        return transformedDigits;
     }
 
     const outputBoldAndItalic = function () {
+
+        // Check for warnings
+        const digits = input.search("[0-9]")
+        digits != -1 && setErrorMessages(current=>
+            [...current, "Due to unicode limitations, digits have not been italicized."]
+        )   
 
         const transformedUpperCase = input
                                       .replaceAll('A', String.fromCodePoint(0x1D63C + 0x00))
@@ -299,6 +324,18 @@ function FormattedTextGenerator() {
 
     const outputItalicSerif = function () {
 
+        // Check for warnings
+        const digits = input.search("[0-9]")
+        digits != -1 && setErrorMessages(current=>
+            [...current, "Due to unicode limitations, digits have not been italicized and are not using serifs."]
+        )
+
+        if (input.includes("h")) {
+            setErrorMessages(current=>
+                [...current, "Due to unicode limitations, the italicized h is not using serifs."]
+            ) 
+        }
+
         const transformedUpperCase = input
                                       .replaceAll('A', String.fromCodePoint(0x1D434 + 0x00))
                                       .replaceAll('B', String.fromCodePoint(0x1D434 + 0x01))
@@ -335,7 +372,7 @@ function FormattedTextGenerator() {
                                       .replaceAll('e', String.fromCodePoint(0x1D44E + 0x04))
                                       .replaceAll('f', String.fromCodePoint(0x1D44E + 0x05))
                                       .replaceAll('g', String.fromCodePoint(0x1D44E + 0x06))
-                                      .replaceAll('h', String.fromCodePoint(0x1D44E + 0x07))
+                                      .replaceAll('h', String.fromCodePoint(0x1D622 + 0x07))
                                       .replaceAll('i', String.fromCodePoint(0x1D44E + 0x08))
                                       .replaceAll('j', String.fromCodePoint(0x1D44E + 0x09))
                                       .replaceAll('k', String.fromCodePoint(0x1D44E + 0x0A))
@@ -355,13 +392,31 @@ function FormattedTextGenerator() {
                                       .replaceAll('y', String.fromCodePoint(0x1D44E + 0x18))
                                       .replaceAll('z', String.fromCodePoint(0x1D44E + 0x19));
         
-        // Ignore digits because italicized digits do not exist
+        // Transform to normal digits because italicized digits do not exist
+        // Because style is slightly different, perform transform anyway
+        const transformedDigits = transformedLowerCase
+                                   .replaceAll('0', String.fromCodePoint(0x1D7E2 + 0x00))
+                                   .replaceAll('1', String.fromCodePoint(0x1D7E2 + 0x01))
+                                   .replaceAll('2', String.fromCodePoint(0x1D7E2 + 0x02))
+                                   .replaceAll('3', String.fromCodePoint(0x1D7E2 + 0x03))
+                                   .replaceAll('4', String.fromCodePoint(0x1D7E2 + 0x04))
+                                   .replaceAll('5', String.fromCodePoint(0x1D7E2 + 0x05))
+                                   .replaceAll('6', String.fromCodePoint(0x1D7E2 + 0x06))
+                                   .replaceAll('7', String.fromCodePoint(0x1D7E2 + 0x07))
+                                   .replaceAll('8', String.fromCodePoint(0x1D7E2 + 0x08))
+                                   .replaceAll('9', String.fromCodePoint(0x1D7E2 + 0x09));
 
-        return transformedLowerCase;
+        return transformedDigits;
     }
 
     const outputBoldAndItalicSerif = function () {
 
+        // Check for warnings
+        const digits = input.search("[0-9]")
+        digits != -1 && setErrorMessages(current=>
+            [...current, "Due to unicode limitations, digits have not been italicized."]
+        )        
+        
         const transformedUpperCase = input
                                       .replaceAll('A', String.fromCodePoint(0x1D468 + 0x00))
                                       .replaceAll('B', String.fromCodePoint(0x1D468 + 0x01))
@@ -433,8 +488,11 @@ function FormattedTextGenerator() {
 
         return transformedDigits;
     }
-
+    
     const handleSubmit = function() {
+
+        // Clear existing error messages
+        setErrorMessages([]);
 
         if (isBold && !isItalic && !isSerif) {
             setOutput(outputBold());
@@ -466,6 +524,15 @@ function FormattedTextGenerator() {
         </div>
     )
 
+    const errorMessagesPane = (
+        <>
+            <p className="warning" style={{paddingTop: "0.9em"}}><strong>The following warnings occurred: </strong></p>
+            <ul>
+                {errorMessages.map(errorMessage=><li key={errorMessage}>{errorMessage}</li>)}
+            </ul>
+        </>
+    )
+
     return (
         <>
             <p className="section-title zero-margin">Formatted Text Generator</p>
@@ -492,15 +559,18 @@ function FormattedTextGenerator() {
                         <input id="serifSwitch" type='checkbox' onChange={(e)=>setIsSerif(e.target.checked)} />
                         <span className='slider round' />
                     </label>
-                    <label for="serifSwitch" className='switch-label' style={{fontFamily: 'serif'}}>Serif</label>
+                    <label for="serifSwitch" className='switch-label' style={{fontFamily: 'serif'}}>Use Serifs</label>
                 </p>
+
                 <button
                     className="g-recaptcha field submit-button"
-                    onClick={handleSubmit}>
+                    onClick={handleSubmit}
+                    disabled={!isBold && !isItalic || !input}>
                     Format Text
                 </button>
 
                 {output && outputPane}
+                {errorMessages.length > 0 && errorMessagesPane}
             </div>
         </>
     );
